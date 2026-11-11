@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import {
   BookOpen,
   CheckCircle2,
+  ClipboardList,
   ExternalLink,
   Gamepad2,
   KeyRound,
@@ -69,6 +70,7 @@ export const LoginPage: React.FC = () => {
     activeStudent,
     isRealFirebaseConfigured,
     signInQuickDemo,
+    signInStaticAdmin,
     signInWithGoogleReal,
     signOutAndWipeSession,
     pendingReturnTo,
@@ -79,6 +81,8 @@ export const LoginPage: React.FC = () => {
   const [quickName, setQuickName] = useState<string>(userRecord?.full_name || '');
   const [quickEmail, setQuickEmail] = useState<string>(email || '');
   const [quickPhone, setQuickPhone] = useState<string>(userRecord?.phone || '');
+  const [adminUsername, setAdminUsername] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
   const [notice, setNotice] = useState<{ type: 'info' | 'error' | 'success'; text: string } | null>(
     null
   );
@@ -125,6 +129,20 @@ export const LoginPage: React.FC = () => {
       type: res.ok ? 'success' : 'error',
       text: res.message,
     });
+  };
+
+  const handleAdminSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setNotice(null);
+    const result = await signInStaticAdmin({
+      username: adminUsername.trim(),
+      password: adminPassword,
+    });
+    if (result.ok) {
+      navigate('/admin');
+      return;
+    }
+    setNotice({ type: 'error', text: result.message });
   };
 
   return (
@@ -237,6 +255,52 @@ export const LoginPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Tài khoản quản trị cố định: được xác minh hoàn toàn ở server. */}
+        <form
+          onSubmit={handleAdminSubmit}
+          className="mt-6 rounded-2xl border border-slate-300 bg-slate-950 p-5 text-white"
+        >
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2 text-sm font-extrabold">
+                <KeyRound className="h-4 w-4 text-amber-300" /> Đăng nhập Quản trị viên
+              </div>
+              <p className="mt-1 text-xs text-slate-300">
+                Tài khoản quản trị được kiểm tra trực tiếp tại máy chủ và không lưu vào MongoDB.
+              </p>
+            </div>
+            <label className="block lg:w-52">
+              <span className="text-xs font-semibold text-slate-200">Tài khoản</span>
+              <input
+                value={adminUsername}
+                onChange={(event) => setAdminUsername(event.target.value)}
+                autoComplete="username"
+                required
+                placeholder="Nhập tài khoản quản trị"
+                className="mt-1 w-full rounded-xl border border-slate-600 bg-white px-3.5 py-2.5 text-sm text-slate-950"
+              />
+            </label>
+            <label className="block lg:w-52">
+              <span className="text-xs font-semibold text-slate-200">Mật khẩu</span>
+              <input
+                type="password"
+                value={adminPassword}
+                onChange={(event) => setAdminPassword(event.target.value)}
+                autoComplete="current-password"
+                required
+                placeholder="Nhập mật khẩu"
+                className="mt-1 w-full rounded-xl border border-slate-600 bg-white px-3.5 py-2.5 text-sm text-slate-950"
+              />
+            </label>
+            <button
+              type="submit"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl bg-amber-400 px-5 text-sm font-extrabold text-slate-950 hover:bg-amber-300"
+            >
+              Vào trang Admin
+            </button>
+          </div>
+        </form>
 
         {/* Biểu mẫu Đăng nhập bằng Thông tin Cá nhân Thực tế */}
         <form
@@ -1525,6 +1589,13 @@ export const AdminConsolePage: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <Link
+              to="/admin/study-logs"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-xl border border-teal-300/40 bg-white/10 px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-white/20"
+            >
+              <ClipboardList className="h-4 w-4" />
+              <span>Nhật ký thời gian học</span>
+            </Link>
             <button
               type="button"
               data-testid="toggle-admin-technical-mode"

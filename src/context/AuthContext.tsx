@@ -118,6 +118,10 @@ interface AuthContextValue {
     email: string;
     phone: string;
   }) => Promise<{ ok: boolean; message: string }>;
+  signInStaticAdmin: (input: {
+    username: string;
+    password: string;
+  }) => Promise<{ ok: boolean; message: string }>;
   signInWithGoogleReal: () => Promise<{ ok: boolean; message: string; missingVars?: string[] }>;
   signInEmulatorSandbox: (actor: VerifiedActorToken) => Promise<void>;
   signOutAndWipeSession: () => Promise<void>;
@@ -666,14 +670,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         };
       }
 
-      const isBootstrapAdmin =
-        cleanEmail === 'tamtranmusic@gmail.com' || cleanEmail === 'minhquantran4312@gmail.com';
       const slug = cleanEmail.replace(/[^a-z0-9]/g, '').slice(0, 16) || 'user';
-      const generatedUid = isBootstrapAdmin
-        ? cleanEmail === 'tamtranmusic@gmail.com'
-          ? 'uid-superadmin-02'
-          : 'uid-superadmin-01'
-        : `uid-demo-${slug}`;
+      const generatedUid = `uid-demo-${slug}`;
 
       const demoActor: VerifiedActorToken = {
         uid: generatedUid,
@@ -681,8 +679,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         email_verified: true,
         name: cleanName,
         phone: cleanPhone,
-        superadmin: isBootstrapAdmin,
-        role: isBootstrapAdmin ? 'superadmin' : 'student',
+        superadmin: false,
+        role: 'student',
       };
 
       await signInEmulatorSandbox(demoActor);
@@ -694,8 +692,43 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     [signInEmulatorSandbox]
   );
 
+  const signInStaticAdmin = useCallback(
+    async (input: {
+      username: string;
+      password: string;
+    }): Promise<{ ok: boolean; message: string }> => {
+      try {
+        const response = await fetch('/api/auth/admin-login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(input),
+        });
+        const data = (await response.json()) as {
+          message?: string;
+          actor?: VerifiedActorToken;
+        };
+        if (!response.ok || !data.actor) {
+          return {
+            ok: false,
+            message: data.message || 'Không thể đăng nhập tài khoản quản trị.',
+          };
+        }
+        await signInEmulatorSandbox(data.actor);
+        return { ok: true, message: 'Đăng nhập quản trị thành công.' };
+      } catch {
+        return { ok: false, message: 'Không thể kết nối máy chủ để đăng nhập quản trị.' };
+      }
+    },
+    [signInEmulatorSandbox]
+  );
+
   const signOutAndWipeSession = useCallback(async () => {
     await unlinkCurrentInstallationPushToken();
+    try {
+      await fetch('/api/auth/admin-session', { method: 'DELETE' });
+    } catch {
+      // Phiên client vẫn được xóa kể cả khi server đang ngoại tuyến.
+    }
     const sdk = getFirebaseAuthAndRtdb();
     if (sdk.isConfigured && sdk.auth) {
       try {
@@ -868,6 +901,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         enterSharedDeviceStudentMode,
         reauthenticateForGuardianArea,
         signInQuickDemo,
+        signInStaticAdmin,
         signInWithGoogleReal,
         signInEmulatorSandbox,
         signOutAndWipeSession,

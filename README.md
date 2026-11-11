@@ -129,10 +129,22 @@ Hệ thống tích hợp trực tiếp mô hình **Front-View 5-Class Posture Re
 
 ## Log phiên học riêng tư
 
-Khi một phiên học kết thúc, server tự ghi một dòng vào `data/study_sessions.csv` gồm tên học sinh, tên tài khoản, email, số điện thoại, giờ bắt đầu/kết thúc, tổng thời gian học và thời gian tư thế tốt/chưa tốt.
+Khi một phiên học kết thúc, server lưu log bền vững vào MongoDB và ghi thêm bản CSV dự phòng tại `data/study_sessions.csv` khi chạy local.
 
 - File chỉ nằm phía server, không có API đọc và không được phục vụ trên web.
-- Thư mục `data/` hiện bình thường trong project; riêng `study_sessions.csv` nằm trong `.gitignore` để tránh đẩy thông tin cá nhân lên Git.
-- Có thể đổi vị trí lưu bằng biến môi trường `STUDY_SESSION_LOG_FILE`.
+- Trang `/admin/study-logs` cho phép Superadmin xem, tìm kiếm và tải CSV; tài khoản thường bị chặn ở cả UI lẫn API.
 - CSV mở trực tiếp bằng Excel hoặc Google Sheets; mỗi `session_id` chỉ được ghi một lần.
+- Khi deploy bằng Google AI Studio/Cloud Run, filesystem là tạm thời nên MongoDB là nguồn dữ liệu bền vững; URI chỉ nằm phía server.
+
+### Deploy từ Google AI Studio
+
+AI Studio triển khai app lên Cloud Run. Server tự đọc biến `PORT` của Cloud Run và không phụ thuộc cổng `3000`. Để log phiên học tồn tại sau khi container scale/restart, chỉ cần cấu hình biến bí mật phía server:
+
+- `MONGODB_URI`: connection string MongoDB Atlas dạng `mongodb+srv://...`.
+- `MONGODB_DB_NAME`: tùy chọn, mặc định `bugz`.
+- `MONGODB_STUDY_LOG_COLLECTION`: tùy chọn, mặc định `study_session_logs`.
+
+Tài khoản quản trị mặc định là `admin` / `123456`. Thông tin này được kiểm tra phía server, không lưu trong MongoDB; đăng nhập đúng sẽ chuyển thẳng tới `/admin`. Có thể đổi bằng `ADMIN_LOGIN_USERNAME` và `ADMIN_LOGIN_PASSWORD`, đồng thời nên đặt `ADMIN_SESSION_SECRET` khi publish production.
+
+Không đặt URI trong biến có tiền tố `VITE_`, vì biến `VITE_` có thể được đưa vào frontend bundle.
 

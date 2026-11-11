@@ -1,7 +1,7 @@
 LOG PHIEN HOC BUGZ
 ==================
 
-Sau khi mot phien hoc ket thuc, server se tu tao/cap nhat file:
+Khi chay local, sau khi mot phien hoc ket thuc server se tu tao/cap nhat file:
 
   data/study_sessions.csv
 
@@ -12,4 +12,4 @@ Mo file CSV bang Microsoft Excel hoac Google Sheets de xem:
 - Tong thoi gian hoc
 - Thoi gian tu the tot va chua tot
 
-Luu y: study_sessions.csv chua thong tin ca nhan va da duoc bo qua khi Git push.
+Khi deploy Google AI Studio/Cloud Run, log ben vung duoc luu rieng tren MongoDB.

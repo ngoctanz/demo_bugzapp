@@ -30,6 +30,7 @@ import {
   ParentDashboardPage,
   ProfilePage,
 } from './pages/P01AccountPages';
+import { AdminStudyLogsPage } from './pages/AdminStudyLogsPage';
 
 export default function App() {
   return (
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/library/:section" element={<LibrarySectionPage />} />
           <Route path="/parent" element={<ParentDashboardPage />} />
           <Route path="/admin" element={<AdminConsolePage />} />
+          <Route path="/admin/study-logs" element={<AdminStudyLogsPage />} />
           <Route path="/integration-status" element={<IntegrationStatusPage />} />
 
           <Route path="*" element={<Navigate to="/learn" replace />} />

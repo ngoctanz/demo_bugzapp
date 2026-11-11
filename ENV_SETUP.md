@@ -41,6 +41,24 @@ Phiên bản 1.1 · Ngày 01/11/2026 · Dự án **BUGZ BrightUpGenZ**
 
 ---
 
+## 1.2 Cấu hình nhanh MongoDB cho Nhật ký Phiên học
+
+Phần nhật ký chỉ cần **một biến bắt buộc** phía server:
+
+```env
+MONGODB_URI="mongodb+srv://<username>:<password>@<cluster>/?retryWrites=true&w=majority"
+```
+
+- `MONGODB_DB_NAME` là tùy chọn, mặc định `bugz`.
+- `MONGODB_STUDY_LOG_COLLECTION` là tùy chọn, mặc định `study_session_logs`.
+- Không đặt URI vào biến `VITE_*` và không commit URI thật vào Git.
+- Trên MongoDB Atlas, tạo Database User, cho phép kết nối từ môi trường deploy và lấy URI tại **Connect → Drivers → Node.js**.
+- Khi chạy Google AI Studio/Cloud Run, thêm `MONGODB_URI` trong **Variables & Secrets**, rồi deploy revision mới.
+
+Nếu thiếu URI, ứng dụng vẫn chạy và local vẫn có CSV dự phòng, nhưng bản Cloud Run sẽ không có kho log bền vững.
+
+---
+
 ## 2. Bảng Tổng hợp Toàn bộ Biến Môi trường
 
 | STT | Tên biến đầy đủ | Phạm vi | Chức năng | Nơi lấy giá trị | Định dạng cần nhập (Không in giá trị secret thật) | Chặng bắt buộc sử dụng |

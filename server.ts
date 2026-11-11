@@ -5,6 +5,7 @@ import path from 'node:path';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
+import { MongoClient, type Collection } from 'mongodb';
 import {
   cert,
   getApp,
@@ -45,12 +46,15 @@ import {
   resolveDriveAssetEntry,
 } from './src/data/driveAssetRegistry.ts';
 import { BugzNativeMqttBridge } from './src/lib/mqttNativeBridge.ts';
-import { appendStudySessionLogCsv } from './src/lib/studySessionFileLog.ts';
+import {
+  appendStudySessionLogCsv,
+  type StudySessionLogEntry,
+} from './src/lib/studySessionFileLog.ts';
 import type { ExtendedSessionRecord } from './src/domain/p03RobotEngine.ts';
 
 dotenv.config();
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const p01Store = new P01RbacDomainService(createCleanDynamicRtdbState());
 
 // ============================================================================
@@ -60,33 +64,203 @@ const p01Store = new P01RbacDomainService(createCleanDynamicRtdbState());
 const PERSIST_DIR = path.resolve(process.cwd(), '.data');
 const PERSIST_FILE_PRIMARY = path.join(PERSIST_DIR, 'bugz_rtdb_persistence.json');
 const PERSIST_FILE_TMP = '/tmp/bugz_rtdb_persistence.json';
+const IS_CLOUD_RUN = Boolean(process.env.K_SERVICE || process.env.K_REVISION);
 const STUDY_SESSION_LOG_FILE = process.env.STUDY_SESSION_LOG_FILE
   ? path.resolve(process.env.STUDY_SESSION_LOG_FILE)
   : path.resolve(process.cwd(), 'data', 'study_sessions.csv');
+const MONGODB_URI = (process.env.MONGODB_URI || '').trim();
+const MONGODB_DB_NAME = (process.env.MONGODB_DB_NAME || 'bugz').trim();
+const MONGODB_STUDY_LOG_COLLECTION = (
+  process.env.MONGODB_STUDY_LOG_COLLECTION || 'study_session_logs'
+).trim();
+const STATIC_ADMIN_USERNAME = (process.env.ADMIN_LOGIN_USERNAME || 'admin').trim();
+const STATIC_ADMIN_PASSWORD = process.env.ADMIN_LOGIN_PASSWORD || '123456';
+const ADMIN_SESSION_MAX_AGE_SECONDS = 8 * 60 * 60;
+const ADMIN_SESSION_SECRET =
+  process.env.ADMIN_SESSION_SECRET ||
+  crypto
+    .createHash('sha256')
+    .update(`bugz-static-admin-v1:${STATIC_ADMIN_USERNAME}:${STATIC_ADMIN_PASSWORD}`)
+    .digest('hex');
 
-function logClosedStudySession(sessionId: string, session: ExtendedSessionRecord): void {
-  if (session.ended_at === undefined) return;
+type AdminStudySessionLog = StudySessionLogEntry & {
+  study_duration_ms: number;
+  study_duration_minutes: number;
+  logged_at: number;
+};
+
+let mongoClientPromise: Promise<MongoClient> | null = null;
+let mongoStudyLogCollectionPromise: Promise<Collection<AdminStudySessionLog>> | null = null;
+
+async function getMongoStudyLogCollection(): Promise<Collection<AdminStudySessionLog> | null> {
+  if (!MONGODB_URI) return null;
+
+  if (!mongoStudyLogCollectionPromise) {
+    mongoStudyLogCollectionPromise = (async () => {
+      if (!mongoClientPromise) {
+        const client = new MongoClient(MONGODB_URI, {
+          maxPoolSize: 10,
+          serverSelectionTimeoutMS: 8_000,
+        });
+        mongoClientPromise = client.connect().catch((error) => {
+          mongoClientPromise = null;
+          throw error;
+        });
+      }
+
+      const client = await mongoClientPromise;
+      const collection = client
+        .db(MONGODB_DB_NAME)
+        .collection<AdminStudySessionLog>(MONGODB_STUDY_LOG_COLLECTION);
+      await collection.createIndex(
+        { device_id: 1, session_id: 1 },
+        { unique: true, name: 'unique_device_session' }
+      );
+      await collection.createIndex({ ended_at: -1 }, { name: 'ended_at_desc' });
+      return collection;
+    })().catch((error) => {
+      mongoStudyLogCollectionPromise = null;
+      throw error;
+    });
+  }
+
+  return mongoStudyLogCollectionPromise;
+}
+
+function buildStudySessionLogEntry(
+  sessionId: string,
+  session: ExtendedSessionRecord
+): StudySessionLogEntry | null {
+  if (session.ended_at === undefined) return null;
   const state = p01Store.getState();
   const student = state.students[session.student_id];
   const account =
     (student?.auth_uid ? state.users[student.auth_uid] : undefined) ||
     (student?.guardian_owner_uid ? state.users[student.guardian_owner_uid] : undefined);
+  return {
+    session_id: sessionId,
+    student_name: student?.display_name || session.student_id || 'Không rõ',
+    account_name: account?.full_name || student?.display_name || 'Không rõ',
+    email: account?.email || '',
+    phone: account?.phone || '',
+    device_id: session.device_id,
+    started_at: session.started_at,
+    ended_at: session.ended_at,
+    good_duration_ms: session.good_duration_ms,
+    bad_duration_ms: session.bad_duration_ms,
+  };
+}
 
+function withStudySessionDurations(
+  entry: StudySessionLogEntry,
+  loggedAt = Date.now()
+): AdminStudySessionLog {
+  const durationMs = Math.max(0, entry.ended_at - entry.started_at);
+  return {
+    ...entry,
+    study_duration_ms: durationMs,
+    study_duration_minutes: Number((durationMs / 60000).toFixed(2)),
+    logged_at: loggedAt,
+  };
+}
+
+function constantTimeTextEqual(actual: string, expected: string): boolean {
+  const actualHash = crypto.createHash('sha256').update(actual).digest();
+  const expectedHash = crypto.createHash('sha256').update(expected).digest();
+  return crypto.timingSafeEqual(actualHash, expectedHash);
+}
+
+function createStaticAdminSessionToken(): string {
+  const payload = Buffer.from(
+    JSON.stringify({
+      v: 1,
+      sub: 'static-admin',
+      username: STATIC_ADMIN_USERNAME,
+      exp: Math.floor(Date.now() / 1000) + ADMIN_SESSION_MAX_AGE_SECONDS,
+    }),
+    'utf8'
+  ).toString('base64url');
+  const signature = crypto.createHmac('sha256', ADMIN_SESSION_SECRET).update(payload).digest('base64url');
+  return `${payload}.${signature}`;
+}
+
+function readCookie(req: Request, name: string): string | null {
+  const raw = req.headers.cookie || '';
+  for (const part of raw.split(';')) {
+    const [key, ...valueParts] = part.trim().split('=');
+    if (key === name) return decodeURIComponent(valueParts.join('='));
+  }
+  return null;
+}
+
+function hasValidStaticAdminSession(req: Request): boolean {
+  const token = readCookie(req, 'bugz_admin_session');
+  if (!token) return false;
+  const [payload, signature, ...extra] = token.split('.');
+  if (!payload || !signature || extra.length > 0) return false;
+  const expected = crypto.createHmac('sha256', ADMIN_SESSION_SECRET).update(payload).digest('base64url');
+  if (!constantTimeTextEqual(signature, expected)) return false;
   try {
-    appendStudySessionLogCsv(STUDY_SESSION_LOG_FILE, {
-      session_id: sessionId,
-      student_name: student?.display_name || session.student_id || 'Không rõ',
-      account_name: account?.full_name || student?.display_name || 'Không rõ',
-      email: account?.email || '',
-      phone: account?.phone || '',
-      device_id: session.device_id,
-      started_at: session.started_at,
-      ended_at: session.ended_at,
-      good_duration_ms: session.good_duration_ms,
-      bad_duration_ms: session.bad_duration_ms,
-    });
+    const parsed = JSON.parse(Buffer.from(payload, 'base64url').toString('utf8')) as {
+      v?: number;
+      sub?: string;
+      username?: string;
+      exp?: number;
+    };
+    return (
+      parsed.v === 1 &&
+      parsed.sub === 'static-admin' &&
+      parsed.username === STATIC_ADMIN_USERNAME &&
+      Number(parsed.exp) > Math.floor(Date.now() / 1000)
+    );
+  } catch {
+    return false;
+  }
+}
+
+function staticAdminActor(): VerifiedActorToken {
+  return {
+    uid: 'uid-static-admin',
+    email: 'admin@bugz.local',
+    email_verified: true,
+    name: 'Quản trị viên',
+    admin: true,
+    superadmin: true,
+    role: 'superadmin',
+  };
+}
+
+async function logClosedStudySession(
+  sessionId: string,
+  session: ExtendedSessionRecord
+): Promise<void> {
+  const entry = buildStudySessionLogEntry(sessionId, session);
+  if (!entry) return;
+
+  // Local/Mac/Windows: giữ CSV dự phòng trong project. Cloud Run: chỉ ghi file khi
+  // người vận hành chủ động cấu hình volume; MongoDB mới là bản lưu bền vững.
+  if (!IS_CLOUD_RUN || Boolean(process.env.STUDY_SESSION_LOG_FILE)) {
+    try {
+      appendStudySessionLogCsv(STUDY_SESSION_LOG_FILE, entry);
+    } catch (error) {
+      console.error('[STUDY_SESSION_LOG] Không thể ghi file CSV:', error);
+    }
+  }
+
+  // MongoDB là kho riêng phía server. Frontend không nhận URI và chỉ Superadmin
+  // có thể đọc dữ liệu thông qua API đã xác thực.
+  try {
+    const collection = await getMongoStudyLogCollection();
+    if (collection) {
+      const document = withStudySessionDurations(entry);
+      await collection.updateOne(
+        { device_id: document.device_id, session_id: document.session_id },
+        { $set: document },
+        { upsert: true }
+      );
+    }
   } catch (error) {
-    console.error('[STUDY_SESSION_LOG] Không thể ghi file CSV:', error);
+    console.error('[STUDY_SESSION_LOG] Không thể đồng bộ MongoDB:', error);
   }
 }
 
@@ -392,6 +566,10 @@ async function resolveRequestActor(req: Request): Promise<
   | { mode: 'unauthenticated'; message: string }
   | { mode: 'authenticated'; isSandbox: boolean; actor: VerifiedActorToken }
 > {
+  if (hasValidStaticAdminSession(req)) {
+    return { mode: 'authenticated', isSandbox: false, actor: staticAdminActor() };
+  }
+
   const isSandboxHeader = req.headers['x-bugz-emulator-sandbox'] === 'true';
   const rawSandboxActor = req.headers['x-bugz-sandbox-actor'];
 
@@ -407,12 +585,15 @@ async function resolveRequestActor(req: Request): Promise<
       if (!parsed?.uid || !parsed?.email) {
         return { mode: 'unauthenticated', message: 'Token Emulator P01 thiếu uid hoặc email.' };
       }
-      const effectiveRole = syncSuperAdminInMemoryIfBootstrapOwner({
-        uid: parsed.uid,
-        email: parsed.email,
-        email_verified: Boolean(parsed.email_verified),
-        name: parsed.name,
-      });
+      const effectiveRole =
+        process.env.NODE_ENV === 'production'
+          ? 'student'
+          : syncSuperAdminInMemoryIfBootstrapOwner({
+              uid: parsed.uid,
+              email: parsed.email,
+              email_verified: Boolean(parsed.email_verified),
+              name: parsed.name,
+            });
       return {
         mode: 'authenticated',
         isSandbox: true,
@@ -780,6 +961,42 @@ async function startServer() {
       stageFeatureChecks: stageChecks,
       services: buildIntegrationStatus(),
     });
+  });
+
+  // Tài khoản quản trị cố định, không lưu vào MongoDB/Firebase. Mật khẩu chỉ được
+  // kiểm tra phía server; cookie HttpOnly giữ phiên trong 8 giờ.
+  app.post('/api/auth/admin-login', (req: Request, res: Response) => {
+    const username = String(req.body?.username || '').trim();
+    const password = String(req.body?.password || '');
+    const isValid =
+      constantTimeTextEqual(username, STATIC_ADMIN_USERNAME) &&
+      constantTimeTextEqual(password, STATIC_ADMIN_PASSWORD);
+    res.setHeader('Cache-Control', 'no-store');
+    if (!isValid) {
+      res.status(401).json({
+        error: 'INVALID_ADMIN_CREDENTIALS',
+        message: 'Tài khoản hoặc mật khẩu quản trị không đúng.',
+      });
+      return;
+    }
+
+    const token = createStaticAdminSessionToken();
+    const secure =
+      process.env.NODE_ENV === 'production' || req.headers['x-forwarded-proto'] === 'https';
+    res.setHeader(
+      'Set-Cookie',
+      `bugz_admin_session=${encodeURIComponent(token)}; HttpOnly; SameSite=Lax; Path=/; Max-Age=${ADMIN_SESSION_MAX_AGE_SECONDS}${secure ? '; Secure' : ''}`
+    );
+    res.json({ ok: true, actor: staticAdminActor(), redirectTo: '/admin' });
+  });
+
+  app.delete('/api/auth/admin-session', (_req: Request, res: Response) => {
+    const secure = process.env.NODE_ENV === 'production';
+    res.setHeader(
+      'Set-Cookie',
+      `bugz_admin_session=; HttpOnly; SameSite=Lax; Path=/; Max-Age=0${secure ? '; Secure' : ''}`
+    );
+    res.json({ ok: true });
   });
 
   // 2. Endpoint lấy thông tin phiên người dùng hiện tại + các nhánh dữ liệu được phép đọc theo RBAC (P01)
@@ -1309,6 +1526,96 @@ async function startServer() {
       captures: Object.values(state.capture_metadata).sort(
         (a, b) => b.created_at - a.created_at
       ),
+    });
+  });
+
+  // Nhật ký phiên học chứa PII: chỉ Superadmin được đọc qua server, không mở RTDB cho client.
+  app.get('/api/admin/study-logs', async (req: Request, res: Response) => {
+    const resolved = await resolveRequestActor(req);
+    if (resolved.mode === 'unconfigured') {
+      res.status(503).json({
+        error: 'SERVICE_NOT_CONFIGURED',
+        message: 'Chưa cấu hình Firebase Admin SDK.',
+        missingVars: resolved.missingVars,
+      });
+      return;
+    }
+    if (resolved.mode === 'unauthenticated') {
+      res.status(401).json({ error: 'UNAUTHENTICATED', message: resolved.message });
+      return;
+    }
+    if (resolved.actor.role !== 'superadmin') {
+      res.status(403).json({
+        error: 'FORBIDDEN_NOT_SUPERADMIN',
+        message: 'Chỉ Superadmin mới được xem nhật ký phiên học.',
+      });
+      return;
+    }
+
+    const merged = new Map<string, AdminStudySessionLog>();
+    const state = p01Store.getState();
+    for (const [deviceId, bySession] of Object.entries(state.sessions)) {
+      for (const [sessionId, session] of Object.entries(bySession)) {
+        const entry = buildStudySessionLogEntry(sessionId, session);
+        if (!entry) continue;
+        const normalized = withStudySessionDurations(entry, session.ended_at || Date.now());
+        merged.set(`${deviceId}:${sessionId}`, normalized);
+      }
+    }
+
+    const query = String(req.query.q || '').trim().toLocaleLowerCase('vi');
+    const limit = Math.max(1, Math.min(500, Number(req.query.limit) || 200));
+
+    try {
+      const collection = await getMongoStudyLogCollection();
+      if (collection) {
+        const remote = await collection.find({}).sort({ ended_at: -1 }).limit(500).toArray();
+        for (const item of remote) {
+          if (!item?.session_id || !item?.device_id) continue;
+          merged.set(`${item.device_id}:${item.session_id}`, item);
+        }
+      }
+    } catch (error) {
+      console.error('[STUDY_SESSION_LOG] Không thể đọc MongoDB:', error);
+      res.status(503).json({
+        error: 'MONGODB_UNAVAILABLE',
+        message: 'Kho nhật ký MongoDB đang tạm thời không kết nối được. Vui lòng thử lại.',
+      });
+      return;
+    }
+
+    const logs = Array.from(merged.values())
+      .filter((item) => {
+        if (!query) return true;
+        return [
+          item.student_name,
+          item.account_name,
+          item.email,
+          item.phone,
+          item.session_id,
+          item.device_id,
+        ].some((value) => String(value || '').toLocaleLowerCase('vi').includes(query));
+      })
+      .sort((a, b) => b.ended_at - a.ended_at)
+      .slice(0, limit);
+
+    res.json({
+      ok: true,
+      logs,
+      summary: {
+        session_count: logs.length,
+        learner_count: new Set(logs.map((item) => item.student_name)).size,
+        total_study_duration_ms: logs.reduce((sum, item) => sum + item.study_duration_ms, 0),
+        total_good_duration_ms: logs.reduce(
+          (sum, item) => sum + Math.max(0, item.good_duration_ms || 0),
+          0
+        ),
+        total_bad_duration_ms: logs.reduce(
+          (sum, item) => sum + Math.max(0, item.bad_duration_ms || 0),
+          0
+        ),
+      },
+      storage: MONGODB_URI ? 'mongodb' : 'memory_and_local_csv',
     });
   });
 
@@ -2004,7 +2311,7 @@ async function startServer() {
       await persistRobotAndSessionState(deviceId, result.session_id);
       if (result.closed_previous_session_id) {
         const previous = p01Store.getState().sessions[deviceId]?.[result.closed_previous_session_id];
-        if (previous) logClosedStudySession(result.closed_previous_session_id, previous);
+        if (previous) await logClosedStudySession(result.closed_previous_session_id, previous);
       }
     }
 
@@ -2057,7 +2364,7 @@ async function startServer() {
     }
 
     if (result.ok && result.session) {
-      logClosedStudySession(sessionId, result.session);
+      await logClosedStudySession(sessionId, result.session);
     }
 
     res.status(result.status).json({
@@ -4174,7 +4481,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    // Khởi động sạch sẽ trên cổng 3000
+    console.log(`[BUGZ] Server đang lắng nghe tại 0.0.0.0:${PORT}`);
   });
 }
 
