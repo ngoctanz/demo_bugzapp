@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "base": "Firebase Realtime Database, giữ nguyên4nhómnguồn",
+  "core_paths": {
+    "users/{uid}": {
+      "full_name": "string",
+      "email": "string"
+    },
+    "devices/{device_id}": {
+      "user_id": "string parent Auth UID",
+      "device_name": "string",
+      "monitoring_enabled": "boolean",
+      "current_posture": "good|bad|absent|unknown",
+      "monitoring_active": "boolean",
+      "alert_after_sec": "positive integer",
+      "last_seen_at": "optional UTC epoch ms"
+    },
+    "sessions/{device_id}/{session_id}": {
+      "device_id": "string",
+      "started_at": "UTC epoch ms",
+      "ended_at": "optional UTC epoch ms >= started_at",
+      "good_count": "nonnegative integer episodes",
+      "bad_count": "nonnegative integer episodes"
+    },
+    "alerts/{device_id}/{session_id}/{alert_id}": {
+      "session_id": "string",
+      "message": "string",
+      "created_at": "UTC epoch ms",
+      "is_read": "boolean parent app-read state"
+    }
+  },
+  "extensions": [
+    "students",
+    "guardian_students",
+    "student_accounts",
+    "device_access",
+    "account_roles",
+    "episode_log",
+    "student_alerts",
+    "learning_days",
+    "learning_progress",
+    "questions_public",
+    "question_keys",
+    "game_attempts",
+    "notification_preferences",
+    "push_tokens",
+    "notification_jobs",
+    "notification_reads",
+    "capture_metadata",
+    "device_runtime",
+    "command_jobs",
+    "content_assets",
+    "certificate_requests",
+    "audit_logs"
+  ],
+  "warning": "Đây là hợp đồng dữ liệu, không phải Security Rules đã triển khai. Không deploy dưới dạng file Rules. null nghĩa xóa trong RTDB; bỏ trường thiếu."
+}

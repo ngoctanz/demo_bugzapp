@@ -1,0 +1,133 @@
+{
+  "stage": "P06",
+  "version": "1.0.0-p06",
+  "generated_at": "2026-11-06T16:30:51.007Z",
+  "project_id": "gen-lang-client-0531599250",
+  "region": "asia-southeast1",
+  "summary": {
+    "total_test_cases": 30,
+    "passed_in_repo_and_browser": 28,
+    "passed_code_blocked_live_external": 2,
+    "external_blocked_codes": [
+      "T21",
+      "T24"
+    ],
+    "p0_guardrails_passed": 10,
+    "p0_guardrails_total": 10
+  },
+  "latency_benchmark_20_samples": {
+    "ok": true,
+    "status": 200,
+    "samplesCount": 20,
+    "samplesMs": [
+      2.583,
+      0.754,
+      0.936,
+      0.632,
+      0.653,
+      0.321,
+      0.343,
+      0.289,
+      0.218,
+      0.171,
+      0.2,
+      0.237,
+      0.229,
+      0.269,
+      0.254,
+      0.252,
+      0.232,
+      0.234,
+      0.203,
+      0.173
+    ],
+    "minMs": 0.171,
+    "medianMs": 0.254,
+    "p95Ms": 0.936,
+    "maxMs": 2.583,
+    "targetSlaP95Ms": 5000,
+    "withinTargetSla": true,
+    "sourceLabel": "simulator_benchmark_pipeline",
+    "scopeNote": "Đo 20 lần liên tiếp thời gian xử lý nội bộ từ gói MQTT hợp lệ -> Bridge FSM -> Outbox Transaction -> Projection Worker -> tạo Alert/Notification Job (Mục 17 Artifact: mục tiêu p95 <= 5000ms). Không bao gồm độ trễ mạng Internet ngoài hoặc thời gian suy luận camera trên phần cứng Robot thật; không phải độ chính xác nhận diện mô hình AI."
+  },
+  "secret_hygiene_t30": {
+    "passed": true,
+    "checkedClientVars": [],
+    "ExposedSecretVarsCount": 0,
+    "details": "Không có bất kỳ khóa bí mật (Service Account, Private Key, MQTT Password, SMTP Password) nào nằm trong biến môi trường VITE_* hoặc bundle phía trình duyệt (Đạt T30)."
+  },
+  "artifacts": {
+    "demo_backup_seed": "docs/project/DEMO_BACKUP_SEED_P06.json",
+    "clean_source_archive": "docs/project/BUGZ_BrightUpGenZ_P06_Clean_Source.tar.gz",
+    "clean_source_archive_bytes": 486270,
+    "deploy_guide": "DEPLOY_FIREBASE.md",
+    "readme": "README.md",
+    "storage_rules": "storage.rules",
+    "rtdb_rules": "database.rules.json",
+    "firebase_config": "firebase.json"
+  },
+  "demo_6_minute_script": [
+    {
+      "minuteRange": "Phút 0:00 – 0:45",
+      "stepTitle": "1. Giới thiệu bài toán, 3 Module liên thông & Minh bạch dữ liệu",
+      "actorAndRoute": "Khách / Học sinh tại /learn và /integration-status",
+      "sourceBadge": "REAL_CONTENT",
+      "actions": [
+        "Mở trang chủ Học 28 ngày (/learn), giới thiệu 3 module: (1) Học & Thực hành 28 ngày, (2) Robot đồng hành MQTT, (3) Trò chơi rèn luyện.",
+        "Nhấn mạnh nguyên tắc trung thực của bản dự thi: tách biệt hoàn toàn Tiến độ tự thực hành, Điểm trò chơi và Số đợt quan sát từ Robot; số liệu khảo sát trong thuyết minh gắn nhãn source_reported."
+      ],
+      "expectedEvidence": "Giao diện sáng rõ, logo gốc logo1.png, hiển thị đủ 4 bản đồ tuần (Tuan1.png..Tuan4.png)."
+    },
+    {
+      "minuteRange": "Phút 0:45 – 2:00",
+      "stepTitle": "2. Đăng nhập Học sinh & Thực hành Lộ trình 28 Ngày (Bóng đèn + Huy chương + Ngày 28)",
+      "actorAndRoute": "Học sinh Bé Minh (uid-student-a1 / stu-a1) tại /login -> /learn/days/1 -> /learn/days/25 -> /learn/days/28",
+      "sourceBadge": "REAL_CONTENT",
+      "actions": [
+        "Tại /login, chọn tài khoản Học sinh Minh (stu-a1) (hoặc Google Sign-In thật khi đã mở Authorized Domain).",
+        "Mở Ngày 1 (/learn/days/1 — ảnh gốc day1.png) và Ngày 25 (/learn/days/25 — ảnh gốc day25.png).",
+        "Bấm nút Bóng đèn góc dưới phải mở trang giải thích (/learn/days/25/info — ảnh gốc in4 d25.png), sau đó bấm quay lại đúng Ngày 25 (T06).",
+        "Bấm nút Nhận Huy chương góc dưới trái -> mở /learn/days/25/medal (ảnh gốc HC d25.png); bấm lại hoặc reload để chứng minh không cộng trùng ngày hoàn thành (T07).",
+        "Mở Ngày 28 (/learn/days/28) -> bấm nút hoàn thành để chuyển thẳng tới biểu mẫu Yêu cầu nhận chứng nhận (/certificate-request), chứng minh không có Ngày 29 (T08)."
+      ],
+      "expectedEvidence": "Hiển thị đúng ảnh rời day*.png, in4 d*.png, HC d*.png từ Google Drive nguồn; lưu learning_progress/stu-a1/25 idempotent."
+    },
+    {
+      "minuteRange": "Phút 2:00 – 3:45",
+      "stepTitle": "3. Bắt đầu Phiên Robot, Kiểm chứng ACK, Phát Sự kiện MQTT & 3 Kênh Thông báo",
+      "actorAndRoute": "Phụ huynh Gia đình A (uid-guardian-a) hoặc SuperAdmin tại /robot -> /alerts/:alertId -> /robot/history",
+      "sourceBadge": "REAL_OR_SIMULATOR",
+      "actions": [
+        "Mở /robot, chọn hồ sơ Bé Minh (stu-a1) và bắt đầu phiên học trên thiết bị.",
+        "Bấm bật Giám sát (monitoring_enabled=true): chỉ rõ trạng thái \"Đang chờ Robot xác nhận (monitoring_active=false)\" trước khi có gói ACK, sau đó xác nhận ACK để chuyển sang \"Đang giám sát\" (T11).",
+        "Nếu dùng phần cứng Robot thật: ngồi cúi đầu vượt ngưỡng. Nếu phần cứng chưa nối mạng thi: bấm nút \"Phát gói Simulator qua MQTT Ingest (source=simulator)\" hoặc \"Chạy 81 gói mẫu mqtt_examples.json (T12)\" ngay trên /robot.",
+        "Quan sát Banner Cảnh báo trong ứng dụng, bấm \"Nghe lại\" lời nhắc giọng nói tiếng Việt lịch sự (T23), xem trạng thái hợp nhất Listener + FCM Push không trùng lặp (T21) và nhật ký notification_jobs (Push/Email/Quiet Hours) (T24).",
+        "Bấm vào chi tiết cảnh báo (/alerts/:alertId) để xem ảnh capture riêng tư đã kiểm tra quyền gia đình (T19, T20) và gợi ý bài học liên quan; sau đó mở /robot/history lọc lịch sử theo múi giờ Việt Nam (T25)."
+      ],
+      "expectedEvidence": "Nhãn nguồn hiển thị rõ [Nguồn: Simulator MQTT] hoặc [Nguồn: Robot thật]; good_count=2, bad_count=2 khi chạy chuỗi mẫu T12; không lộ ảnh ra màn hình khóa."
+    },
+    {
+      "minuteRange": "Phút 3:45 – 4:50",
+      "stepTitle": "4. Trò chơi Rèn luyện 3 Kiểu Tương tác & Chấm điểm Server Chống Cộng Lặp",
+      "actorAndRoute": "Học sinh Bé Minh (stu-a1) tại /games -> /games/play/situations -> /games/play/desk_builder -> /games/play/habit_relay",
+      "sourceBadge": "REAL_CONTENT",
+      "actions": [
+        "Mở /games: chỉ rõ 3 thẻ chỉ số tách biệt (Điểm Trò chơi Ôn tập vs Tiến độ Tự thực hành 28 ngày vs Quan sát thực tế từ Robot) và cam kết không có bảng xếp hạng trẻ em công khai.",
+        "Vào Kiểu chơi 1 (/games/play/situations): trả lời đúng 1 câu để nhận +10 điểm và giải thích ngay; trả lời sai 1 câu rồi bấm \"Thử lại câu này\" để thấy phản hồi học tập nhưng +0 điểm (chống cộng điểm lặp T26); bấm link Ngày nguồn để đối chiếu bài học.",
+        "Minh họa nhanh Kiểu chơi 2 (/games/play/desk_builder — chạm hoặc dùng bàn phím Tab/Enter ghép kệ kê chân, đèn học, mặt bàn T27) và Kiểu chơi 3 (/games/play/habit_relay — xếp 4 bước thói quen)."
+      ],
+      "expectedEvidence": "Hiển thị đúng 4 ô cảnh của bugz_learning_atlas.png theo illustration_manifest.json; điểm số do Server chấm theo phiên bản câu hỏi đã khóa."
+    },
+    {
+      "minuteRange": "Phút 4:50 – 6:00",
+      "stepTitle": "5. Kiểm chứng Phân quyền Gia đình (T03, T04) & Bảng Quản trị SuperAdmin 9 Phân hệ",
+      "actorAndRoute": "Phụ huynh Gia đình B -> SuperAdmin (minhquantran4312@gmail.com / tamtranmusic@gmail.com) tại /parent & /admin",
+      "sourceBadge": "SERVER_RBAC",
+      "actions": [
+        "Chuyển nhanh sang Phụ huynh Gia đình B tại /login rồi thử mở cảnh báo của Gia đình A (/alerts/alert-a-001) hoặc /admin -> chứng minh bị chặn 403 Forbidden (T03, T04).",
+        "Chuyển sang tài khoản SuperAdmin -> mở /admin: điểm qua 9 phân hệ quản trị (Tổng quan, Người dùng & RBAC, Thiết bị & Pairing, Nội dung 28 ngày chặn xuất bản Ngày 27/28 thiếu in4, Ngân hàng 40 câu hỏi với 28 câu bản thảo bị ẩn khỏi học sinh T28, Mẫu lời nhắc văn minh, Ảnh Capture có ghi Audit Log, Hàng đợi Chứng nhận Ngày 28 và Nhật ký Kiểm toán audit_logs)."
+      ],
+      "expectedEvidence": "Mọi thao tác quản trị và mọi truy cập trái phép đều được ghi vết tức thì trong bảng audit_logs."
+    }
+  ]
+}

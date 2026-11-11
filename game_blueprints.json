@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "proposed_to_implement",
+  "games": [
+    {
+      "id": "situations",
+      "title": "Chọn cách xử lý",
+      "interaction": "single_choice",
+      "questions_per_round": 5,
+      "timer_default": false,
+      "question_source": "question_bank.json",
+      "rules": [
+        "Chỉ chọn câu published",
+        "Hiện phản hồi ngay",
+        "Có thử lại và xem ngày nguồn",
+        "Server chấm theo phiên bản"
+      ]
+    },
+    {
+      "id": "desk_builder",
+      "title": "Sắp góc học tập",
+      "interaction": "drag_or_tap_match",
+      "source_days": [
+        4,
+        5,
+        19
+      ],
+      "tasks": [
+        {
+          "item": "foot_support",
+          "target": "feet",
+          "feedback": "Bàn chân có chỗ đỡ chắc chắn."
+        },
+        {
+          "item": "adjust_lamp",
+          "target": "work_area",
+          "feedback": "Ánh sáng giúp đọc dễ chịu, tránh chói."
+        },
+        {
+          "item": "clear_desk",
+          "target": "desk",
+          "feedback": "Đồ cần dùng gọn và trong tầm với."
+        }
+      ],
+      "accessibility": "Chạm chọn vật rồi chọn vùng; có phím Tab/Enter, không chỉ kéo thả.",
+      "grading": "Chấm từ cặp ID và luật đã duyệt, không suy tọa độ từ ảnh minh họa AI."
+    },
+    {
+      "id": "habit_relay",
+      "title": "Tiếp sức thói quen",
+      "interaction": "sequence_and_reflect",
+      "source_days": [
+        1,
+        8,
+        15,
+        18,
+        26
+      ],
+      "scenario": "Chuẩn bị một lượt học thoải mái và nghỉ đúng lúc.",
+      "cards": [
+        {
+          "id": "prepare",
+          "text": "Chỉnh góc học và chỗ ngồi."
+        },
+        {
+          "id": "study",
+          "text": "Bắt đầu học với tư thế thoải mái."
+        },
+        {
+          "id": "pause",
+          "text": "Đến lúc phù hợp thì nghỉ nhìn gần hoặc vận động nhẹ."
+        },
+        {
+          "id": "return",
+          "text": "Quay lại học và tự quan sát cảm giác."
+        }
+      ],
+      "correct_sequence": [
+        "prepare",
+        "study",
+        "pause",
+        "return"
+      ],
+      "grading": "Chỉ chấm lựa chọn/xếp thẻ; thực hành là tự báo cáo, không khẳng định Robot đã quan sát."
+    }
+  ]
+}

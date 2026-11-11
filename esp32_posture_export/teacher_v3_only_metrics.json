@@ -1,0 +1,6 @@
+{
+  "mode": "v3_only",
+  "val_macro_f1": 0.7871517027863777,
+  "train_accuracy": 0.9685863874345549,
+  "warning": "Teacher is not exported to ESP32. Its validation score is not test accuracy."
+}

@@ -1,0 +1,8 @@
+{
+  "name": "APP BUGZ BrightUpGenZ",
+  "description": "Ứng dụng Webapp/PWA rèn luyện thói quen Mắt sáng Lưng thẳng 28 ngày, Robot đồng hành và Trò chơi rèn luyện cho học sinh và phụ huynh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

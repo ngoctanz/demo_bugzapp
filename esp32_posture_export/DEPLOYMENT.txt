@@ -1,0 +1,11 @@
+Target: classic ESP32-CAM with working PSRAM.
+Use TensorFlow Lite Micro (Espressif esp-tflite-micro), not ESP-DL to read this TFLite model.
+Register ops in model_config.json. Allocate tensor arena and check AllocateTensors status.
+Do not infer arena bytes from model bytes. Measure arena usage, free internal RAM, camera buffers and invoke latency on board.
+Validate golden_input_int8.bin and golden_output.json before camera preprocessing.
+Match RGB channel order, nearest resize/padding and quantization exactly.
+Camera fixed at side, one person fully covering head/shoulders/hips. No person detector included.
+No Empty prediction is trained. If validation threshold is null, do not enable automatic warnings.
+Suggested initial temporal rule: stable Bad for 3 s, stable Good for 2 s; tune with labelled video.
+Camera capture, pixel decode and tensor arena share RAM. PSRAM and allocation strategy depend on firmware.
+This export is not a tested firmware and has no board speed or RAM guarantee.

@@ -1,0 +1,5 @@
+# Generated build output and local configuration (may contain Wi-Fi/MQTT secrets)
+build/
+managed_components/
+sdkconfig
+sdkconfig.old

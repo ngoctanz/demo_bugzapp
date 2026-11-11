@@ -1,0 +1,1985 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-01",
+  "language": "vi",
+  "status": "editorial_draft",
+  "counts": {
+    "total": 40,
+    "lung_thang": 20,
+    "mat_sang": 20
+  },
+  "medical_review": "Chưa thẩm định lâm sàng; cần người phụ trách duyệt trước khi xuất bản cho trẻ.",
+  "sources": {
+    "PROJECT_DOC": {
+      "title": "Thuyết minh dự án",
+      "url": "https://docs.google.com/document/d/1u_QcKfS4_pAX27Q1pE6X5CbBvn5ENTLj/edit"
+    },
+    "PROJECT_FLASHCARDS": {
+      "title": "full flashcard.png đã xem đủ 28 ngày",
+      "url": "https://drive.google.com/file/d/1pXDx90HFAV-7oVSFmHv5m6_C8F8qUWdG/view?usp=drivesdk"
+    },
+    "NHS_SEATING": {
+      "title": "NHS Sitting position and posture",
+      "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-occupational-therapy-service/sitting-position-and-posture/"
+    },
+    "NHS_SEATING_EQUIPMENT": {
+      "title": "NHS Getting Seating Right",
+      "url": "https://childrenscommunitytherapies.uhb.nhs.uk/wp-content/uploads/GettingSeatingRight.pdf"
+    },
+    "AAO_BREAKS": {
+      "title": "AAO về nghỉ mắt và quy tắc 20 20 20",
+      "url": "https://www.aao.org/eye-health/tips-prevention/are-computer-glasses-worth-it"
+    }
+  },
+  "questions": [
+    {
+      "id": "BUGZ-Q001",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Lưng muốn học cùng mình thật thoải mái. Mình chọn cách nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ngồi có điểm tựa nhẹ, vai thả lỏng, chân được đỡ."
+        },
+        {
+          "id": "B",
+          "text": "Gồng vai lên như đang xách hai quả tạ tưởng tượng."
+        },
+        {
+          "id": "C",
+          "text": "Cúi sát bàn để chào từng con chữ."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+      "feedback_correct": "Chuẩn rồi! Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+      "feedback_incorrect": "Vai không cần đi tập tạ trong giờ học đâu nhé. Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+      "source_days": [
+        1
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 1 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q002",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Ngồi vào ghế mà chân cứ đung đưa trên không, mình làm gì trước?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rủ chân thi đu đến hết buổi."
+        },
+        {
+          "id": "B",
+          "text": "Nhờ người lớn chỉnh ghế hoặc dùng kê chân chắc chắn, vừa tầm."
+        },
+        {
+          "id": "C",
+          "text": "Ngồi lên thật cao rồi cố nhón mũi chân."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+      "feedback_correct": "Chuẩn rồi! Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+      "feedback_incorrect": "Chân cũng thích có bến đỗ riêng mà. Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+      "source_days": [
+        5
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING_EQUIPMENT"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 5 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q003",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Bàn thấp quá khiến mình phải cúi người nhiều. Cách xử lý hợp lý là gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cúi thêm một chút cho quen luôn."
+        },
+        {
+          "id": "B",
+          "text": "Cố chịu vì cái bàn chắc chắn hiểu mình."
+        },
+        {
+          "id": "C",
+          "text": "Nhờ người lớn điều chỉnh bàn ghế cho vừa người."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+      "feedback_correct": "Chuẩn rồi! Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+      "feedback_incorrect": "Cái bàn chưa biết tự lớn lên đâu, mình nhờ người lớn nhé. Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+      "source_days": [
+        5,
+        19
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING_EQUIPMENT"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 5, 19 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q004",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Đầu đang cúi quá thấp khi học, mình nên thử cách nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chỉnh chỗ ngồi và tài liệu để đầu, cổ ở tư thế dễ chịu hơn."
+        },
+        {
+          "id": "B",
+          "text": "Nín thở để cổ đứng yên."
+        },
+        {
+          "id": "C",
+          "text": "Dí đầu gần hơn để chữ thấy mình rõ."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+      "feedback_correct": "Chuẩn rồi! Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+      "feedback_incorrect": "Con chữ vẫn thấy bạn mà, không cần dí sát đâu. Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+      "source_days": [
+        1,
+        3
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 1, 3 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q005",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Ngồi học một lúc rồi thấy người bí bách, mình chọn gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gồng hết người để chứng tỏ mình chăm."
+        },
+        {
+          "id": "B",
+          "text": "Đứng dậy nghỉ vận động nhẹ khi phù hợp."
+        },
+        {
+          "id": "C",
+          "text": "Giữ nguyên như tượng cho đến cuối buổi."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+      "feedback_correct": "Chuẩn rồi! Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+      "feedback_incorrect": "Chăm học không bắt buộc phải hóa thành tượng nhé. Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+      "source_days": [
+        15,
+        18
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 15, 18 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q006",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Viết bài mà hai vai cứ phải nhún cao để với bàn, mình nên làm gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ráng viết nhanh để vai khỏi kịp mỏi."
+        },
+        {
+          "id": "B",
+          "text": "Nhún thêm cho vai cao bằng bàn."
+        },
+        {
+          "id": "C",
+          "text": "Kiểm tra độ cao bàn ghế cùng người lớn."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+      "feedback_correct": "Chuẩn rồi! Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+      "feedback_incorrect": "Vai chưa nhận nhiệm vụ làm giá đỡ đâu. Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+      "source_days": [
+        5
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING_EQUIPMENT"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 5 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q007",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Thấy bạn cúi người lâu, câu nhắc nào dễ nghe nhất?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mình thả lỏng vai rồi chỉnh chỗ ngồi cùng nhau nhé!"
+        },
+        {
+          "id": "B",
+          "text": "Ngồi thế xấu quá, cả lớp nhìn kìa!"
+        },
+        {
+          "id": "C",
+          "text": "Để tớ chụp rồi đăng lên nhóm cho vui."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+      "feedback_correct": "Chuẩn rồi! Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+      "feedback_incorrect": "Mình làm đồng đội của bạn, không làm ban giám khảo hình dáng nhé. Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+      "source_days": [
+        21,
+        26
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 21, 26 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q008",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Có lời nhắc chỉnh tư thế trong lúc học, mình nên làm gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gồng lưng thật cứng để máy khỏi nhắc."
+        },
+        {
+          "id": "B",
+          "text": "Bình tĩnh xem hướng dẫn, chỉnh chỗ ngồi và thả lỏng vai."
+        },
+        {
+          "id": "C",
+          "text": "Cáu với cái thông báo rồi bỏ qua mọi hướng dẫn."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+      "feedback_correct": "Chuẩn rồi! Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+      "feedback_incorrect": "Mình chỉnh nhẹ thôi, không cần vào vai siêu nhân bất động. Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+      "source_days": [
+        1
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 1 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q009",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Bàn đầy đồ khiến vở phải nằm tận mép xa. Mình xử lý sao?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chồng thêm vài cuốn cho bàn có phong cách."
+        },
+        {
+          "id": "B",
+          "text": "Vươn người qua cả núi đồ."
+        },
+        {
+          "id": "C",
+          "text": "Dọn bớt đồ, đưa tài liệu cần dùng đến vị trí dễ với."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+      "feedback_correct": "Chuẩn rồi! Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+      "feedback_incorrect": "Dọn đường cho cuốn vở về nhà nào. Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+      "source_days": [
+        19
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 19 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q010",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Nhờ người thân xem tư thế qua một tấm ảnh, cách dùng nào hợp lý?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dùng ảnh để cùng xem cách ngồi và điều chỉnh, không tự chẩn đoán."
+        },
+        {
+          "id": "B",
+          "text": "Coi ảnh là kết luận chắc chắn mình có bệnh."
+        },
+        {
+          "id": "C",
+          "text": "Đăng ảnh bạn bè để mọi người chấm điểm dáng."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+      "feedback_correct": "Chuẩn rồi! Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+      "feedback_incorrect": "Ảnh là bạn quan sát, chưa phải bác sĩ mini đâu. Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+      "source_days": [
+        22
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 22 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q011",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Khi viết, cách chuẩn bị nào giúp mình dễ ngồi hơn?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kẹp vai thật chặt cho bút chạy nhanh."
+        },
+        {
+          "id": "B",
+          "text": "Đặt vở và bút ở vị trí thuận tay, ngồi gọn và thư giãn vai."
+        },
+        {
+          "id": "C",
+          "text": "Đẩy vở thật xa rồi rướn người theo."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+      "feedback_correct": "Chuẩn rồi! Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+      "feedback_incorrect": "Để bút làm việc, vai được thư giãn một chút nhé. Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+      "source_days": [
+        20
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 20 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q012",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Nhóm bạn cùng rèn thói quen nên hoạt động thế nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chỉ khen người giữ im một tư thế lâu nhất."
+        },
+        {
+          "id": "B",
+          "text": "Thi xem ai chê bạn sắc sảo hơn."
+        },
+        {
+          "id": "C",
+          "text": "Cùng nhắc nhẹ, cùng chỉnh góc học, ghi nhận nỗ lực."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+      "feedback_correct": "Chuẩn rồi! Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+      "feedback_incorrect": "Đồng đội giỏi là đồng đội biết giúp nhau mà. Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+      "source_days": [
+        21
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 21 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q013",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Đến giờ nghỉ ngắn, mình chọn cách vươn vai nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vươn nhẹ, thoải mái, không cố làm đau mình."
+        },
+        {
+          "id": "B",
+          "text": "Kéo thật mạnh để nhanh có thành tích."
+        },
+        {
+          "id": "C",
+          "text": "Thi ai làm động tác khó nhất."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+      "feedback_correct": "Chuẩn rồi! Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+      "feedback_incorrect": "Mình nghỉ cho dễ chịu, không thi xiếc đâu nha. Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+      "source_days": [
+        15
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 15 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q014",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Ngày 18 gợi ý nghỉ đi lại. Ý chính mình cần nhớ là gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chỉ ngón tay bấm game mới cần hoạt động."
+        },
+        {
+          "id": "B",
+          "text": "Có lúc rời ghế vận động nhẹ thay vì ngồi liền mãi."
+        },
+        {
+          "id": "C",
+          "text": "Càng ngồi bất động lâu càng tốt."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+      "feedback_correct": "Chuẩn rồi! Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+      "feedback_incorrect": "Đôi chân cũng muốn được tham gia buổi học nhé. Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+      "source_days": [
+        18
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 18 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q015",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Sau thử thách học đầu tiên, điều nào đáng ghi nhận?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hôm nay mình bỏ qua mọi bước nhưng bấm huy chương thật nhanh."
+        },
+        {
+          "id": "B",
+          "text": "Chỉ xem mình làm nhanh hơn ai."
+        },
+        {
+          "id": "C",
+          "text": "Mình đã chuẩn bị chỗ học và thực hành theo hướng dẫn."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+      "feedback_correct": "Chuẩn rồi! Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+      "feedback_incorrect": "Huy chương thích đi cùng nỗ lực thật đó. Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+      "source_days": [
+        7
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 7 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q016",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Làm flashcard riêng về tư thế, mình nên viết gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Một việc cụ thể, dễ hiểu, dựa vào bài đã học và kèm tranh rõ."
+        },
+        {
+          "id": "B",
+          "text": "Một lời hứa ngồi đúng là sẽ chữa mọi bệnh."
+        },
+        {
+          "id": "C",
+          "text": "Càng nhiều chữ càng khó hiểu càng hay."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+      "feedback_correct": "Chuẩn rồi! Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+      "feedback_incorrect": "Mình làm thẻ nhắc nhớ, không làm lá bùa siêu năng lực. Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+      "source_days": [
+        25
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 25 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q017",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Muốn rủ một bạn cùng tập thói quen, mình có thể nói gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mình ép bạn ngồi im cả tiết nhé."
+        },
+        {
+          "id": "B",
+          "text": "Đến giờ nghỉ rồi, mình đứng dậy thư giãn một chút nhé?"
+        },
+        {
+          "id": "C",
+          "text": "Bạn không làm là mình chê ngay."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+      "feedback_correct": "Chuẩn rồi! Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+      "feedback_incorrect": "Rủ bạn bằng một lời dễ thương là đủ rồi. Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+      "source_days": [
+        26
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 26 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q018",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Ngày Không Flashcard muốn mình thử điều gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Không cần để ý cơ thể nữa."
+        },
+        {
+          "id": "B",
+          "text": "Quên hết các thói quen đã học."
+        },
+        {
+          "id": "C",
+          "text": "Tự nhớ những thói quen phù hợp khi học, đọc và ngồi."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+      "feedback_correct": "Chuẩn rồi! Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+      "feedback_incorrect": "Không cầm thẻ nhưng kiến thức vẫn đi cùng mình mà. Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+      "source_days": [
+        27
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 27 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q019",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Hoàn thành 28 ngày và nhận giấy chúc mừng có nghĩa là gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nỗ lực rèn thói quen được ghi nhận; mình vẫn tiếp tục chăm sóc bản thân."
+        },
+        {
+          "id": "B",
+          "text": "Mọi vấn đề mắt và lưng đều đã được chữa khỏi."
+        },
+        {
+          "id": "C",
+          "text": "Từ nay không cần chú ý tư thế nữa."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+      "feedback_correct": "Chuẩn rồi! Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+      "feedback_incorrect": "Mình nhận lời chúc mừng, không nhận một chiếc áo giáp sức khỏe nhé. Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+      "source_days": [
+        28
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 28 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "MOVE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q020",
+      "topic": "lung_thang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Một góc học hợp với mình cần điều gì nhất?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ghế thật cao cho mình có tầm vóc."
+        },
+        {
+          "id": "B",
+          "text": "Bàn ghế phù hợp, chân có điểm đỡ, tài liệu dễ dùng."
+        },
+        {
+          "id": "C",
+          "text": "Bàn thật to dù phải với khắp nơi."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+      "feedback_correct": "Chuẩn rồi! Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+      "feedback_incorrect": "Góc học chọn vừa người là được điểm rồi. Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+      "source_days": [
+        1,
+        5
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING_EQUIPMENT"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 1, 5 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q021",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Theo flashcard đọc và viết của dự án, sách/vở nên ở khoảng nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Càng xa đến mức không đọc được càng tốt."
+        },
+        {
+          "id": "B",
+          "text": "Dí sát mũi cho chữ khỏi chạy."
+        },
+        {
+          "id": "C",
+          "text": "Khoảng 30–35 cm theo hướng dẫn trong thẻ."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+      "feedback_correct": "Chuẩn rồi! Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+      "feedback_incorrect": "Cho cuốn vở một khoảng thở vừa phải nào. Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+      "source_days": [
+        1,
+        2
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 1, 2 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q022",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Cứ phải đưa mắt sát vở mới đọc được, mình nên làm gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chỉnh vị trí, ánh sáng và báo người lớn nếu vẫn khó nhìn."
+        },
+        {
+          "id": "B",
+          "text": "Cố dí sát hơn cả buổi."
+        },
+        {
+          "id": "C",
+          "text": "Giấu đi vì chữ nhỏ là thử thách bí mật."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+      "feedback_correct": "Chuẩn rồi! Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+      "feedback_incorrect": "Cuốn vở không cần một cái ôm bằng mũi đâu nhé. Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+      "source_days": [
+        2
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 2 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q023",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Góc học tối, mình nên bắt đầu bằng việc nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bật trò chơi cho màn hình sáng hộ cuốn vở."
+        },
+        {
+          "id": "B",
+          "text": "Bổ sung hoặc điều chỉnh ánh sáng để thấy tài liệu rõ, dễ chịu."
+        },
+        {
+          "id": "C",
+          "text": "Nheo mắt thật chăm chỉ thay đèn."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+      "feedback_correct": "Chuẩn rồi! Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+      "feedback_incorrect": "Đôi mắt không cần nhận thêm ca trực trong bóng tối. Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+      "source_days": [
+        4
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 4 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q024",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Đèn chiếu khiến trang giấy chói, mình xử lý sao?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Giữ nguyên vì càng chói càng học giỏi."
+        },
+        {
+          "id": "B",
+          "text": "Đưa mặt sát vào vùng chói."
+        },
+        {
+          "id": "C",
+          "text": "Chỉnh vị trí hoặc hướng đèn để đọc dễ chịu hơn."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+      "feedback_correct": "Chuẩn rồi! Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+      "feedback_incorrect": "Đèn làm trợ lý thôi, đừng để đèn thành đèn sân khấu. Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+      "source_days": [
+        4
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 4 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q025",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Học việc gần được một lúc, quy tắc 20-20-20 nhắc mình làm gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Khoảng mỗi 20 phút, nhìn xa khoảng 6 mét trong ít nhất 20 giây."
+        },
+        {
+          "id": "B",
+          "text": "Chơi tiếp thêm 20 màn."
+        },
+        {
+          "id": "C",
+          "text": "Nhìn thật sát trong 20 giây."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+      "feedback_correct": "Chuẩn rồi! 20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+      "feedback_incorrect": "Ba số 20 ở đây dành vé nghỉ cho mắt nhé. 20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+      "source_days": [
+        8
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q026",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Trong lúc nghỉ mắt theo 20-20-20, hoạt động nào phù hợp?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Đọc chữ bé hơn để mắt luyện thêm."
+        },
+        {
+          "id": "B",
+          "text": "Ngước nhìn một vật ở xa và thả lỏng."
+        },
+        {
+          "id": "C",
+          "text": "Đổi từ sách sang điện thoại sát mặt."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+      "feedback_correct": "Chuẩn rồi! Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+      "feedback_incorrect": "Mắt xin nghỉ, không xin chuyển công việc gần đâu nha. Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+      "source_days": [
+        8
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q027",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Chơi quiz tới lúc cần nghỉ mắt, mình chọn gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tắt lời nhắc và nhìn màn hình sát hơn."
+        },
+        {
+          "id": "B",
+          "text": "Cố thắng thêm thật nhiều lượt mới được nghỉ."
+        },
+        {
+          "id": "C",
+          "text": "Tạm dừng lượt chơi, nghỉ nhìn xa rồi quay lại."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+      "feedback_correct": "Chuẩn rồi! Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+      "feedback_incorrect": "Nút tạm dừng cũng là một đồng đội tốt đó. Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+      "source_days": [
+        8
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q028",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Nhớ tới bài chớp mắt, cách thực hiện nào nhẹ nhàng?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chớp mắt tự nhiên, nhẹ nhàng, không cố gồng."
+        },
+        {
+          "id": "B",
+          "text": "Dùng tay kéo mí để chớp nhanh hơn."
+        },
+        {
+          "id": "C",
+          "text": "Nhắm chặt đến mức đau."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+      "feedback_correct": "Chuẩn rồi! Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+      "feedback_incorrect": "Mí mắt biết làm việc rồi, mình đừng bắt bạn ấy tập tạ. Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+      "source_days": [
+        9
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 9 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q029",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Đang nhìn màn hình thấy mắt khó chịu, mình nên làm gì trước?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cố thêm một giờ để quên khó chịu."
+        },
+        {
+          "id": "B",
+          "text": "Nghỉ nhìn gần, chớp nhẹ và nói với người lớn nếu khó chịu còn kéo dài."
+        },
+        {
+          "id": "C",
+          "text": "Dụi thật mạnh cho nhanh tỉnh."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+      "feedback_correct": "Chuẩn rồi! Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+      "feedback_incorrect": "Mắt báo tin thì mình nghe bạn ấy một chút nhé. Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+      "source_days": [
+        9,
+        23
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 9, 23 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q030",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Đến thời gian nghỉ buổi tối theo lịch gia đình, mình chọn cách nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Xem tiếp đến khi máy tự hết pin."
+        },
+        {
+          "id": "B",
+          "text": "Giấu điện thoại dưới chăn cho mắt bất ngờ."
+        },
+        {
+          "id": "C",
+          "text": "Dừng màn hình và chuẩn bị nghỉ theo lịch đã thống nhất."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+      "feedback_correct": "Chuẩn rồi! Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+      "feedback_incorrect": "Cho điện thoại đi ngủ trước mình cũng được mà. Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+      "source_days": [
+        13
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 13 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q031",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Nhìn cây xanh ở xa trong giờ nghỉ có ý nghĩa gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Là một cách nghỉ việc nhìn gần; không phải cách chữa cận."
+        },
+        {
+          "id": "B",
+          "text": "Màu xanh chắc chắn chữa khỏi cận thị."
+        },
+        {
+          "id": "C",
+          "text": "Chỉ cây thật xanh mới có phép bảo vệ mắt."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+      "feedback_correct": "Chuẩn rồi! Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+      "feedback_incorrect": "Cây là bạn thư giãn, không phải bác sĩ lá xanh nhé. Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+      "source_days": [
+        14
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "AAO_BREAKS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 14 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q032",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Khi tạm dừng việc gần, mình nên chọn điểm nhìn thế nào?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Màn hình điện thoại áp gần hơn."
+        },
+        {
+          "id": "B",
+          "text": "Một vật ở xa nhìn thấy thoải mái."
+        },
+        {
+          "id": "C",
+          "text": "Một dòng chữ bé xíu sát mặt."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+      "feedback_correct": "Chuẩn rồi! Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+      "feedback_incorrect": "Mắt đang xin đổi phong cảnh đó. Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+      "source_days": [
+        10,
+        14
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 10, 14 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q033",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Nhật ký cảm giác mắt nên ghi điều gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tự đặt tên bệnh cho mình mỗi tối."
+        },
+        {
+          "id": "B",
+          "text": "Chỉ ghi điều mình nghĩ người lớn muốn nghe."
+        },
+        {
+          "id": "C",
+          "text": "Ghi thật cảm giác và hoàn cảnh mình nhận thấy."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+      "feedback_correct": "Chuẩn rồi! Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+      "feedback_incorrect": "Nhật ký thích sự thật hơn câu chuyện siêu nhân nhé. Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+      "source_days": [
+        23
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 23 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q034",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Mình nhìn mờ hoặc khó chịu lặp lại, cách xử lý phù hợp là gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nói với phụ huynh để được hỗ trợ và kiểm tra khi cần."
+        },
+        {
+          "id": "B",
+          "text": "Cứ bấm huy chương là mắt sẽ tự ổn."
+        },
+        {
+          "id": "C",
+          "text": "Đoán bệnh từ một câu trong game."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+      "feedback_correct": "Chuẩn rồi! Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+      "feedback_incorrect": "Mình nhờ đúng người hỗ trợ, không để game làm bác sĩ nhé. Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+      "source_days": [
+        23
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 23 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q035",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Muốn đọc sách thật thoải mái theo bài ngày 6, mình chọn gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nheo mắt trong góc tối để tăng độ khó."
+        },
+        {
+          "id": "B",
+          "text": "Chỗ ngồi có hỗ trợ, đủ sáng và sách ở vị trí dễ nhìn."
+        },
+        {
+          "id": "C",
+          "text": "Nằm nghiêng rồi đưa sách sát mặt cho tiện."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+      "feedback_correct": "Chuẩn rồi! Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+      "feedback_incorrect": "Cho cuốn sách một chỗ học tử tế cùng mình nào. Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+      "source_days": [
+        6
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 6 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "POSTURE",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q036",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Chữ khó đọc khiến mình cứ rướn tới gần, nên thử gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Đổi sang chữ nhỏ hơn cho vui."
+        },
+        {
+          "id": "B",
+          "text": "Cố nheo mắt đến cuối bài."
+        },
+        {
+          "id": "C",
+          "text": "Chỉnh ánh sáng, vị trí hoặc cỡ chữ khi có thể; nhờ hỗ trợ nếu vẫn khó."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+      "feedback_correct": "Chuẩn rồi! Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+      "feedback_incorrect": "Mình mời con chữ rõ lên, không bắt mắt làm thám tử. Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+      "source_days": [
+        2,
+        4
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 2, 4 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q037",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Dùng laptop mà cứ phải cúi đầu nhiều, mình nên thử gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nhờ người lớn bố trí màn hình và bàn học ổn định, phù hợp."
+        },
+        {
+          "id": "B",
+          "text": "Kê máy thật chênh bằng đồ dễ đổ."
+        },
+        {
+          "id": "C",
+          "text": "Cúi cổ theo máy suốt buổi."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+      "feedback_correct": "Chuẩn rồi! Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+      "feedback_incorrect": "Laptop thích chỗ đứng vững vàng hơn một ngọn tháp lung lay. Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+      "source_days": [
+        3
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS",
+        "NHS_SEATING"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 3 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "DESK",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q038",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Một ngày mình ghi nhận đã nghỉ mắt đúng lúc. Nên tự khen gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Từ mai không cần nghỉ nữa."
+        },
+        {
+          "id": "B",
+          "text": "Hôm nay mình nhớ chăm sóc mắt và sẽ tiếp tục thói quen này."
+        },
+        {
+          "id": "C",
+          "text": "Mắt mình chắc chắn không bao giờ gặp vấn đề nữa."
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+      "feedback_correct": "Chuẩn rồi! Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+      "feedback_incorrect": "Một lời khen nhỏ cho việc làm tốt là đủ vui rồi. Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+      "source_days": [
+        8,
+        23
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 8, 23 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q039",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 2,
+      "prompt": "Muốn chia sẻ mẹo giữ mắt từ bài học, câu nào phù hợp?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cứ nhìn màu xanh là khỏi cần kiểm tra mắt."
+        },
+        {
+          "id": "B",
+          "text": "Chơi game này sẽ hết cận ngay."
+        },
+        {
+          "id": "C",
+          "text": "Nhớ nghỉ việc nhìn gần và xem lại hướng dẫn trong bài nhé."
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+      "feedback_correct": "Chuẩn rồi! Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+      "feedback_incorrect": "Mẹo hay cần đúng trước rồi mới vui nhé. Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+      "source_days": [
+        24,
+        25
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 24, 25 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    },
+    {
+      "id": "BUGZ-Q040",
+      "topic": "mat_sang",
+      "type": "single_choice",
+      "age_groups": [
+        "primary",
+        "lower_secondary"
+      ],
+      "difficulty": 1,
+      "prompt": "Chơi hết bộ câu hỏi Mắt sáng chứng minh điều gì?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mình đã ôn kiến thức; vẫn cần thực hành và được hỗ trợ khi có vấn đề."
+        },
+        {
+          "id": "B",
+          "text": "Mình đã vượt qua một cuộc khám mắt đầy đủ."
+        },
+        {
+          "id": "C",
+          "text": "Mình có thể bỏ mọi hướng dẫn chăm sóc mắt."
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+      "feedback_correct": "Chuẩn rồi! Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+      "feedback_incorrect": "Danh hiệu giỏi ôn tập rất vui, nhưng không thay kính khám mắt nhé. Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+      "source_days": [
+        8,
+        28
+      ],
+      "source_refs": [
+        "PROJECT_FLASHCARDS"
+      ],
+      "source_fact": "Đối chiếu thẻ ngày 8, 28 và nguồn bổ sung nếu được chỉ rõ.",
+      "illustration_id": "EYES",
+      "version": 1,
+      "status": "editorial_draft",
+      "approval": {
+        "content_reviewed": false,
+        "clinical_reviewed": false
+      },
+      "scoring": {
+        "first_correct_points": 10,
+        "repeat_points": 0
+      },
+      "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh."
+    }
+  ]
+}

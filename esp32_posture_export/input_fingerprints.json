@@ -1,0 +1,8 @@
+{
+  "drive_dataset_dir": "/content/drive/MyDrive/Sitting_pose/datasets",
+  "run_id": "esp32_v3_20261106_112721_UTC",
+  "files": {
+    "sitting-posture-v3.zip": "842b1b8819c12826e863b0a92922869e31854e4d47a6e68065bd693e59bb5d7a",
+    "SittingPostureDetection.v5i.yolov8.zip": "59a53378ae21375ea2d7e9682d185bd2e93e01a8793faa3d2b00b88b5053a0aa"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "checkpoint_id": "CHECKPOINT_P02_2026_11_03_DRIVE_FULL",
+  "stage": "P02",
+  "project": "BUGZ BrightUpGenZ",
+  "firebase_project_id": "gen-lang-client-0531599250",
+  "completed_at": "2026-11-03T01:05:00+07:00",
+  "drive_folder_source": "https://drive.google.com/drive/folders/17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6",
+  "downloaded_drive_files_count": 111,
+  "runtime_drive_assets_dir": "/public/assets/drive",
+  "verified_groups": {
+    "day_primary_cards": "day1.png .. day28.png (28/28 standalone files downloaded & rendered directly)",
+    "week_maps": "Tuan1.png .. Tuan4.png (4/4 standalone files downloaded & rendered directly)",
+    "day_info_lightbulb": "in4 d1.png .. in4 d26.png (26/26 downloaded; in4 d27.png & in4 d28.png not_yet_verified in Drive)",
+    "day_medals": "HC d1.png .. HC d27.png (27/27 downloaded; Day 28 routes to /certificate-request)",
+    "press": "Bao.png + 6 exact article URLs from inputs/YEU_CAU_GOC_TRICH_VAN_BAN.md",
+    "team": "team.png + Quan CV.png, in4 Quan.png, chip CV.png, in4 chip.png, in4 leade.png, leade CV.png, in4 Thúy.png, Thúy CV.png",
+    "medical_certificates": "4 hospital/health center confirmation images downloaded & rendered in slideshow",
+    "ui_branding": "logo1.png, bg.png, home.png, mucluc.png, full flashcard.png"
+  },
+  "verification": {
+    "lint": "PASS",
+    "build": "PASS",
+    "unit_and_rbac_tests": "PASS (14/14)",
+    "browser_e2e_playwright": "PASS"
+  },
+  "next_stage": "P03"
+}

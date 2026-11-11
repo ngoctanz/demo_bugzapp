@@ -1,0 +1,1059 @@
+{
+  "schema_version": 1,
+  "days": [
+    {
+      "day_number": 1,
+      "week_number": 1,
+      "title_transcribed": "Ngồi thẳng nào!",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day1.png",
+        "drive_id": "1H9-RBf8qY2-vX6ZeFxEki8SeqLQ3Zfjl",
+        "source_url": "https://drive.google.com/file/d/1H9-RBf8qY2-vX6ZeFxEki8SeqLQ3Zfjl/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d1.png",
+        "drive_id": "1zpOeK5-Os7rfW1EKNnB3S7QpqBplwV5e",
+        "source_url": "https://drive.google.com/file/d/1zpOeK5-Os7rfW1EKNnB3S7QpqBplwV5e/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": true
+      },
+      "medal_asset": {
+        "original_filename": "HC d1.png",
+        "drive_id": "1AXnyEiL0805dCOD43hlSyTtMSoz1rRnW",
+        "source_url": "https://drive.google.com/file/d/1AXnyEiL0805dCOD43hlSyTtMSoz1rRnW/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q001",
+        "BUGZ-Q004",
+        "BUGZ-Q008",
+        "BUGZ-Q020",
+        "BUGZ-Q021"
+      ],
+      "next_day": 2,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 2,
+      "week_number": 1,
+      "title_transcribed": "Khoảng cách 30cm",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day2.png",
+        "drive_id": "1IUgyKrnQlzklKo4jYOk57ru1SvATS79a",
+        "source_url": "https://drive.google.com/file/d/1IUgyKrnQlzklKo4jYOk57ru1SvATS79a/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d2.png",
+        "drive_id": "1BmLo787PUleBPdA0_CTUBMflSqZ8wsZE",
+        "source_url": "https://drive.google.com/file/d/1BmLo787PUleBPdA0_CTUBMflSqZ8wsZE/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d2.png",
+        "drive_id": "16Bg5yFoRkc8WCVxLnPWpWYWgD6u2HRel",
+        "source_url": "https://drive.google.com/file/d/16Bg5yFoRkc8WCVxLnPWpWYWgD6u2HRel/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q021",
+        "BUGZ-Q022",
+        "BUGZ-Q036"
+      ],
+      "next_day": 3,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 3,
+      "week_number": 1,
+      "title_transcribed": "Mắt nhìn ngang tầm",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day3.png",
+        "drive_id": "12XXdEoMzDfW5JYglr8wDuV_lQk6EqvSh",
+        "source_url": "https://drive.google.com/file/d/12XXdEoMzDfW5JYglr8wDuV_lQk6EqvSh/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d3.png",
+        "drive_id": "1WQ0PKAsHkjalzcuh3K3-tKpgGgyfCTfn",
+        "source_url": "https://drive.google.com/file/d/1WQ0PKAsHkjalzcuh3K3-tKpgGgyfCTfn/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d3.png",
+        "drive_id": "159mflUTwJmq6lT5eyNisbVDzIrnDp6y8",
+        "source_url": "https://drive.google.com/file/d/159mflUTwJmq6lT5eyNisbVDzIrnDp6y8/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q004",
+        "BUGZ-Q037"
+      ],
+      "next_day": 4,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 4,
+      "week_number": 1,
+      "title_transcribed": "Ánh sáng vừa đủ",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day4.png",
+        "drive_id": "1vqBDan0ZbaE7ai9TgskoXamRwRqDjlhI",
+        "source_url": "https://drive.google.com/file/d/1vqBDan0ZbaE7ai9TgskoXamRwRqDjlhI/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d4.png",
+        "drive_id": "12uP3wtH6Wi2ABucIiZy873nE0RqlFXqi",
+        "source_url": "https://drive.google.com/file/d/12uP3wtH6Wi2ABucIiZy873nE0RqlFXqi/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d4.png",
+        "drive_id": "1QDWzH0Cd1tH6ECtqC4V0QZte-zuUHjbu",
+        "source_url": "https://drive.google.com/file/d/1QDWzH0Cd1tH6ECtqC4V0QZte-zuUHjbu/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q023",
+        "BUGZ-Q024",
+        "BUGZ-Q036"
+      ],
+      "next_day": 5,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 5,
+      "week_number": 1,
+      "title_transcribed": "Bàn ghế vừa tầm",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day5.png",
+        "drive_id": "1EJSl7P7q8Xi_fpn9M5-Wj5XgmqRnxbFy",
+        "source_url": "https://drive.google.com/file/d/1EJSl7P7q8Xi_fpn9M5-Wj5XgmqRnxbFy/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d5.png",
+        "drive_id": "1TO6qZWinxMbGpk4uhwxImFSGqgL-uKbu",
+        "source_url": "https://drive.google.com/file/d/1TO6qZWinxMbGpk4uhwxImFSGqgL-uKbu/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d5.png",
+        "drive_id": "1qQLYEIElga-VXMhOd0JzW_2uGCnN67R3",
+        "source_url": "https://drive.google.com/file/d/1qQLYEIElga-VXMhOd0JzW_2uGCnN67R3/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q002",
+        "BUGZ-Q003",
+        "BUGZ-Q006",
+        "BUGZ-Q020"
+      ],
+      "next_day": 6,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 6,
+      "week_number": 1,
+      "title_transcribed": "Không nằm đọc!",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day6.png",
+        "drive_id": "1uhL6Pd3VFFv8JjqzCH5G3VFrnHgc4kPd",
+        "source_url": "https://drive.google.com/file/d/1uhL6Pd3VFFv8JjqzCH5G3VFrnHgc4kPd/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d6.png",
+        "drive_id": "1T5Ylz0OrDVLa1qq-yj4LQqzPB0I69elR",
+        "source_url": "https://drive.google.com/file/d/1T5Ylz0OrDVLa1qq-yj4LQqzPB0I69elR/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d6.png",
+        "drive_id": "1D2pQupgspX70QRZ0b0j6QtWSpD_iQXXv",
+        "source_url": "https://drive.google.com/file/d/1D2pQupgspX70QRZ0b0j6QtWSpD_iQXXv/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q035"
+      ],
+      "next_day": 7,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 7,
+      "week_number": 1,
+      "title_transcribed": "Thử thách đầu tiên",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day7.png",
+        "drive_id": "15y9V_pUsy6_SXzqgtrnkIhRxibCvZIo5",
+        "source_url": "https://drive.google.com/file/d/15y9V_pUsy6_SXzqgtrnkIhRxibCvZIo5/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d7.png",
+        "drive_id": "1DskKqRyWko87TSbsDx1ZkBMvzLpWTBDA",
+        "source_url": "https://drive.google.com/file/d/1DskKqRyWko87TSbsDx1ZkBMvzLpWTBDA/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d7.png",
+        "drive_id": "1VTTt0xycL2jM0OqJ0DVlCeHZ2Ls3U-GW",
+        "source_url": "https://drive.google.com/file/d/1VTTt0xycL2jM0OqJ0DVlCeHZ2Ls3U-GW/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q015"
+      ],
+      "next_day": 8,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 8,
+      "week_number": 2,
+      "title_transcribed": "20-20-20",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day8.png",
+        "drive_id": "1IUAZdeZ2Pb1qeYcMRGOmVJ7NvxieYzC1",
+        "source_url": "https://drive.google.com/file/d/1IUAZdeZ2Pb1qeYcMRGOmVJ7NvxieYzC1/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d8.png",
+        "drive_id": "1O0BXVNQftPNu0q8AMl0t9bZds_ywQ2ZT",
+        "source_url": "https://drive.google.com/file/d/1O0BXVNQftPNu0q8AMl0t9bZds_ywQ2ZT/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d8.png",
+        "drive_id": "1okEbrU9WunQi5yMZ1M8pbsvNNlirSL7l",
+        "source_url": "https://drive.google.com/file/d/1okEbrU9WunQi5yMZ1M8pbsvNNlirSL7l/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q025",
+        "BUGZ-Q026",
+        "BUGZ-Q027",
+        "BUGZ-Q038",
+        "BUGZ-Q040"
+      ],
+      "next_day": 9,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 9,
+      "week_number": 2,
+      "title_transcribed": "Chớp mắt 10 lần",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day9.png",
+        "drive_id": "1nkn4C9tZiTZ3xzc92wS0HjEXD5kSIm-0",
+        "source_url": "https://drive.google.com/file/d/1nkn4C9tZiTZ3xzc92wS0HjEXD5kSIm-0/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d9.png",
+        "drive_id": "1otyTT4VOzlwDHJuCgH_YAgSqy5MLoU2g",
+        "source_url": "https://drive.google.com/file/d/1otyTT4VOzlwDHJuCgH_YAgSqy5MLoU2g/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d9.png",
+        "drive_id": "1wjiohLfSiPZ3M4zryNESzdqTs9o4CEqk",
+        "source_url": "https://drive.google.com/file/d/1wjiohLfSiPZ3M4zryNESzdqTs9o4CEqk/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q028",
+        "BUGZ-Q029"
+      ],
+      "next_day": 10,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 10,
+      "week_number": 2,
+      "title_transcribed": "Nhìn xa - gần",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day10.png",
+        "drive_id": "1tMo9CmuDya8H5vKmzk9IAjKIYyyX61Tm",
+        "source_url": "https://drive.google.com/file/d/1tMo9CmuDya8H5vKmzk9IAjKIYyyX61Tm/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d10.png",
+        "drive_id": "1Ga9zjOFezHxo3-IUtNcN1xSHC_pT9ZrX",
+        "source_url": "https://drive.google.com/file/d/1Ga9zjOFezHxo3-IUtNcN1xSHC_pT9ZrX/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d10.png",
+        "drive_id": "1DuXaVvKgtKdLLeS2un2LWP-akw8vwp_R",
+        "source_url": "https://drive.google.com/file/d/1DuXaVvKgtKdLLeS2un2LWP-akw8vwp_R/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q032"
+      ],
+      "next_day": 11,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 11,
+      "week_number": 2,
+      "title_transcribed": "Massage mắt",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day11.png",
+        "drive_id": "1pS9sj2R7V-Yst3nGS-RjMhIVGp8yW2Sn",
+        "source_url": "https://drive.google.com/file/d/1pS9sj2R7V-Yst3nGS-RjMhIVGp8yW2Sn/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d11.png",
+        "drive_id": "15_STTw0XTZXnJpcX0nEWriTB2ERtlkQN",
+        "source_url": "https://drive.google.com/file/d/15_STTw0XTZXnJpcX0nEWriTB2ERtlkQN/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d11.png",
+        "drive_id": "1_fXe3kwqUucnz3XohhJot_cJNiwhZW2r",
+        "source_url": "https://drive.google.com/file/d/1_fXe3kwqUucnz3XohhJot_cJNiwhZW2r/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": true,
+      "question_ids": [],
+      "next_day": 12,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 12,
+      "week_number": 2,
+      "title_transcribed": "Rửa mắt bằng nước mát",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day12.png",
+        "drive_id": "1nmnRWh2aCE0IXS64uPn75TSmCpzRnpR3",
+        "source_url": "https://drive.google.com/file/d/1nmnRWh2aCE0IXS64uPn75TSmCpzRnpR3/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d12.png",
+        "drive_id": "1PjXTSlfhMKw4g_W9fJf8FwadnanTInMm",
+        "source_url": "https://drive.google.com/file/d/1PjXTSlfhMKw4g_W9fJf8FwadnanTInMm/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d12.png",
+        "drive_id": "10FI4j9uFvdh-cVhDeTlqV0iA5LUJW6N9",
+        "source_url": "https://drive.google.com/file/d/10FI4j9uFvdh-cVhDeTlqV0iA5LUJW6N9/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": true,
+      "question_ids": [],
+      "next_day": 13,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 13,
+      "week_number": 2,
+      "title_transcribed": "Hạn chế màn hình sau 21h",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day13.png",
+        "drive_id": "1vOlyW6L9AKoWuUlm22Zxg5VkikC5epvO",
+        "source_url": "https://drive.google.com/file/d/1vOlyW6L9AKoWuUlm22Zxg5VkikC5epvO/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d13.png",
+        "drive_id": "1FK1t6fLf0NTTC0AfVhKSv-veWmGokVbO",
+        "source_url": "https://drive.google.com/file/d/1FK1t6fLf0NTTC0AfVhKSv-veWmGokVbO/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d13.png",
+        "drive_id": "1SzaNWvIrQHwXOeS75i-4EA4tqYA3Q81t",
+        "source_url": "https://drive.google.com/file/d/1SzaNWvIrQHwXOeS75i-4EA4tqYA3Q81t/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q030"
+      ],
+      "next_day": 14,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 14,
+      "week_number": 2,
+      "title_transcribed": "Nhìn xanh cho mắt khỏe",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day14.png",
+        "drive_id": "1plHixgYjuL3MPdWc9FLjQJ9zj4s-1M4T",
+        "source_url": "https://drive.google.com/file/d/1plHixgYjuL3MPdWc9FLjQJ9zj4s-1M4T/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d14.png",
+        "drive_id": "1aT0UcDGRHBP6K-IkPNsKy4Eb5pNd2hMd",
+        "source_url": "https://drive.google.com/file/d/1aT0UcDGRHBP6K-IkPNsKy4Eb5pNd2hMd/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d14.png",
+        "drive_id": "1clxvrQhM5FcF-U0X3yTLg-BOwcgDVt_T",
+        "source_url": "https://drive.google.com/file/d/1clxvrQhM5FcF-U0X3yTLg-BOwcgDVt_T/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q031",
+        "BUGZ-Q032"
+      ],
+      "next_day": 15,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 15,
+      "week_number": 3,
+      "title_transcribed": "Vươn vai mỗi giờ",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day15.png",
+        "drive_id": "1I35cnQHKxiD3xrKtmRqtCkU1mx4c1q5c",
+        "source_url": "https://drive.google.com/file/d/1I35cnQHKxiD3xrKtmRqtCkU1mx4c1q5c/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d15.png",
+        "drive_id": "1Ty56MXHRZKQTbVbKWPiCFdaD4amvvRCW",
+        "source_url": "https://drive.google.com/file/d/1Ty56MXHRZKQTbVbKWPiCFdaD4amvvRCW/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d15.png",
+        "drive_id": "1Eninv07piitL3QNGRMxrOUqOKa7F_hVO",
+        "source_url": "https://drive.google.com/file/d/1Eninv07piitL3QNGRMxrOUqOKa7F_hVO/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q005",
+        "BUGZ-Q013"
+      ],
+      "next_day": 16,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 16,
+      "week_number": 3,
+      "title_transcribed": "Xoay cổ nhẹ nhàng",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day16.png",
+        "drive_id": "1T45pvRnnwghkb_CZ1tDUu5K1Nyye2rD1",
+        "source_url": "https://drive.google.com/file/d/1T45pvRnnwghkb_CZ1tDUu5K1Nyye2rD1/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d16.png",
+        "drive_id": "1EdCGrDf1vlyRGwU_bN0oxI7Zm6AcM2aS",
+        "source_url": "https://drive.google.com/file/d/1EdCGrDf1vlyRGwU_bN0oxI7Zm6AcM2aS/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d16.png",
+        "drive_id": "1OtN5uMrNLSQJ45CETxy-5mLNKiUZll7R",
+        "source_url": "https://drive.google.com/file/d/1OtN5uMrNLSQJ45CETxy-5mLNKiUZll7R/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": true,
+      "question_ids": [],
+      "next_day": 17,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 17,
+      "week_number": 3,
+      "title_transcribed": "Chống đẩy tường",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day17.png",
+        "drive_id": "12m-jHiULkrQFBIYOeqLEgZI45Ong5am3",
+        "source_url": "https://drive.google.com/file/d/12m-jHiULkrQFBIYOeqLEgZI45Ong5am3/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d17.png",
+        "drive_id": "1xd_Qpy6MBKz_ZGnd5O1UjS_pgCYxrc5s",
+        "source_url": "https://drive.google.com/file/d/1xd_Qpy6MBKz_ZGnd5O1UjS_pgCYxrc5s/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d17.png",
+        "drive_id": "17s2Jfs2NEucYRneeDHy6EyvHoZ36LJDq",
+        "source_url": "https://drive.google.com/file/d/17s2Jfs2NEucYRneeDHy6EyvHoZ36LJDq/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [],
+      "next_day": 18,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 18,
+      "week_number": 3,
+      "title_transcribed": "Đi lại một phút",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day18.png",
+        "drive_id": "1mFd9Y6q44PPIYqImuCsGjx0jNeFUJ8Ww",
+        "source_url": "https://drive.google.com/file/d/1mFd9Y6q44PPIYqImuCsGjx0jNeFUJ8Ww/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d18.png",
+        "drive_id": "1VSVtnAYJpCdSORIm68NVRChS_UjRIOiW",
+        "source_url": "https://drive.google.com/file/d/1VSVtnAYJpCdSORIm68NVRChS_UjRIOiW/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d18.png",
+        "drive_id": "15Uj5fenZNE0blE2tc16x37jaaRvclpKb",
+        "source_url": "https://drive.google.com/file/d/15Uj5fenZNE0blE2tc16x37jaaRvclpKb/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q005",
+        "BUGZ-Q014"
+      ],
+      "next_day": 19,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 19,
+      "week_number": 3,
+      "title_transcribed": "Đặt lại bàn học",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day19.png",
+        "drive_id": "1S1Jj7iO_1QfG4YRv7c4yIp18FmQUcLtp",
+        "source_url": "https://drive.google.com/file/d/1S1Jj7iO_1QfG4YRv7c4yIp18FmQUcLtp/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d19.png",
+        "drive_id": "1Z2MNSEWod2TOuLuwl8DHHuAsU2bES0tT",
+        "source_url": "https://drive.google.com/file/d/1Z2MNSEWod2TOuLuwl8DHHuAsU2bES0tT/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d19.png",
+        "drive_id": "1Xd-rlZuBbC7aZHNVQ30aryxfGuTe3EJd",
+        "source_url": "https://drive.google.com/file/d/1Xd-rlZuBbC7aZHNVQ30aryxfGuTe3EJd/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q003",
+        "BUGZ-Q009"
+      ],
+      "next_day": 20,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 20,
+      "week_number": 3,
+      "title_transcribed": "Tư thế khi viết",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day20.png",
+        "drive_id": "1ELNjR2N7S28zm5VxwwglrCA-xiWfzlp3",
+        "source_url": "https://drive.google.com/file/d/1ELNjR2N7S28zm5VxwwglrCA-xiWfzlp3/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d20.png",
+        "drive_id": "1KmV3ohrBYIaGgFIBYEjMcaLLgSEYwI0z",
+        "source_url": "https://drive.google.com/file/d/1KmV3ohrBYIaGgFIBYEjMcaLLgSEYwI0z/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d20.png",
+        "drive_id": "1ssBAjXpJ2Oh4o73qorwxtiAyUzyCxXWu",
+        "source_url": "https://drive.google.com/file/d/1ssBAjXpJ2Oh4o73qorwxtiAyUzyCxXWu/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q011"
+      ],
+      "next_day": 21,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 21,
+      "week_number": 3,
+      "title_transcribed": "Nhóm bạn cùng thẳng lưng",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day21.png",
+        "drive_id": "1HEOM0rxNyT9OKzuegzHr7kfMDgSFAF-U",
+        "source_url": "https://drive.google.com/file/d/1HEOM0rxNyT9OKzuegzHr7kfMDgSFAF-U/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d21.png",
+        "drive_id": "1flhX8SgHkkyKDrcbyAXkav27GoP6XscG",
+        "source_url": "https://drive.google.com/file/d/1flhX8SgHkkyKDrcbyAXkav27GoP6XscG/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d21.png",
+        "drive_id": "1q9TTzhEHxSTkwAsM9-RewI5pozPXJ85v",
+        "source_url": "https://drive.google.com/file/d/1q9TTzhEHxSTkwAsM9-RewI5pozPXJ85v/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q007",
+        "BUGZ-Q012"
+      ],
+      "next_day": 22,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 22,
+      "week_number": 4,
+      "title_transcribed": "Kiểm tra tư thế bản thân",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day22.png",
+        "drive_id": "1d8B-K0YEbVC0jlYva1IwB6cGsHwfyfcv",
+        "source_url": "https://drive.google.com/file/d/1d8B-K0YEbVC0jlYva1IwB6cGsHwfyfcv/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d22.png",
+        "drive_id": "1kQZUEvVPYYyEWPCnRbkfuCOHj9kh15WL",
+        "source_url": "https://drive.google.com/file/d/1kQZUEvVPYYyEWPCnRbkfuCOHj9kh15WL/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d22.png",
+        "drive_id": "1BCGVyPxXuVIVVlLSABw5hQwOlIxJGncJ",
+        "source_url": "https://drive.google.com/file/d/1BCGVyPxXuVIVVlLSABw5hQwOlIxJGncJ/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q010"
+      ],
+      "next_day": 23,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 23,
+      "week_number": 4,
+      "title_transcribed": "Ghi nhật ký cảm giác mắt",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day23.png",
+        "drive_id": "11u_cuenEdFq7OZOQAu9aTtvEMWDbRYTz",
+        "source_url": "https://drive.google.com/file/d/11u_cuenEdFq7OZOQAu9aTtvEMWDbRYTz/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d23.png",
+        "drive_id": "1wsNQIq_bIKNDJwUEWWh44yIiV4Fa5PKM",
+        "source_url": "https://drive.google.com/file/d/1wsNQIq_bIKNDJwUEWWh44yIiV4Fa5PKM/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d23.png",
+        "drive_id": "1gGGnGW53m2uqzkaLN-1EUEpGPmmpqutX",
+        "source_url": "https://drive.google.com/file/d/1gGGnGW53m2uqzkaLN-1EUEpGPmmpqutX/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q029",
+        "BUGZ-Q033",
+        "BUGZ-Q034",
+        "BUGZ-Q038"
+      ],
+      "next_day": 24,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 24,
+      "week_number": 4,
+      "title_transcribed": "Chia sẻ mẹo của bạn",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day24.png",
+        "drive_id": "1guOb_VF1tseCb37hnlQIKz-jyprEtTRQ",
+        "source_url": "https://drive.google.com/file/d/1guOb_VF1tseCb37hnlQIKz-jyprEtTRQ/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d24.png",
+        "drive_id": "1_nFqzdFmwmA5eDnORnPafwnutyaADBlE",
+        "source_url": "https://drive.google.com/file/d/1_nFqzdFmwmA5eDnORnPafwnutyaADBlE/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d24.png",
+        "drive_id": "1llrC3LUQSs9VJTfcEiiqvAhSZs1wf5Rd",
+        "source_url": "https://drive.google.com/file/d/1llrC3LUQSs9VJTfcEiiqvAhSZs1wf5Rd/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q039"
+      ],
+      "next_day": 25,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 25,
+      "week_number": 4,
+      "title_transcribed": "Sáng tạo flashcard riêng",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day25.png",
+        "drive_id": "1l_-6WoQ_0boQAzg9RfA1NHiJX68zctgh",
+        "source_url": "https://drive.google.com/file/d/1l_-6WoQ_0boQAzg9RfA1NHiJX68zctgh/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d25.png",
+        "drive_id": "1WKcaQhOiIue1hia77h08tTJftyuIOjiR",
+        "source_url": "https://drive.google.com/file/d/1WKcaQhOiIue1hia77h08tTJftyuIOjiR/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d25.png",
+        "drive_id": "1R7mB_paq7EvH752cRgf5NfaGk5rQNG0b",
+        "source_url": "https://drive.google.com/file/d/1R7mB_paq7EvH752cRgf5NfaGk5rQNG0b/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q016",
+        "BUGZ-Q039"
+      ],
+      "next_day": 26,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 26,
+      "week_number": 4,
+      "title_transcribed": "Nhắc bạn cùng làm",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day26.png",
+        "drive_id": "1iwxrIahwyP6qQ464vl4geLh-b2gXaDo9",
+        "source_url": "https://drive.google.com/file/d/1iwxrIahwyP6qQ464vl4geLh-b2gXaDo9/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d26.png",
+        "drive_id": "15WFbxpapxaL5Vu3QcC_v-8kKlh5fv45s",
+        "source_url": "https://drive.google.com/file/d/15WFbxpapxaL5Vu3QcC_v-8kKlh5fv45s/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d26.png",
+        "drive_id": "1gEH06tYOGXAikeDN4stcQp64WigPvCyA",
+        "source_url": "https://drive.google.com/file/d/1gEH06tYOGXAikeDN4stcQp64WigPvCyA/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q007",
+        "BUGZ-Q017"
+      ],
+      "next_day": 27,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 27,
+      "week_number": 4,
+      "title_transcribed": "Không Flashcard!",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day27.png",
+        "drive_id": "1S2e9T28pZfUVTgI4i_yfqq6V8ERH383q",
+        "source_url": "https://drive.google.com/file/d/1S2e9T28pZfUVTgI4i_yfqq6V8ERH383q/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "info_asset": {
+        "original_filename": "in4 d27.png",
+        "drive_id": null,
+        "source_url": null,
+        "status": "not_yet_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "original_filename": "HC d27.png",
+        "drive_id": "1Mey-84FKEjcpooHQ-a-_ELrOhx6kpppK",
+        "source_url": "https://drive.google.com/file/d/1Mey-84FKEjcpooHQ-a-_ELrOhx6kpppK/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": false
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q018"
+      ],
+      "next_day": 28,
+      "completion_type": "self_reported"
+    },
+    {
+      "day_number": 28,
+      "week_number": 4,
+      "title_transcribed": "Nhận chứng nhận Mắt sáng - Lưng thẳng",
+      "title_note": "Đối chiếu nguyên văn trên ảnh khi xuất bản.",
+      "primary_asset": {
+        "original_filename": "day28.png",
+        "drive_id": "13fRcrc8X-cCY04R4eUGKw8_PhlkdrK_e",
+        "source_url": "https://drive.google.com/file/d/13fRcrc8X-cCY04R4eUGKw8_PhlkdrK_e/view?usp=drivesdk",
+        "status": "metadata_verified",
+        "original_bytes_downloaded": true
+      },
+      "info_asset": {
+        "original_filename": "in4 d28.png",
+        "drive_id": null,
+        "source_url": null,
+        "status": "not_yet_verified",
+        "original_bytes_downloaded": false
+      },
+      "medal_asset": {
+        "status": "special_day28_certificate_flow",
+        "note": "Không tự tạo badge ngày28; kiểm tra ảnh nguồn đặc biệt."
+      },
+      "source_ref": "PROJECT_FLASHCARDS",
+      "practice_text": null,
+      "ocr_status": "not_transcribed",
+      "publish_status": "draft_pending_asset_and_content_verification",
+      "clinical_review_flag": false,
+      "question_ids": [
+        "BUGZ-Q019",
+        "BUGZ-Q040"
+      ],
+      "next_day": null,
+      "completion_type": "self_reported"
+    }
+  ],
+  "note": "Không phải28bài đã OCR. Giữ ảnh gốc và nhập chính xác khi xuất bản; null chỉ là ô dữ liệu manifest, khi ghi RTDB phải bỏ trường thiếu."
+}

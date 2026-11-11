@@ -1,0 +1,38 @@
+{
+  "atlas_file": "assets/bugz_learning_atlas.png",
+  "grid": {
+    "rows": 2,
+    "columns": 2
+  },
+  "usage": "Một ảnh atlas với bốn cảnh; illustration chỉ dẫn chuyện, không chấm góc hay cm từ ảnh.",
+  "css": {
+    "background_size": "200% 200%",
+    "aspect_ratio": "1 / 1"
+  },
+  "illustrations": {
+    "POSTURE": {
+      "row": 0,
+      "column": 0,
+      "background_position": "0% 0%",
+      "alt": "Hai nhân vật hoạt hình cùng xem tư thế đọc ở bàn học."
+    },
+    "DESK": {
+      "row": 0,
+      "column": 1,
+      "background_position": "100% 0%",
+      "alt": "Hai nhân vật chỉnh góc học có bàn ghế, đèn và kê chân."
+    },
+    "EYES": {
+      "row": 1,
+      "column": 0,
+      "background_position": "0% 100%",
+      "alt": "Hai nhân vật nghỉ việc nhìn gần bên cửa sổ có cây ở xa."
+    },
+    "MOVE": {
+      "row": 1,
+      "column": 1,
+      "background_position": "100% 100%",
+      "alt": "Hai nhân vật đứng dậy nghỉ vận động nhẹ."
+    }
+  }
+}

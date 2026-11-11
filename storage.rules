@@ -1,0 +1,51 @@
+rules_version = '2';
+
+// ============================================================================
+// BUGZ BrightUpGenZ — Firebase Cloud Storage Security Rules (storage.rules)
+// Tuân thủ Mục 12.4 & 14.1 Artifact và Ca kiểm thử T03, T19, T29:
+// 1. Mặc định từ chối toàn bộ (Default Deny).
+// 2. Ảnh capture học sinh (`captures/{deviceId}/{sessionId}/{captureId}`) là dữ liệu
+//    riêng tư tuyệt đối: KHÔNG mở public read, chỉ đọc/ghi qua Backend Admin SDK
+//    sau khi kiểm tra quan hệ gia đình (`GET /api/captures/:id`) hoặc Upload Ticket ngắn hạn
+//    (`POST /api/captures/upload-ticket` -> `PUT /api/captures/:id/upload`), giới hạn MIME & <= 2MB.
+// 3. Tài nguyên học liệu công khai đã xác minh (`public_assets/**`) chỉ cho phép SuperAdmin ghi.
+// ============================================================================
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSuperAdmin() {
+      return request.auth != null &&
+        (request.auth.token.superadmin == true || request.auth.token.admin == true);
+    }
+
+    function isValidCaptureImage() {
+      return request.resource != null &&
+        request.resource.size <= 2 * 1024 * 1024 &&
+        request.resource.contentType.matches('image/(jpeg|png|webp)');
+    }
+
+    // Nhánh ảnh capture riêng tư: Client không được đọc/ghi trực tiếp qua Storage SDK;
+    // mọi luồng tải lên và xem ảnh đều đi qua Backend Admin SDK (`GET /api/captures/:id`)
+    // để kiểm tra quan hệ phụ huynh-con và ghi Audit Log khi SuperAdmin hỗ trợ kỹ thuật (T19).
+    match /captures/{deviceId}/{sessionId}/{captureId} {
+      allow read: if false;
+      allow write: if isSuperAdmin() && isValidCaptureImage();
+    }
+
+    // Nhánh ảnh đính kèm yêu cầu chứng nhận Ngày 28
+    match /certificate_requests/{studentId}/{fileName} {
+      allow read: if isSuperAdmin();
+      allow write: if request.auth != null && isValidCaptureImage();
+    }
+
+    // Nhánh tài nguyên học liệu đã xác minh
+    match /public_assets/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if isSuperAdmin();
+    }
+
+    // Mặc định từ chối mọi đường dẫn khác
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

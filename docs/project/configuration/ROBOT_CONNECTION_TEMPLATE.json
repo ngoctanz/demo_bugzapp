@@ -1,0 +1,33 @@
+{
+  "status": "TEMPLATE_NOT_CONNECTED",
+  "note": "Điền thông tin thực tế không bí mật; null là còn chờ. Đây không phải cấu hình đang hoạt động.",
+  "broker": {
+    "host": null,
+    "port": null,
+    "tls_required": true,
+    "supports_https_webhook": null,
+    "supports_publish_api": null
+  },
+  "device": {
+    "device_id": null,
+    "firmware_version": null,
+    "payload_schema_version": null,
+    "computes_episodes": null,
+    "observation_interval_ms": null,
+    "supports_capture_upload": null,
+    "supported_posture_codes": []
+  },
+  "adapter": {
+    "chosen_mode": null,
+    "bridge_runtime_location": null,
+    "webhook_url": null
+  },
+  "topics": {
+    "observations": "bugz/v1/devices/{device_id}/observations",
+    "events": "bugz/v1/devices/{device_id}/events",
+    "presence": "bugz/v1/devices/{device_id}/presence",
+    "commands": "bugz/v1/devices/{device_id}/commands",
+    "acks": "bugz/v1/devices/{device_id}/acks"
+  },
+  "credential_handling": "Credentials nằm trong Secrets/thiết bị theo thiết kế; không điền giá trị vào bản gửi chat."
+}

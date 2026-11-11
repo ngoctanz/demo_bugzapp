@@ -1,0 +1,209 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": "auth != null && auth.uid === $uid && !newData.hasChild('role') && !newData.hasChild('disabled') && !newData.hasChild('superadmin') && !newData.hasChild('admin')",
+        ".validate": "newData.hasChildren(['full_name', 'email']) && newData.child('full_name').isString() && newData.child('full_name').val().length >= 1 && newData.child('full_name').val().length <= 120 && newData.child('email').isString() && newData.child('email').val().length >= 3"
+      }
+    },
+    "account_roles": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "students": {
+      ".indexOn": ["guardian_owner_uid", "auth_uid"],
+      "$student_id": {
+        ".read": "auth != null && (data.child('guardian_owner_uid').val() === auth.uid || root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false,
+        "display_name": {
+          ".write": "auth != null && data.parent().exists() && data.parent().child('guardian_owner_uid').val() === auth.uid && newData.isString() && newData.val().length >= 1 && newData.val().length <= 100"
+        },
+        "age_group": {
+          ".write": "auth != null && data.parent().exists() && data.parent().child('guardian_owner_uid').val() === auth.uid && newData.isString()"
+        },
+        "timezone": {
+          ".write": "auth != null && data.parent().exists() && data.parent().child('guardian_owner_uid').val() === auth.uid && newData.isString()"
+        }
+      }
+    },
+    "guardian_students": {
+      "$guardian_uid": {
+        "$student_id": {
+          ".read": "auth != null && (auth.uid === $guardian_uid || auth.token.superadmin === true || auth.token.admin === true)",
+          ".write": false
+        }
+      }
+    },
+    "student_accounts": {
+      "$uid": {
+        "$student_id": {
+          ".read": "auth != null && (auth.uid === $uid || root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+          ".write": false
+        }
+      }
+    },
+    "device_access": {
+      "$device_id": {
+        "$uid": {
+          ".read": "auth != null && (auth.uid === $uid || root.child('devices/' + $device_id + '/user_id').val() === auth.uid || auth.token.superadmin === true || auth.token.admin === true)",
+          ".write": false
+        }
+      }
+    },
+    "devices": {
+      ".indexOn": ["user_id"],
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true || (query.orderByChild === 'user_id' && query.equalTo === auth.uid))",
+      "$device_id": {
+        ".read": "auth != null && (data.child('user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false,
+        "device_name": {
+          ".write": "auth != null && data.parent().exists() && data.parent().child('user_id').val() === auth.uid && newData.isString() && newData.val().length >= 1 && newData.val().length <= 100"
+        },
+        "monitoring_enabled": {
+          ".write": "auth != null && data.parent().exists() && (data.parent().child('user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid + '/can_operate').val() === true) && newData.isBoolean()"
+        },
+        "alert_after_sec": {
+          ".write": "auth != null && data.parent().exists() && data.parent().child('user_id').val() === auth.uid && newData.isNumber() && newData.val() > 0 && newData.val() % 1 === 0"
+        },
+        "user_id": {
+          ".write": false
+        },
+        "current_posture": {
+          ".write": false,
+          ".validate": "newData.val() === 'good' || newData.val() === 'bad' || newData.val() === 'absent' || newData.val() === 'unknown'"
+        },
+        "monitoring_active": {
+          ".write": false
+        },
+        "last_seen_at": {
+          ".write": false
+        }
+      }
+    },
+    "sessions": {
+      "$device_id": {
+        ".indexOn": ["started_at"],
+        ".read": "auth != null && (root.child('devices/' + $device_id + '/user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid).exists() || auth.token.superadmin === true || auth.token.admin === true) && (query.orderByChild == null || (query.orderByChild === 'started_at' && query.limitToLast != null && query.limitToLast <= 50))",
+        "$session_id": {
+          ".read": "auth != null && (root.child('devices/' + $device_id + '/user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+          ".write": false
+        }
+      }
+    },
+    "alerts": {
+      "$device_id": {
+        "$session_id": {
+          ".indexOn": ["is_read", "created_at"],
+          ".read": "auth != null && (root.child('devices/' + $device_id + '/user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid).exists() || auth.token.superadmin === true || auth.token.admin === true) && (query.orderByChild == null || query.orderByChild === 'is_read' || query.orderByChild === 'created_at')",
+          "$alert_id": {
+            ".read": "auth != null && (root.child('devices/' + $device_id + '/user_id').val() === auth.uid || root.child('device_access/' + $device_id + '/' + auth.uid).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+            ".write": false,
+            "is_read": {
+              ".write": "auth != null && data.parent().exists() && root.child('devices/' + $device_id + '/user_id').val() === auth.uid && newData.isBoolean()"
+            }
+          }
+        }
+      }
+    },
+    "student_alerts": {
+      "$student_id": {
+        ".indexOn": ["event_at"],
+        ".read": "auth != null && (root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true) && (query.orderByChild == null || (query.orderByChild === 'event_at' && (query.limitToLast != null || query.startAt != null)))",
+        ".write": false
+      }
+    },
+    "episode_log": {
+      "$student_id": {
+        ".indexOn": ["started_at"],
+        ".read": "auth != null && (root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true) && (query.orderByChild == null || (query.orderByChild === 'started_at' && (query.limitToLast != null || query.startAt != null)))",
+        ".write": false
+      }
+    },
+    "learning_days": {
+      ".read": "auth != null",
+      ".write": false
+    },
+    "learning_progress": {
+      "$student_id": {
+        ".read": "auth != null && (root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "content_assets": {
+      ".read": "auth != null",
+      ".write": false
+    },
+    "certificate_requests": {
+      "$student_id": {
+        ".read": "auth != null && (root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "questions_public": {
+      ".indexOn": ["status", "topic"],
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true || (query.orderByChild === 'status' && query.equalTo === 'published'))",
+      "$question_id": {
+        ".read": "auth != null && (data.child('status').val() === 'published' || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "question_keys": {
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true)",
+      ".write": false
+    },
+    "game_attempts": {
+      "$student_id": {
+        ".indexOn": ["created_at"],
+        ".read": "auth != null && (root.child('guardian_students/' + auth.uid + '/' + $student_id).exists() || root.child('student_accounts/' + auth.uid + '/' + $student_id).exists() || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "notification_preferences": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "notification_reads": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+        "$alert_id": {
+          ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+          ".write": "auth != null && auth.uid === $uid && newData.hasChild('read_at') && newData.child('read_at').isNumber()"
+        }
+      }
+    },
+    "push_tokens": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "notification_jobs": {
+      ".indexOn": ["uid", "alert_id", "state"],
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true)",
+      "$job_id": {
+        ".read": "auth != null && (data.child('uid').val() === auth.uid || auth.token.superadmin === true || auth.token.admin === true)",
+        ".write": false
+      }
+    },
+    "invitations": {
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true)",
+      ".write": false
+    },
+    "system_locks": {
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true)",
+      ".write": false
+    },
+    "audit_logs": {
+      ".indexOn": ["time", "actor_uid"],
+      ".read": "auth != null && (auth.token.superadmin === true || auth.token.admin === true)",
+      ".write": false
+    }
+  }
+}

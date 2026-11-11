@@ -1,0 +1,4909 @@
+{
+  "schema_version": "v1.6-p06-rtdb-contract",
+  "project_id": "gen-lang-client-0531599250",
+  "exported_at": 1793982650855,
+  "exported_by_uid": "uid-superadmin-01",
+  "exported_by_email": "minhquantran4312@gmail.com",
+  "contains_secrets": false,
+  "contains_real_personal_data": false,
+  "counts": {
+    "users": 5,
+    "students": 3,
+    "devices": 3,
+    "learning_days": 28,
+    "questions_public": 40,
+    "published_questions": 12
+  },
+  "snapshot": {
+    "users": {
+      "uid-superadmin-01": {
+        "full_name": "Trần Minh Quân (SuperAdmin)",
+        "email": "minhquantran4312@gmail.com"
+      },
+      "uid-superadmin-02": {
+        "full_name": "Tâm Trần (Chủ dự án · SuperAdmin)",
+        "email": "tamtranmusic@gmail.com"
+      },
+      "uid-guardian-a": {
+        "full_name": "Phụ huynh Gia đình A (Nguyễn Văn An)",
+        "email": "phuhuynh.a@example.com"
+      },
+      "uid-guardian-b": {
+        "full_name": "Phụ huynh Gia đình B (Lê Thị Bình)",
+        "email": "phuhuynh.b@example.com"
+      },
+      "uid-student-a1": {
+        "full_name": "Học sinh Minh (Con Gia đình A)",
+        "email": "hocsinh.minh.a1@example.com"
+      }
+    },
+    "account_roles": {
+      "uid-superadmin-01": {
+        "role": "superadmin",
+        "disabled": false,
+        "updated_at": 1793500000000,
+        "updated_by": "system_bootstrap"
+      },
+      "uid-superadmin-02": {
+        "role": "superadmin",
+        "disabled": false,
+        "updated_at": 1793500000000,
+        "updated_by": "system_bootstrap"
+      },
+      "uid-guardian-a": {
+        "role": "guardian",
+        "disabled": false,
+        "updated_at": 1793500000000,
+        "updated_by": "self_onboarding"
+      },
+      "uid-guardian-b": {
+        "role": "guardian",
+        "disabled": false,
+        "updated_at": 1793500000000,
+        "updated_by": "self_onboarding"
+      },
+      "uid-student-a1": {
+        "role": "student",
+        "disabled": false,
+        "updated_at": 1793500000000,
+        "updated_by": "invitation_accept"
+      }
+    },
+    "students": {
+      "stu-a1": {
+        "student_id": "stu-a1",
+        "display_name": "Bé Minh (Lớp 4 - Gia đình A)",
+        "age_group": "primary_6_10",
+        "guardian_owner_uid": "uid-guardian-a",
+        "auth_uid": "uid-student-a1",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "created_at": 1793413600000
+      },
+      "stu-a2-no-google": {
+        "student_id": "stu-a2-no-google",
+        "display_name": "Bé Na (Lớp 2 - Không có Google Account riêng)",
+        "age_group": "primary_6_10",
+        "guardian_owner_uid": "uid-guardian-a",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "created_at": 1793456800000
+      },
+      "stu-b1": {
+        "student_id": "stu-b1",
+        "display_name": "Bạn Khoa (Lớp 7 - Gia đình B)",
+        "age_group": "middle_11_15",
+        "guardian_owner_uid": "uid-guardian-b",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "created_at": 1793413600000
+      }
+    },
+    "guardian_students": {
+      "uid-guardian-a": {
+        "stu-a1": {
+          "relationship": "parent_owner",
+          "verified_at": 1793413600000,
+          "can_manage": true
+        },
+        "stu-a2-no-google": {
+          "relationship": "parent_owner",
+          "verified_at": 1793456800000,
+          "can_manage": true
+        }
+      },
+      "uid-guardian-b": {
+        "stu-b1": {
+          "relationship": "parent_owner",
+          "verified_at": 1793413600000,
+          "can_manage": true
+        }
+      }
+    },
+    "student_accounts": {
+      "uid-student-a1": {
+        "stu-a1": {
+          "verified_at": 1793420000000,
+          "linked_via_invitation": "INV-INIT-A1"
+        }
+      }
+    },
+    "device_access": {
+      "robot-fam-a-01": {
+        "uid-guardian-a": {
+          "role": "owner",
+          "can_operate": true,
+          "granted_at": 1793413600000
+        },
+        "uid-student-a1": {
+          "role": "student_operator",
+          "student_id": "stu-a1",
+          "can_operate": true,
+          "granted_at": 1793420000000
+        }
+      },
+      "robot-fam-b-01": {
+        "uid-guardian-b": {
+          "role": "owner",
+          "can_operate": true,
+          "granted_at": 1793413600000
+        }
+      },
+      "sim-dev01": {
+        "uid-superadmin-01": {
+          "role": "owner",
+          "can_operate": true,
+          "granted_at": 1793413600000
+        },
+        "uid-superadmin-02": {
+          "role": "owner",
+          "can_operate": true,
+          "granted_at": 1793413600000
+        },
+        "uid-guardian-a": {
+          "role": "owner",
+          "can_operate": true,
+          "granted_at": 1793413600000
+        }
+      }
+    },
+    "devices": {
+      "robot-fam-a-01": {
+        "user_id": "uid-guardian-a",
+        "device_name": "Robot Bàn Học Gia đình A",
+        "monitoring_enabled": false,
+        "current_posture": "unknown",
+        "monitoring_active": false,
+        "alert_after_sec": 30,
+        "last_seen_at": 1793499940000
+      },
+      "robot-fam-b-01": {
+        "user_id": "uid-guardian-b",
+        "device_name": "Robot Bàn Học Gia đình B",
+        "monitoring_enabled": false,
+        "current_posture": "good",
+        "monitoring_active": false,
+        "alert_after_sec": 30,
+        "last_seen_at": 1793499970000
+      },
+      "sim-dev01": {
+        "user_id": "uid-guardian-a",
+        "device_name": "Robot Simulator Hợp đồng MQTT (sim-dev01)",
+        "monitoring_enabled": false,
+        "current_posture": "unknown",
+        "monitoring_active": false,
+        "alert_after_sec": 30,
+        "last_seen_at": 1793499990000
+      }
+    },
+    "sessions": {
+      "robot-fam-a-01": {
+        "sess-a-001": {
+          "device_id": "robot-fam-a-01",
+          "session_id": "sess-a-001",
+          "started_at": 1793496400000,
+          "ended_at": 1793498200000,
+          "good_count": 4,
+          "bad_count": 1,
+          "alert_count": 1,
+          "student_id": "stu-a1",
+          "source": "simulator",
+          "last_projected_revision": 1
+        }
+      },
+      "robot-fam-b-01": {
+        "sess-b-001": {
+          "device_id": "robot-fam-b-01",
+          "session_id": "sess-b-001",
+          "started_at": 1793492800000,
+          "ended_at": 1793494600000,
+          "good_count": 6,
+          "bad_count": 2,
+          "alert_count": 1,
+          "student_id": "stu-b1",
+          "source": "simulator",
+          "last_projected_revision": 1
+        }
+      }
+    },
+    "alerts": {
+      "robot-fam-a-01": {
+        "sess-a-001": {
+          "alert-a-001": {
+            "alert_id": "alert-a-001",
+            "device_id": "robot-fam-a-01",
+            "session_id": "sess-a-001",
+            "student_id": "stu-a1",
+            "episode_id": "ep-a-001",
+            "reminder_index": 1,
+            "message": "Lưng mình xin một chỗ tựa nhé. Thả lỏng vai rồi ngồi ngay ngắn nào!",
+            "created_at": 1793497600000,
+            "occurred_at": 1793497600000,
+            "received_at": 1793497600000,
+            "time_basis": "robot_clock_validated",
+            "severity": "low",
+            "is_read": false,
+            "image_id": "cap-a-001",
+            "capture_status": "uploaded",
+            "source": "simulator"
+          }
+        }
+      },
+      "robot-fam-b-01": {
+        "sess-b-001": {
+          "alert-b-001": {
+            "alert_id": "alert-b-001",
+            "device_id": "robot-fam-b-01",
+            "session_id": "sess-b-001",
+            "student_id": "stu-b1",
+            "episode_id": "ep-b-001",
+            "reminder_index": 1,
+            "message": "Cuốn vở chưa chạy mất đâu! Mình đưa mắt ra xa một chút theo hướng dẫn nhé.",
+            "created_at": 1793494000000,
+            "occurred_at": 1793494000000,
+            "received_at": 1793494000000,
+            "time_basis": "robot_clock_validated",
+            "severity": "medium",
+            "is_read": false,
+            "image_id": "cap-b-001",
+            "capture_status": "uploaded",
+            "source": "simulator"
+          }
+        }
+      }
+    },
+    "learning_days": {
+      "1": {
+        "day_number": 1,
+        "week_number": 1,
+        "title_transcribed": "Ngồi thẳng nào!",
+        "slogan_transcribed": "Vai thả lỏng, lưng thẳng, đầu thẳng",
+        "primary_asset": {
+          "name": "day1.png",
+          "drive_id": "1H9-RBf8qY2-vX6ZeFxEki8SeqLQ3Zfjl",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day1.png"
+        },
+        "info_asset": {
+          "name": "in4 d1.png",
+          "drive_id": "1zpOeK5-Os7rfW1EKNnB3S7QpqBplwV5e",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d1.png"
+        },
+        "medal_asset": {
+          "name": "HC d1.png",
+          "drive_id": "1AXnyEiL0805dCOD43hlSyTtMSoz1rRnW",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d1.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi thẳng lưng, tựa nhẹ vào ghế, vai thả lỏng.",
+          "2. Mắt cách vở 30 – 35 cm (ước lượng bằng một cánh tay).",
+          "3. Đầu thẳng, không cúi hoặc ngửa quá.",
+          "4. Hai chân chạm sàn, không ngồi vắt chéo chân.",
+          "5. Giữ tư thế đúng trong 15 phút liên tục, sau đó nghỉ 1 phút vươn vai."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Giữ đúng tư thế trong 15 phút.",
+          "Cảm thấy dễ chịu hơn khi học.",
+          "Cần nhớ lại vị trí ngồi khi học buổi tối."
+        ],
+        "qr_note": "Bạn hãy làm khảo sát 1!",
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q001",
+          "BUGZ-Q004",
+          "BUGZ-Q008",
+          "BUGZ-Q020",
+          "BUGZ-Q021"
+        ],
+        "next_day": 2,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "2": {
+        "day_number": 2,
+        "week_number": 1,
+        "title_transcribed": "Khoảng cách 30cm",
+        "slogan_transcribed": "Giữ sách cách mắt 30 cm - nhỏ thôi nhưng bảo vệ đôi mắt to!",
+        "primary_asset": {
+          "name": "day2.png",
+          "drive_id": "1IUgyKrnQlzklKo4jYOk57ru1SvATS79a",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day2.png"
+        },
+        "info_asset": {
+          "name": "in4 d2.png",
+          "drive_id": "1BmLo787PUleBPdA0_CTUBMflSqZ8wsZE",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d2.png"
+        },
+        "medal_asset": {
+          "name": "HC d2.png",
+          "drive_id": "16Bg5yFoRkc8WCVxLnPWpWYWgD6u2HRel",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d2.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi thẳng lưng, đầu ngẩng cao.",
+          "2. Đặt khuỷu tay lên bàn, từ mắt đến ngón tay mở = khoảng 30 cm.",
+          "3. Nếu thấy gần hơn thế, lùi sách ra xa hoặc dùng giá đỡ.",
+          "4. Kiểm tra khoảng cách 3 lần/ngày: sáng – trưa – tối."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Giữ được khoảng cách 30 cm khi viết, đọc.",
+          "Mắt thấy thoải mái hơn khi học liên tục.",
+          "Nhắc bạn bên cạnh đo thử cùng mình."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q021",
+          "BUGZ-Q022",
+          "BUGZ-Q036"
+        ],
+        "next_day": 3,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "3": {
+        "day_number": 3,
+        "week_number": 1,
+        "title_transcribed": "Mắt nhìn ngang tầm",
+        "slogan_transcribed": "Giữ ánh nhìn ngang tầm - học vui không mỏi cổ!",
+        "primary_asset": {
+          "name": "day3.png",
+          "drive_id": "12XXdEoMzDfW5JYglr8wDuV_lQk6EqvSh",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day3.png"
+        },
+        "info_asset": {
+          "name": "in4 d3.png",
+          "drive_id": "1WQ0PKAsHkjalzcuh3K3-tKpgGgyfCTfn",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d3.png"
+        },
+        "medal_asset": {
+          "name": "HC d3.png",
+          "drive_id": "159mflUTwJmq6lT5eyNisbVDzIrnDp6y8",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d3.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Khi ngồi học, tầm mắt nên ngang với ⅓ trên của trang sách hoặc màn hình.",
+          "2. Không cúi đầu quá 20° – nếu phải nhìn xuống nhiều, dùng giá đỡ sách.",
+          "3. Khi dùng laptop, kê thêm 1–2 quyển sách bên dưới để nâng màn hình.",
+          "4. Thực hành kiểm tra tư thế của mình 3 lần/ngày: sáng – trưa – tối."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Giữ mắt ngang tầm trong 15 phút học.",
+          "Cảm giác cổ và vai thoải mái hơn.",
+          "Điều chỉnh xong góc học tập có \"tầm nhìn đúng tầm mắt\"."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q004",
+          "BUGZ-Q037"
+        ],
+        "next_day": 4,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "4": {
+        "day_number": 4,
+        "week_number": 1,
+        "title_transcribed": "Ánh sáng vừa đủ",
+        "slogan_transcribed": "Hôm nay kiểm tra góc học xem đèn có đúng vị trí chưa nào?",
+        "primary_asset": {
+          "name": "day4.png",
+          "drive_id": "1vqBDan0ZbaE7ai9TgskoXamRwRqDjlhI",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day4.png"
+        },
+        "info_asset": {
+          "name": "in4 d4.png",
+          "drive_id": "12uP3wtH6Wi2ABucIiZy873nE0RqlFXqi",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d4.png"
+        },
+        "medal_asset": {
+          "name": "HC d4.png",
+          "drive_id": "1QDWzH0Cd1tH6ECtqC4V0QZte-zuUHjbu",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d4.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Bật đèn bàn trước khi trời tối; đặt đèn phía trái nếu em thuận tay phải.",
+          "2. Kiểm tra bóng đổ – nếu bóng tay che vở -> đổi góc đèn.",
+          "3. Tránh ngồi đối diện ánh sáng mạnh hoặc bóng đèn trần chiếu thẳng.",
+          "4. Duy trì ánh sáng ổn định suốt buổi học – không chớp nhấp nháy."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Kiểm tra vị trí đèn học và ánh sáng phòng.",
+          "Không còn cảm giác lóa hoặc mỏi mắt.",
+          "Giới thiệu góc học có đủ sáng cùng bố/mẹ hoặc bạn bè."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q023",
+          "BUGZ-Q024",
+          "BUGZ-Q036"
+        ],
+        "next_day": 5,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "5": {
+        "day_number": 5,
+        "week_number": 1,
+        "title_transcribed": "Bàn ghế vừa tầm",
+        "slogan_transcribed": "Hôm nay đo thử xem bàn ghế của bạn đã hợp chưa?",
+        "primary_asset": {
+          "name": "day5.png",
+          "drive_id": "1EJSl7P7q8Xi_fpn9M5-Wj5XgmqRnxbFy",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day5.png"
+        },
+        "info_asset": {
+          "name": "in4 d5.png",
+          "drive_id": "1TO6qZWinxMbGpk4uhwxImFSGqgL-uKbu",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d5.png"
+        },
+        "medal_asset": {
+          "name": "HC d5.png",
+          "drive_id": "1qQLYEIElga-VXMhOd0JzW_2uGCnN67R3",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d5.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi thử lại bàn học: kiểm tra xem cẳng tay có ngang mặt bàn không.",
+          "2. Nếu bàn quá cao -> kê thêm gối ngồi hoặc đổi ghế.",
+          "3. Nếu bàn quá thấp -> kê thêm sách dưới chân bàn hoặc dùng giá đỡ vở.",
+          "4. Kiểm tra dáng ngồi trong gương hoặc nhờ bạn chụp lại tư thế."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Cẳng tay ngang mặt bàn.",
+          "Hai chân chạm sàn, đầu gối vuông góc.",
+          "Không còn gập người hoặc rướn cổ."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q002",
+          "BUGZ-Q003",
+          "BUGZ-Q006",
+          "BUGZ-Q020"
+        ],
+        "next_day": 6,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "6": {
+        "day_number": 6,
+        "week_number": 1,
+        "title_transcribed": "Không nằm đọc!",
+        "slogan_transcribed": "Đọc nằm - mắt than, đọc đứng - mắt sáng!",
+        "primary_asset": {
+          "name": "day6.png",
+          "drive_id": "1uhL6Pd3VFFv8JjqzCH5G3VFrnHgc4kPd",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day6.png"
+        },
+        "info_asset": {
+          "name": "in4 d6.png",
+          "drive_id": "1T5Ylz0OrDVLa1qq-yj4LQqzPB0I69elR",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d6.png"
+        },
+        "medal_asset": {
+          "name": "HC d6.png",
+          "drive_id": "1D2pQupgspX70QRZ0b0j6QtWSpD_iQXXv",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d6.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Không đọc khi nằm hoặc khi dựa lưng trên giường.",
+          "2. Luôn ngồi thẳng lưng, giữ khoảng cách 30–35 cm với trang sách.",
+          "3. Đặt sách trên bàn hoặc dùng giá đỡ để dễ quan sát.",
+          "4. Khi đọc buổi tối, bật đèn bàn đủ sáng (300–500 lux)."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Hôm nay em không đọc sách khi nằm.",
+          "Giữ đúng tư thế khi đọc buổi tối.",
+          "Cảm thấy mắt dễ chịu hơn khi đọc sách lúc ngồi."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q035"
+        ],
+        "next_day": 7,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "7": {
+        "day_number": 7,
+        "week_number": 1,
+        "title_transcribed": "Thử thách đầu tiên",
+        "slogan_transcribed": "30 phút đầu tiên - khởi đầu hành trình giữ dáng đẹp, mắt sáng!",
+        "primary_asset": {
+          "name": "day7.png",
+          "drive_id": "15y9V_pUsy6_SXzqgtrnkIhRxibCvZIo5",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day7.png"
+        },
+        "info_asset": {
+          "name": "in4 d7.png",
+          "drive_id": "1DskKqRyWko87TSbsDx1ZkBMvzLpWTBDA",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d7.png"
+        },
+        "medal_asset": {
+          "name": "HC d7.png",
+          "drive_id": "1VTTt0xycL2jM0OqJ0DVlCeHZ2Ls3U-GW",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d7.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Chuẩn bị góc học đạt chuẩn (ánh sáng, bàn ghế, tư thế ngồi).",
+          "2. Đặt hẹn giờ 30 phút – tập trung học hoặc đọc.",
+          "3. Sau khi hoàn thành, ghi cảm nhận: Mắt có mỏi không? Cổ/lưng có đau không? Có giữ được tư thế chuẩn trong suốt 30 phút?"
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Giữ tư thế đúng trọn 30 phút.",
+          "Tập trung đúng trọn 30 phút.",
+          "Tự hào đánh dấu \"Tuần đầu tiên hoàn thành!\"."
+        ],
+        "qr_note": "Bạn hãy làm khảo sát 2!",
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q015"
+        ],
+        "next_day": 8,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "8": {
+        "day_number": 8,
+        "week_number": 2,
+        "title_transcribed": "20-20-20",
+        "slogan_transcribed": "Cứ sau 20 phút học, hãy cho đôi mắt nghỉ 20 giây.",
+        "primary_asset": {
+          "name": "day8.png",
+          "drive_id": "1IUAZdeZ2Pb1qeYcMRGOmVJ7NvxieYzC1",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day8.png"
+        },
+        "info_asset": {
+          "name": "in4 d8.png",
+          "drive_id": "1O0BXVNQftPNu0q8AMl0t9bZds_ywQ2ZT",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d8.png"
+        },
+        "medal_asset": {
+          "name": "HC d8.png",
+          "drive_id": "1okEbrU9WunQi5yMZ1M8pbsvNNlirSL7l",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d8.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Học hoặc đọc 20 phút -> dừng lại, ngẩng đầu lên.",
+          "2. Nhìn ra xa khoảng 6 mét (20 feet) – có thể là cây, tường, cửa sổ, bức tường xa.",
+          "3. Giữ ánh nhìn đó ít nhất 20 giây, chớp mắt nhẹ 10 lần."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã thực hiện quy tắc 20–20–20 ít nhất 3 lần hôm nay.",
+          "Mắt cảm thấy dễ chịu hơn khi học lâu.",
+          "Không còn thấy khô, cay hoặc nặng mắt."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q025",
+          "BUGZ-Q026",
+          "BUGZ-Q027",
+          "BUGZ-Q038",
+          "BUGZ-Q040"
+        ],
+        "next_day": 9,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "9": {
+        "day_number": 9,
+        "week_number": 2,
+        "title_transcribed": "Chớp mắt 10 lần",
+        "slogan_transcribed": "Đôi mắt cũng cần chớp để thở - chớp 10 lần, nhẹ tênh cả đôi mi!",
+        "primary_asset": {
+          "name": "day9.png",
+          "drive_id": "1nkn4C9tZiTZ3xzc92wS0HjEXD5kSIm-0",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day9.png"
+        },
+        "info_asset": {
+          "name": "in4 d9.png",
+          "drive_id": "1otyTT4VOzlwDHJuCgH_YAgSqy5MLoU2g",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d9.png"
+        },
+        "medal_asset": {
+          "name": "HC d9.png",
+          "drive_id": "1wjiohLfSiPZ3M4zryNESzdqTs9o4CEqk",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d9.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Sau mỗi 20–30 phút học hoặc nhìn màn hình, dừng lại 10 giây.",
+          "2. Nhắm mắt nhẹ – mở ra 10 lần liên tiếp (không nhíu, không bóp chặt mí).",
+          "3. Có thể xoa nhẹ hai lòng bàn tay, áp gần mắt để cảm nhận hơi ấm (không chạm trực tiếp).",
+          "4. Uống đủ nước – giúp tuyến lệ tiết tốt hơn."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã thực hiện \"chớp mắt 10 lần\" ít nhất 3 lần trong ngày.",
+          "Mắt cảm thấy dễ chịu hơn sau mỗi lần làm.",
+          "Không còn thấy khô, cay hoặc nặng mắt."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q028",
+          "BUGZ-Q029"
+        ],
+        "next_day": 10,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "10": {
+        "day_number": 10,
+        "week_number": 2,
+        "title_transcribed": "Nhìn xa - gần",
+        "slogan_transcribed": "Đừng để mắt \"đứng yên\" - Cho đôi mắt vận động như cơ thể!",
+        "primary_asset": {
+          "name": "day10.png",
+          "drive_id": "1tMo9CmuDya8H5vKmzk9IAjKIYyyX61Tm",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day10.png"
+        },
+        "info_asset": {
+          "name": "in4 d10.png",
+          "drive_id": "1Ga9zjOFezHxo3-IUtNcN1xSHC_pT9ZrX",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d10.png"
+        },
+        "medal_asset": {
+          "name": "HC d10.png",
+          "drive_id": "1DuXaVvKgtKdLLeS2un2LWP-akw8vwp_R",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d10.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Đứng hoặc ngồi ở tư thế thoải mái.",
+          "2. Nhìn ra xa (cây, tòa nhà, điểm ngoài cửa sổ) trong 10 giây.",
+          "3. Sau đó, nhìn lại vật gần (bút, sách, tay mình) trong 10 giây.",
+          "4. Lặp lại 5 lần liên tiếp, hít thở chậm, thả lỏng vai.",
+          "5. Có thể kết hợp bài tập này sau mỗi 30 phút học."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã tập nhìn xa – gần ít nhất 2 lần trong hôm nay.",
+          "Cảm thấy mắt dễ chịu hơn, nhìn rõ hơn sau khi đổi tiêu cự.",
+          "Nhớ được khoảng cách an toàn giữa mắt và sách khi quay lại học."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q032"
+        ],
+        "next_day": 11,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "11": {
+        "day_number": 11,
+        "week_number": 2,
+        "title_transcribed": "Massage mắt",
+        "slogan_transcribed": "Một phút massage - Đánh thức đôi mắt sáng trong!",
+        "primary_asset": {
+          "name": "day11.png",
+          "drive_id": "1pS9sj2R7V-Yst3nGS-RjMhIVGp8yW2Sn",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day11.png"
+        },
+        "info_asset": {
+          "name": "in4 d11.png",
+          "drive_id": "15_STTw0XTZXnJpcX0nEWriTB2ERtlkQN",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d11.png"
+        },
+        "medal_asset": {
+          "name": "HC d11.png",
+          "drive_id": "1_fXe3kwqUucnz3XohhJot_cJNiwhZW2r",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d11.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Rửa tay sạch trước khi thực hiện.",
+          "2. Nhắm mắt, dùng hai ngón trỏ và giữa xoa nhẹ quanh hốc mắt theo vòng tròn nhỏ 5–10 lần.",
+          "3. Dùng đầu ngón tay ấn nhẹ vào thái dương trong 5 giây rồi thả lỏng.",
+          "4. Áp hai lòng bàn tay ấm lên mắt (không đè trực tiếp vào nhãn cầu) trong 10 giây.",
+          "5. Hít thở sâu 3 nhịp, chớp nhẹ 3–5 lần để mắt quen sáng."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã massage mắt ít nhất 2 lần hôm nay.",
+          "Đôi mắt thấy ấm, nhẹ và dễ chịu hơn sau khi làm.",
+          "Nhớ rửa tay sạch và không ấn mạnh vào nhãn cầu."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": true,
+        "clinical_review_note": "Cần rà soát y khoa: nhấn mạnh chỉ xoa nhẹ quanh xương hốc mắt, tuyệt đối không ấn trực tiếp lên nhãn cầu.",
+        "question_ids": [],
+        "next_day": 12,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "12": {
+        "day_number": 12,
+        "week_number": 2,
+        "title_transcribed": "Rửa mặt bằng nước mát",
+        "slogan_transcribed": "Một làn nước mát - Xua tan mỏi mệt cho đôi mắt!",
+        "primary_asset": {
+          "name": "day12.png",
+          "drive_id": "1nmnRWh2aCE0IXS64uPn75TSmCpzRnpR3",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day12.png"
+        },
+        "info_asset": {
+          "name": "in4 d12.png",
+          "drive_id": "1PjXTSlfhMKw4g_W9fJf8FwadnanTInMm",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d12.png"
+        },
+        "medal_asset": {
+          "name": "HC d12.png",
+          "drive_id": "10FI4j9uFvdh-cVhDeTlqV0iA5LUJW6N9",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d12.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Dùng nước sạch mát (không lạnh buốt).",
+          "2. Vỗ nhẹ nước lên vùng quanh mắt và trán 3–5 lần.",
+          "3. Nhắm mắt, vỗ nhẹ nước lên mí mắt để mi mắt được thư giãn.",
+          "4. Dùng khăn mềm thấm khô nhẹ nhàng, không chà xát.",
+          "5. Có thể thực hiện 2–3 lần/ngày: sau giờ học sáng, chiều và tối."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã rửa mặt bằng nước mát sau giờ học.",
+          "Mắt thấy nhẹ, dễ chịu hơn sau khi làm.",
+          "Em đã tránh dùng nước lạnh buốt hoặc chà xát mạnh quanh mắt."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": true,
+        "clinical_review_note": "Cần rà soát y khoa: hướng dẫn nhắm mắt vỗ nhẹ nước sạch bên ngoài, không tạt nước trực tiếp vào mắt đang mở.",
+        "question_ids": [],
+        "next_day": 13,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "13": {
+        "day_number": 13,
+        "week_number": 2,
+        "title_transcribed": "Hạn chế màn hình sau 21h",
+        "slogan_transcribed": "Tắt màn hình - bật giấc mơ đẹp",
+        "primary_asset": {
+          "name": "day13.png",
+          "drive_id": "1vOlyW6L9AKoWuUlm22Zxg5VkikC5epvO",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day13.png"
+        },
+        "info_asset": {
+          "name": "in4 d13.png",
+          "drive_id": "1FK1t6fLf0NTTC0AfVhKSv-veWmGokVbO",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d13.png"
+        },
+        "medal_asset": {
+          "name": "HC d13.png",
+          "drive_id": "1SzaNWvIrQHwXOeS75i-4EA4tqYA3Q81t",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d13.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ghi lại thời gian dùng điện thoại trong ngày (đặc biệt sau 20h).",
+          "2. Tắt hoặc cất màn hình trước 21h – để mắt và não được nghỉ.",
+          "3. Trước khi ngủ, đọc sách giấy hoặc nghe nhạc nhẹ thay vì lướt màn hình.",
+          "4. Dán nhãn nhỏ ở góc bàn học: \"Sau 21h – nghỉ cho mắt sáng\"."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã dừng dùng điện thoại trước 21h hôm nay.",
+          "Em thấy dễ ngủ và ít mỏi mắt hơn.",
+          "Em đã ghi lại thời lượng sử dụng điện thoại vào mỗi ngày."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q030"
+        ],
+        "next_day": 14,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "14": {
+        "day_number": 14,
+        "week_number": 2,
+        "title_transcribed": "Nhìn xanh cho mắt khỏe",
+        "slogan_transcribed": "Nhìn cây xanh 2 phút - đôi mắt nói lời cảm ơn!",
+        "primary_asset": {
+          "name": "day14.png",
+          "drive_id": "1plHixgYjuL3MPdWc9FLjQJ9zj4s-1M4T",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day14.png"
+        },
+        "info_asset": {
+          "name": "in4 d14.png",
+          "drive_id": "1aT0UcDGRHBP6K-IkPNsKy4Eb5pNd2hMd",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d14.png"
+        },
+        "medal_asset": {
+          "name": "HC d14.png",
+          "drive_id": "1clxvrQhM5FcF-U0X3yTLg-BOwcgDVt_T",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d14.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Khi học xong 1 tiết hoặc 30 phút đọc sách, rời mắt khỏi màn hình / vở, nhìn ra xa ít nhất 6 mét – khoảng 2 phút.",
+          "2. Tập trung nhìn cây xanh, bầu trời, hoặc đồ vật màu xanh lá trong phòng.",
+          "3. Trong lúc nhìn, thở chậm, chớp mắt nhẹ để mắt được dưỡng ẩm."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã nhìn ra xanh ít nhất 2 lần trong ngày học.",
+          "Mắt em cảm thấy nhẹ và dễ chịu hơn.",
+          "Hoàn thành khảo sát cảm nhận."
+        ],
+        "qr_note": "Bạn hãy làm khảo sát 3!",
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q031",
+          "BUGZ-Q032"
+        ],
+        "next_day": 15,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "15": {
+        "day_number": 15,
+        "week_number": 3,
+        "title_transcribed": "Vươn vai mỗi giờ",
+        "slogan_transcribed": "Mỗi giờ vươn vai - Mỏi mệt bay ngay!",
+        "primary_asset": {
+          "name": "day15.png",
+          "drive_id": "1I35cnQHKxiD3xrKtmRqtCkU1mx4c1q5c",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day15.png"
+        },
+        "info_asset": {
+          "name": "in4 d15.png",
+          "drive_id": "1Ty56MXHRZKQTbVbKWPiCFdaD4amvvRCW",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d15.png"
+        },
+        "medal_asset": {
+          "name": "HC d15.png",
+          "drive_id": "1Eninv07piitL3QNGRMxrOUqOKa7F_hVO",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d15.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi thẳng lưng.",
+          "2. Đan hai tay vào nhau, vươn người lên cao trong 5 giây.",
+          "3. Hít sâu – thở ra chậm 3 lần.",
+          "4. Xoay vai nhẹ 5 vòng ra sau, 5 vòng ra trước.",
+          "5. Nghiêng đầu nhẹ sang trái – phải mỗi bên 5 giây.",
+          "6. Mỉm cười rồi tiếp tục học!"
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã thực hiện bài tập ít nhất 2 lần trong hôm nay.",
+          "Cơ thể cảm thấy nhẹ và dễ thở hơn sau khi vươn vai.",
+          "Nhớ lại hoặc nhắc bạn cùng vươn vai mỗi giờ học."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q005",
+          "BUGZ-Q013"
+        ],
+        "next_day": 16,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "16": {
+        "day_number": 16,
+        "week_number": 3,
+        "title_transcribed": "Xoay cổ nhẹ nhàng",
+        "slogan_transcribed": "Cổ xoay chậm - Mỏi biến mất!",
+        "primary_asset": {
+          "name": "day16.png",
+          "drive_id": "1T45pvRnnwghkb_CZ1tDUu5K1Nyye2rD1",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day16.png"
+        },
+        "info_asset": {
+          "name": "in4 d16.png",
+          "drive_id": "1EdCGrDf1vlyRGwU_bN0oxI7Zm6AcM2aS",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d16.png"
+        },
+        "medal_asset": {
+          "name": "HC d16.png",
+          "drive_id": "1OtN5uMrNLSQJ45CETxy-5mLNKiUZll7R",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d16.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi thẳng lưng, mắt nhìn về phía trước.",
+          "2. Quay đầu sang trái thật chậm và giữ 3 giây.",
+          "3. Quay về giữa, rồi xoay sang phải đếm giữ 3 giây.",
+          "4. Lặp lại 5 vòng mỗi bên.",
+          "5. Nghiêng nhẹ đầu sang hai bên vai (tránh xoay tròn cổ 360 độ mạnh hoặc bẻ cổ).",
+          "6. Hít sâu – thở chậm, cảm nhận cổ nhẹ ra."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã xoay cổ đủ 5 vòng chậm.",
+          "Cổ em thấy nhẹ hơn và dễ quay hơn.",
+          "Em nhớ ngồi thẳng lưng khi quay lại học tập."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": true,
+        "clinical_review_note": "Cần rà soát y khoa: chỉ nghiêng/quay chậm trong biên độ sinh lý, không xoay cổ mạnh 360 độ hoặc tự bẻ cổ.",
+        "question_ids": [],
+        "next_day": 17,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "17": {
+        "day_number": 17,
+        "week_number": 3,
+        "title_transcribed": "Chống đẩy tường",
+        "slogan_transcribed": "Hoạt động thể chất - vai khỏe, lưng thẳng!",
+        "primary_asset": {
+          "name": "day17.png",
+          "drive_id": "12m-jHiULkrQFBIYOeqLEgZI45Ong5am3",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day17.png"
+        },
+        "info_asset": {
+          "name": "in4 d17.png",
+          "drive_id": "1xd_Qpy6MBKz_ZGnd5O1UjS_pgCYxrc5s",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d17.png"
+        },
+        "medal_asset": {
+          "name": "HC d17.png",
+          "drive_id": "17s2Jfs2NEucYRneeDHy6EyvHoZ36LJDq",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d17.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Đứng thẳng, cách tường một sải tay.",
+          "2. Đặt hai bàn tay lên tường, cao ngang hai vai.",
+          "3. Giữ lưng, cổ, chân thành một đường thẳng.",
+          "4. Hít vào khi hạ người gần tường.",
+          "5. Thở ra khi đẩy người trở lại vị trí ban đầu.",
+          "6. Thực hiện 10 lần liên tiếp, có thể lặp lại 2–3 hiệp/ngày."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã làm đủ 10 lần chống đẩy.",
+          "Em thấy vai, tay và lưng khỏe hơn sau khi tập.",
+          "Em có thể mời thêm bạn để vui và đều đặn hơn."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [],
+        "next_day": 18,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "18": {
+        "day_number": 18,
+        "week_number": 3,
+        "title_transcribed": "Đi lại một phút",
+        "slogan_transcribed": "Mỗi 45 phút học - 1 phút đi lại cho khoẻ mạnh cả ngày!",
+        "primary_asset": {
+          "name": "day18.png",
+          "drive_id": "1mFd9Y6q44PPIYqImuCsGjx0jNeFUJ8Ww",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day18.png"
+        },
+        "info_asset": {
+          "name": "in4 d18.png",
+          "drive_id": "1VSVtnAYJpCdSORIm68NVRChS_UjRIOiW",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d18.png"
+        },
+        "medal_asset": {
+          "name": "HC d18.png",
+          "drive_id": "15Uj5fenZNE0blE2tc16x37jaaRvclpKb",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d18.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Sau 45 phút học, đứng dậy khỏi ghế.",
+          "2. Đi bộ chậm quanh bàn hoặc hành lang ít nhất 1 phút.",
+          "3. Kết hợp vươn vai, xoay cổ, hít thở sâu 3 lần.",
+          "4. Nhìn ra cửa sổ để mắt thư giãn.",
+          "5. Sau đó trở lại bàn học, ngồi đúng tư thế, mắt nhìn ngang tầm."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã rời bàn học và đi lại ít nhất 1 phút sau mỗi 45 phút.",
+          "Em thấy dễ chịu, tỉnh táo hơn.",
+          "Em nhớ thực hiện đều mỗi buổi học."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q005",
+          "BUGZ-Q014"
+        ],
+        "next_day": 19,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "19": {
+        "day_number": 19,
+        "week_number": 3,
+        "title_transcribed": "Đặt lại bàn học",
+        "slogan_transcribed": "Không gian gọn - Tư thế chuẩn - Tinh thần sáng!",
+        "primary_asset": {
+          "name": "day19.png",
+          "drive_id": "1S1Jj7iO_1QfG4YRv7c4yIp18FmQUcLtp",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day19.png"
+        },
+        "info_asset": {
+          "name": "in4 d19.png",
+          "drive_id": "1Z2MNSEWod2TOuLuwl8DHHuAsU2bES0tT",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d19.png"
+        },
+        "medal_asset": {
+          "name": "HC d19.png",
+          "drive_id": "1Xd-rlZuBbC7aZHNVQ30aryxfGuTe3EJd",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d19.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Dọn bàn học sạch, chỉ để sách vở đang dùng.",
+          "2. Kiểm tra chiều cao bàn ghế.",
+          "3. Kiểm tra ánh sáng.",
+          "4. Trang trí góc học một cây nhỏ, khung ảnh nhỏ, hoặc vật yêu thích để tạo cảm xúc tích cực."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã chỉnh lại bàn và ghế vừa tầm.",
+          "Góc học tập hôm nay của em sáng và gọn hơn.",
+          "Em cảm thấy dễ tập trung và thoải mái hơn khi học."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q003",
+          "BUGZ-Q009"
+        ],
+        "next_day": 20,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "20": {
+        "day_number": 20,
+        "week_number": 3,
+        "title_transcribed": "Tư thế khi viết",
+        "slogan_transcribed": "Ngồi đúng - viết đẹp - học vui!",
+        "primary_asset": {
+          "name": "day20.png",
+          "drive_id": "1ELNjR2N7S28zm5VxwwglrCA-xiWfzlp3",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day20.png"
+        },
+        "info_asset": {
+          "name": "in4 d20.png",
+          "drive_id": "1KmV3ohrBYIaGgFIBYEjMcaLLgSEYwI0z",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d20.png"
+        },
+        "medal_asset": {
+          "name": "HC d20.png",
+          "drive_id": "1ssBAjXpJ2Oh4o73qorwxtiAyUzyCxXWu",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d20.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Ngồi ngay ngắn, lưng thẳng, không tì ngực vào cạnh bàn.",
+          "2. Giữ khoảng cách mắt – vở 30–35 cm.",
+          "3. Cầm bút bằng 3 ngón, cổ tay thả lỏng.",
+          "4. Đặt vở nghiêng nhẹ 15–20 độ về phía tay cầm bút.",
+          "5. Quan sát gương hoặc nhờ bạn chụp ảnh để xem tư thế đã chuẩn chưa."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã ngồi thẳng khi viết bài.",
+          "Mắt em cách vở khoảng 30 cm.",
+          "Em cảm thấy cổ và vai rất nhẹ, thoải mái hơn."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q011"
+        ],
+        "next_day": 21,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "21": {
+        "day_number": 21,
+        "week_number": 3,
+        "title_transcribed": "Nhóm bạn cùng thẳng lưng",
+        "slogan_transcribed": "Một người thẳng lưng là tốt - cả nhóm thẳng lưng là tuyệt vời!",
+        "primary_asset": {
+          "name": "day21.png",
+          "drive_id": "1HEOM0rxNyT9OKzuegzHr7kfMDgSFAF-U",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day21.png"
+        },
+        "info_asset": {
+          "name": "in4 d21.png",
+          "drive_id": "1flhX8SgHkkyKDrcbyAXkav27GoP6XscG",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d21.png"
+        },
+        "medal_asset": {
+          "name": "HC d21.png",
+          "drive_id": "1q9TTzhEHxSTkwAsM9-RewI5pozPXJ85v",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d21.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Rủ 2–3 bạn cùng tham gia \"Thử thách thẳng lưng\".",
+          "2. Cùng nhau chụp 1 tấm ảnh hoặc vẽ minh họa nhóm ngồi học đúng tư thế.",
+          "3. Trong mỗi tiết học, 1 bạn làm \"Người quan sát\" – nhắc khéo khi có bạn gù hoặc cúi.",
+          "4. Cuối ngày, cả nhóm đánh giá xem ai giữ tư thế tốt nhất."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em và nhóm bạn đã cùng nhắc nhau thực hiện ít nhất 3 lần trong ngày.",
+          "Cả nhóm đều ngồi thẳng lưng ít nhất 1 tiết học.",
+          "Hoàn thành khảo sát cảm nhận."
+        ],
+        "qr_note": "Bạn hãy làm khảo sát 4!",
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q007",
+          "BUGZ-Q012"
+        ],
+        "next_day": 22,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "22": {
+        "day_number": 22,
+        "week_number": 4,
+        "title_transcribed": "Kiểm tra tư thế bản thân",
+        "slogan_transcribed": "Lưng vuông - cao hơn - tự tin hơn!",
+        "primary_asset": {
+          "name": "day22.png",
+          "drive_id": "1d8B-K0YEbVC0jlYva1IwB6cGsHwfyfcv",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day22.png"
+        },
+        "info_asset": {
+          "name": "in4 d22.png",
+          "drive_id": "1kQZUEvVPYYyEWPCnRbkfuCOHj9kh15WL",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d22.png"
+        },
+        "medal_asset": {
+          "name": "HC d22.png",
+          "drive_id": "1BCGVyPxXuVIVVlLSABw5hQwOlIxJGncJ",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d22.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Chuẩn bị: Một tấm gương lớn hoặc camera điện thoại (nhờ bố/mẹ hỗ trợ).",
+          "2. Thực hành đứng nghiêng 90° và nhìn sang bên để thấy dáng lưng.",
+          "3. Kiểm tra 3 điểm thẳng hàng: Tai – Vai – Hông cùng nằm trên một đường thẳng.",
+          "4. Kiểm tra khi ngồi học: Nhìn gương hoặc nhờ người thân chụp ảnh tư thế ngồi.",
+          "5. Nếu lưng bị cong, vai bị lệch, cổ đổ về trước -> điều chỉnh ngay rồi chụp lại để so sánh."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Em đã chụp/gương soi tư thế đúng.",
+          "Em nhận ra điểm cần chỉnh sửa.",
+          "Em thấy mình thẳng và tự tin hơn."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q010"
+        ],
+        "next_day": 23,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "23": {
+        "day_number": 23,
+        "week_number": 4,
+        "title_transcribed": "Ghi nhật ký cảm giác mắt",
+        "slogan_transcribed": "Đôi mắt cũng biết kể chuyện - hôm nay chúng muốn nói gì với bạn?",
+        "primary_asset": {
+          "name": "day23.png",
+          "drive_id": "11u_cuenEdFq7OZOQAu9aTtvEMWDbRYTz",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day23.png"
+        },
+        "info_asset": {
+          "name": "in4 d23.png",
+          "drive_id": "1wsNQIq_bIKNDJwUEWWh44yIiV4Fa5PKM",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d23.png"
+        },
+        "medal_asset": {
+          "name": "HC d23.png",
+          "drive_id": "1gGGnGW53m2uqzkaLN-1EUEpGPmmpqutX",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d23.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Sau một ngày học, hãy dừng lại 2 phút.",
+          "2. Hỏi bản thân: \"Mắt mình hôm nay thấy thế nào?\"",
+          "3. Ghi lại trạng thái của mắt: Sáng – khỏe – dễ chịu / Hơi mỏi, khô / Nặng mi, khó nhìn lâu."
+        ],
+        "self_eval_heading": "Tại sao nên làm điều này?",
+        "self_eval_items": [
+          "Khi ghi lại cảm giác của mắt mỗi ngày, bạn sẽ tự nhận ra những thói quen tốt/xấu ảnh hưởng đến đôi mắt.",
+          "Nếu mắt dễ mỏi hơn -> điều chỉnh lại thời gian nhìn màn hình, ánh sáng và khoảng cách ngồi!"
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q029",
+          "BUGZ-Q033",
+          "BUGZ-Q034",
+          "BUGZ-Q038"
+        ],
+        "next_day": 24,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "24": {
+        "day_number": 24,
+        "week_number": 4,
+        "title_transcribed": "Chia sẻ mẹo của bạn",
+        "slogan_transcribed": "Mỗi người có một bí kíp riêng để mắt sáng - lưng thẳng. Hãy chia sẻ bí kíp của bạn nhé!",
+        "primary_asset": {
+          "name": "day24.png",
+          "drive_id": "1guOb_VF1tseCb37hnlQIKz-jyprEtTRQ",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day24.png"
+        },
+        "info_asset": {
+          "name": "in4 d24.png",
+          "drive_id": "1_nFqzdFmwmA5eDnORnPafwnutyaADBlE",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d24.png"
+        },
+        "medal_asset": {
+          "name": "HC d24.png",
+          "drive_id": "1llrC3LUQSs9VJTfcEiiqvAhSZs1wf5Rd",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d24.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Viết một câu khuyên bạn bè về cách giữ mắt khỏe hoặc tư thế đúng.",
+          "2. Trình bày trên giấy nhỏ, vẽ minh họa, hoặc gửi qua mục chia sẻ lớp học."
+        ],
+        "self_eval_heading": "Tại sao nên làm điều này?",
+        "self_eval_items": [
+          "Khi bạn chia sẻ, bạn đang củng cố thói quen của chính mình.",
+          "Một lời nhắc nhỏ có thể giúp người khác tránh cận thị hoặc đau lưng!",
+          "Đây cũng là một cách lan tỏa tinh thần \"Mắt sáng – Học vui – Sống khỏe\"."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q039"
+        ],
+        "next_day": 25,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "25": {
+        "day_number": 25,
+        "week_number": 4,
+        "title_transcribed": "Sáng tạo flashcard riêng",
+        "slogan_transcribed": "Giờ đến lượt bạn trở thành nhà thiết kế - tạo ra thẻ học khỏe mạnh của chính mình!",
+        "primary_asset": {
+          "name": "day25.png",
+          "drive_id": "1l_-6WoQ_0boQAzg9RfA1NHiJX68zctgh",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day25.png"
+        },
+        "info_asset": {
+          "name": "in4 d25.png",
+          "drive_id": "1WKcaQhOiIue1hia77h08tTJftyuIOjiR",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d25.png"
+        },
+        "medal_asset": {
+          "name": "HC d25.png",
+          "drive_id": "1R7mB_paq7EvH752cRgf5NfaGk5rQNG0b",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d25.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Nghĩ ra một thói quen tốt cho mắt hoặc tư thế học tập mà bạn muốn chia sẻ.",
+          "2. Vẽ hoặc viết một thẻ flashcard mới: Mặt trước (tên hoạt động + hình minh họa), Mặt sau (hướng dẫn cách làm ngắn gọn, lý do có ích).",
+          "3. Có thể dùng Canva, PowerPoint, hoặc vẽ tay rồi chụp ảnh."
+        ],
+        "self_eval_heading": "Vì sao hoạt động này quan trọng?",
+        "self_eval_items": [
+          "Khi tự sáng tạo, bạn biến kiến thức thành hành động thực tế.",
+          "Việc tự nghĩ ra thẻ mới giúp bạn hiểu sâu hơn về cách bảo vệ mắt và tư thế đúng.",
+          "Sản phẩm của bạn có thể được chọn làm \"Thẻ vàng của khóa sau\"."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q016",
+          "BUGZ-Q039"
+        ],
+        "next_day": 26,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "26": {
+        "day_number": 26,
+        "week_number": 4,
+        "title_transcribed": "Nhắc bạn cùng làm",
+        "slogan_transcribed": "Một mình là thói quen - Cả nhóm là sức mạnh!",
+        "primary_asset": {
+          "name": "day26.png",
+          "drive_id": "1iwxrIahwyP6qQ464vl4geLh-b2gXaDo9",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day26.png"
+        },
+        "info_asset": {
+          "name": "in4 d26.png",
+          "drive_id": "15WFbxpapxaL5Vu3QcC_v-8kKlh5fv45s",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/in4%20d26.png"
+        },
+        "medal_asset": {
+          "name": "HC d26.png",
+          "drive_id": "1gEH06tYOGXAikeDN4stcQp64WigPvCyA",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d26.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Chọn ít nhất 1 người bạn cùng thực hiện thử thách \"Mắt sáng – Lưng thẳng\" để duy trì động lực lâu dài.",
+          "2. Hẹn thời điểm nhắc nhau: \"Giờ nghỉ giữa tiết, nhớ nhìn xa nhé!\" hoặc \"Ngồi thẳng lưng lên nào bạn ơi!\"."
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Nhắc đôi giữ thói quen ít nhất 2 lần với bạn.",
+          "Cùng bạn thực hiện một bài tập mắt hoặc vươn vai hôm nay."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "verified_in_drive_and_downloaded",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q007",
+          "BUGZ-Q017"
+        ],
+        "next_day": 27,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "27": {
+        "day_number": 27,
+        "week_number": 4,
+        "title_transcribed": "Không Flashcard!",
+        "slogan_transcribed": "Hãy sống - học - đọc - viết - ngồi - nhìn... như cách bạn thấy thoải mái và tự nhiên nhất.",
+        "primary_asset": {
+          "name": "day27.png",
+          "drive_id": "1S2e9T28pZfUVTgI4i_yfqq6V8ERH383q",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day27.png"
+        },
+        "info_asset": {
+          "name": "in4 d27.png",
+          "drive_id": null,
+          "status": "not_yet_verified",
+          "original_bytes_downloaded": false
+        },
+        "medal_asset": {
+          "name": "HC d27.png",
+          "drive_id": "1Mey-84FKEjcpooHQ-a-_ELrOhx6kpppK",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/HC%20d27.png"
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Trong hôm nay, có những khoảnh khắc nào bạn tự nhớ ngồi đúng hoặc nghỉ mắt mà không cần nhìn thẻ?",
+          "2. Có thói quen nào bạn giữ được mà không cần nhắc nhở?",
+          "3. Có thói quen nào vẫn cần cố gắng thêm?"
+        ],
+        "self_eval_heading": "Tự đánh giá ✅",
+        "self_eval_items": [
+          "Ghi lại 2–3 thói quen tốt mà bạn đã tự nhớ làm hôm nay.",
+          "Hoàn thành khảo sát cảm nhận."
+        ],
+        "qr_note": "Bạn hãy làm khảo sát 5!",
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "not_yet_verified_in_drive",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q018"
+        ],
+        "next_day": 28,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      },
+      "28": {
+        "day_number": 28,
+        "week_number": 4,
+        "title_transcribed": "Nhận chứng nhận \"Mắt sáng - Lưng thẳng\"",
+        "slogan_transcribed": "Thói quen tốt không tự nhiên có - bạn đã tạo ra nó bằng nỗ lực mỗi ngày!",
+        "primary_asset": {
+          "name": "day28.png",
+          "drive_id": "13fRcrc8X-cCY04R4eUGKw8_PhlkdrK_e",
+          "status": "verified",
+          "original_bytes_downloaded": true,
+          "runtime_url": "/assets/drive/day28.png"
+        },
+        "info_asset": {
+          "name": "in4 d28.png",
+          "drive_id": null,
+          "status": "not_yet_verified",
+          "original_bytes_downloaded": false
+        },
+        "medal_asset": {
+          "name": "HC d28.png",
+          "drive_id": null,
+          "status": "special_day28_certificate_flow",
+          "original_bytes_downloaded": false
+        },
+        "source_ref": "PROJECT_FLASHCARDS (Google Drive folder 17jX1J0xhyvYG5lfKrTMu6fdViTQsg9M6)",
+        "practice_steps": [
+          "1. Chụp lại một khoảnh khắc thể hiện thành quả của bạn (bàn học gọn gàng, tư thế đúng, góc sáng đẹp...).",
+          "2. Gửi ảnh qua email để nhận chứng nhận hoặc điền biểu mẫu Yêu cầu nhận chứng nhận.",
+          "3. Viết 1 câu cảm nghĩ ngắn: \"Sau 28 ngày, mình cảm thấy...\"."
+        ],
+        "self_eval_heading": "Chúc mừng bạn đã hoàn thành Hành trình 28 ngày!",
+        "self_eval_items": [
+          "Mỗi thói quen tốt là món quà bạn tặng cho chính mình mỗi ngày. 💙",
+          "Mở biểu mẫu Yêu cầu nhận chứng nhận (không có Ngày 29)."
+        ],
+        "ocr_status": "transcribed_from_full_flashcard_png",
+        "info_ocr_status": "not_yet_verified_in_drive",
+        "publish_status": "draft_pending_asset_and_content_verification",
+        "clinical_review_flag": false,
+        "question_ids": [
+          "BUGZ-Q019",
+          "BUGZ-Q040"
+        ],
+        "next_day": null,
+        "completion_type": "self_reported",
+        "source_version": "v1.3-p02-drive-originals"
+      }
+    },
+    "learning_progress": {
+      "stu-a1": {
+        "1": {
+          "viewed_at": 1793495000000,
+          "self_completed_at": 1793495100000,
+          "source_version": "v1.2-p02-manifest",
+          "medal_asset": "HC d1.png"
+        }
+      },
+      "stu-b1": {
+        "1": {
+          "viewed_at": 1793491000000,
+          "self_completed_at": 1793491100000,
+          "source_version": "v1.2-p02-manifest",
+          "medal_asset": "HC d1.png"
+        },
+        "2": {
+          "viewed_at": 1793493000000,
+          "self_completed_at": 1793493100000,
+          "source_version": "v1.2-p02-manifest",
+          "medal_asset": "HC d2.png"
+        }
+      }
+    },
+    "certificate_requests": {},
+    "student_alerts": {
+      "stu-a1": {
+        "alert-a-001": {
+          "alert_id": "alert-a-001",
+          "event_at": 1793497600000,
+          "severity": "low",
+          "device_id": "robot-fam-a-01",
+          "session_id": "sess-a-001",
+          "episode_id": "ep-a-001",
+          "reminder_index": 1,
+          "message": "Lưng mình xin một chỗ tựa nhé. Thả lỏng vai rồi ngồi ngay ngắn nào!",
+          "image_id": "cap-a-001",
+          "capture_status": "uploaded",
+          "source": "simulator"
+        }
+      },
+      "stu-b1": {
+        "alert-b-001": {
+          "alert_id": "alert-b-001",
+          "event_at": 1793494000000,
+          "severity": "medium",
+          "device_id": "robot-fam-b-01",
+          "session_id": "sess-b-001",
+          "episode_id": "ep-b-001",
+          "reminder_index": 1,
+          "message": "Cuốn vở chưa chạy mất đâu! Mình đưa mắt ra xa một chút theo hướng dẫn nhé.",
+          "image_id": "cap-b-001",
+          "capture_status": "uploaded",
+          "source": "simulator"
+        }
+      }
+    },
+    "episode_log": {
+      "stu-a1": {
+        "ep-a-001": {
+          "episode_id": "ep-a-001",
+          "student_id": "stu-a1",
+          "device_id": "robot-fam-a-01",
+          "session_id": "sess-a-001",
+          "started_at": 1793497500000,
+          "ended_at": 1793497650000,
+          "state": "bad",
+          "stable_duration_ms": 150000,
+          "source": "simulator",
+          "revision": 1
+        }
+      },
+      "stu-b1": {
+        "ep-b-001": {
+          "episode_id": "ep-b-001",
+          "student_id": "stu-b1",
+          "device_id": "robot-fam-b-01",
+          "session_id": "sess-b-001",
+          "started_at": 1793493900000,
+          "ended_at": 1793494050000,
+          "state": "bad",
+          "stable_duration_ms": 150000,
+          "source": "simulator",
+          "revision": 1
+        }
+      }
+    },
+    "device_runtime": {
+      "robot-fam-a-01": {
+        "device_id": "robot-fam-a-01",
+        "active_session_id": null,
+        "active_student_id": null,
+        "revision": 0,
+        "last_projected_revision": 0,
+        "current_episode_id": null,
+        "current_episode_reminder_index": 0,
+        "fsm": {
+          "sessionId": "no-session",
+          "sessionClosed": false,
+          "lastSequenceByBoot": {},
+          "processedDedupeKeys": [],
+          "candidateState": "unknown",
+          "candidateSinceMs": null,
+          "confirmedEpisodeState": "unknown",
+          "currentEpisodeStartedAtMs": null,
+          "lastAlertAtMs": null,
+          "goodCount": 0,
+          "badCount": 0,
+          "alertCount": 0,
+          "frameCount": 0
+        },
+        "outbox": {},
+        "presence_status": "online",
+        "config_version": 1
+      },
+      "robot-fam-b-01": {
+        "device_id": "robot-fam-b-01",
+        "active_session_id": null,
+        "active_student_id": null,
+        "revision": 0,
+        "last_projected_revision": 0,
+        "current_episode_id": null,
+        "current_episode_reminder_index": 0,
+        "fsm": {
+          "sessionId": "no-session",
+          "sessionClosed": false,
+          "lastSequenceByBoot": {},
+          "processedDedupeKeys": [],
+          "candidateState": "unknown",
+          "candidateSinceMs": null,
+          "confirmedEpisodeState": "unknown",
+          "currentEpisodeStartedAtMs": null,
+          "lastAlertAtMs": null,
+          "goodCount": 0,
+          "badCount": 0,
+          "alertCount": 0,
+          "frameCount": 0
+        },
+        "outbox": {},
+        "presence_status": "online",
+        "config_version": 1
+      },
+      "sim-dev01": {
+        "device_id": "sim-dev01",
+        "active_session_id": null,
+        "active_student_id": null,
+        "revision": 0,
+        "last_projected_revision": 0,
+        "current_episode_id": null,
+        "current_episode_reminder_index": 0,
+        "fsm": {
+          "sessionId": "no-session",
+          "sessionClosed": false,
+          "lastSequenceByBoot": {},
+          "processedDedupeKeys": [],
+          "candidateState": "unknown",
+          "candidateSinceMs": null,
+          "confirmedEpisodeState": "unknown",
+          "currentEpisodeStartedAtMs": null,
+          "lastAlertAtMs": null,
+          "goodCount": 0,
+          "badCount": 0,
+          "alertCount": 0,
+          "frameCount": 0
+        },
+        "outbox": {},
+        "presence_status": "online",
+        "config_version": 1
+      }
+    },
+    "command_jobs": {},
+    "capture_metadata": {
+      "cap-a-001": {
+        "capture_id": "cap-a-001",
+        "storage_path": "captures/stu-a1/sess-a-001/cap-a-001.jpg",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "mime_type": "image/jpeg",
+        "byte_size": 84200,
+        "status": "uploaded",
+        "upload_ticket_token": "ticket-init-a1",
+        "upload_expires_at": 1793498000000,
+        "created_at": 1793497595000,
+        "uploaded_at": 1793497599000,
+        "source": "simulator",
+        "svg_preview_kind": "study_desk_posture"
+      },
+      "cap-b-001": {
+        "capture_id": "cap-b-001",
+        "storage_path": "captures/stu-b1/sess-b-001/cap-b-001.jpg",
+        "student_id": "stu-b1",
+        "device_id": "robot-fam-b-01",
+        "session_id": "sess-b-001",
+        "mime_type": "image/jpeg",
+        "byte_size": 91400,
+        "status": "uploaded",
+        "upload_ticket_token": "ticket-init-b1",
+        "upload_expires_at": 1793494100000,
+        "created_at": 1793493995000,
+        "uploaded_at": 1793493999000,
+        "source": "simulator",
+        "svg_preview_kind": "study_desk_posture"
+      }
+    },
+    "device_broker_credentials": {
+      "robot-fam-a-01": {
+        "device_id": "robot-fam-a-01",
+        "mqtt_username": "robot-fam-a-01",
+        "mqtt_client_id": "robot-fam-a-01",
+        "secret_hash": "REDACTED_FOR_DEMO_BACKUP",
+        "tls_required": true,
+        "revoked": false,
+        "computes_episodes": false,
+        "supported_posture_codes": [
+          "HEAD_FORWARD",
+          "TRUNK_LEAN",
+          "EYES_TOO_CLOSE"
+        ],
+        "calibration_valid": true,
+        "updated_at": 1793500000000
+      },
+      "robot-fam-b-01": {
+        "device_id": "robot-fam-b-01",
+        "mqtt_username": "robot-fam-b-01",
+        "mqtt_client_id": "robot-fam-b-01",
+        "secret_hash": "REDACTED_FOR_DEMO_BACKUP",
+        "tls_required": true,
+        "revoked": false,
+        "computes_episodes": false,
+        "supported_posture_codes": [
+          "HEAD_FORWARD",
+          "TRUNK_LEAN"
+        ],
+        "calibration_valid": true,
+        "updated_at": 1793500000000
+      },
+      "sim-dev01": {
+        "device_id": "sim-dev01",
+        "mqtt_username": "sim-dev01",
+        "mqtt_client_id": "sim-dev01",
+        "secret_hash": "REDACTED_FOR_DEMO_BACKUP",
+        "tls_required": true,
+        "revoked": false,
+        "computes_episodes": false,
+        "supported_posture_codes": [
+          "HEAD_FORWARD",
+          "TRUNK_LEAN",
+          "EYES_TOO_CLOSE"
+        ],
+        "calibration_valid": true,
+        "updated_at": 1793500000000
+      }
+    },
+    "notification_reads": {},
+    "push_tokens": {
+      "uid-guardian-a": {
+        "inst-guardian-a-web-01": {
+          "uid": "uid-guardian-a",
+          "installation_id": "inst-guardian-a-web-01",
+          "token": "fcm-token-guardian-a-demo-001",
+          "platform": "web_desktop",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X) Chrome/130.0",
+          "status": "active",
+          "created_at": 1793413600000,
+          "updated_at": 1793496400000
+        }
+      },
+      "uid-student-a1": {
+        "inst-student-a1-web-01": {
+          "uid": "uid-student-a1",
+          "installation_id": "inst-student-a1-web-01",
+          "token": "fcm-token-student-a1-demo-001",
+          "platform": "web_desktop",
+          "user_agent": "Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X)",
+          "status": "active",
+          "created_at": 1793413600000,
+          "updated_at": 1793496400000
+        }
+      }
+    },
+    "notification_jobs": {
+      "alert-a-001_uid-guardian-a_push": {
+        "job_id": "alert-a-001_uid-guardian-a_push",
+        "alert_id": "alert-a-001",
+        "uid": "uid-guardian-a",
+        "recipient_role": "guardian",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "push",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-guardian-a:push",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "provider_not_configured",
+        "last_error": "Chưa cấu hình VITE_FIREBASE_VAPID_KEY / FCM Admin SDK (BLOCKED). Không giả gửi Web Push thật."
+      },
+      "alert-a-001_uid-guardian-a_email": {
+        "job_id": "alert-a-001_uid-guardian-a_email",
+        "alert_id": "alert-a-001",
+        "uid": "uid-guardian-a",
+        "recipient_role": "guardian",
+        "recipient_email": "phuhuynh.a@example.com",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "email",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-guardian-a:email",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "provider_not_configured",
+        "last_error": "Chưa cấu hình EMAIL_PROVIDER / SMTP trên server (BLOCKED). Không giả gửi email thành công."
+      },
+      "alert-a-001_uid-guardian-a_voice": {
+        "job_id": "alert-a-001_uid-guardian-a_voice",
+        "alert_id": "alert-a-001",
+        "uid": "uid-guardian-a",
+        "recipient_role": "guardian",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "voice",
+        "state": "queued",
+        "attempts": 1,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-guardian-a:voice",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "provider_message_id": "client-active-page-voice:alert-a-001"
+      },
+      "alert-a-001_uid-student-a1_push": {
+        "job_id": "alert-a-001_uid-student-a1_push",
+        "alert_id": "alert-a-001",
+        "uid": "uid-student-a1",
+        "recipient_role": "student",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "push",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-student-a1:push",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "provider_not_configured",
+        "last_error": "Chưa cấu hình VITE_FIREBASE_VAPID_KEY / FCM Admin SDK (BLOCKED). Không giả gửi Web Push thật."
+      },
+      "alert-a-001_uid-student-a1_email": {
+        "job_id": "alert-a-001_uid-student-a1_email",
+        "alert_id": "alert-a-001",
+        "uid": "uid-student-a1",
+        "recipient_role": "student",
+        "recipient_email": "hocsinh.minh.a1@example.com",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "email",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-student-a1:email",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "channel_disabled_by_user"
+      },
+      "alert-a-001_uid-student-a1_voice": {
+        "job_id": "alert-a-001_uid-student-a1_voice",
+        "alert_id": "alert-a-001",
+        "uid": "uid-student-a1",
+        "recipient_role": "student",
+        "student_id": "stu-a1",
+        "device_id": "robot-fam-a-01",
+        "session_id": "sess-a-001",
+        "channel": "voice",
+        "state": "queued",
+        "attempts": 1,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-a-001:uid-student-a1:voice",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-a-001",
+          "alert_id": "alert-a-001",
+          "tag": "bugz-alert-alert-a-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "provider_message_id": "client-active-page-voice:alert-a-001"
+      },
+      "alert-b-001_uid-guardian-b_push": {
+        "job_id": "alert-b-001_uid-guardian-b_push",
+        "alert_id": "alert-b-001",
+        "uid": "uid-guardian-b",
+        "recipient_role": "guardian",
+        "student_id": "stu-b1",
+        "device_id": "robot-fam-b-01",
+        "session_id": "sess-b-001",
+        "channel": "push",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-b-001:uid-guardian-b:push",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-b-001",
+          "alert_id": "alert-b-001",
+          "tag": "bugz-alert-alert-b-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "no_active_push_token"
+      },
+      "alert-b-001_uid-guardian-b_email": {
+        "job_id": "alert-b-001_uid-guardian-b_email",
+        "alert_id": "alert-b-001",
+        "uid": "uid-guardian-b",
+        "recipient_role": "guardian",
+        "recipient_email": "phuhuynh.b@example.com",
+        "student_id": "stu-b1",
+        "device_id": "robot-fam-b-01",
+        "session_id": "sess-b-001",
+        "channel": "email",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-b-001:uid-guardian-b:email",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-b-001",
+          "alert_id": "alert-b-001",
+          "tag": "bugz-alert-alert-b-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "digest_mode_batched"
+      },
+      "alert-b-001_uid-guardian-b_voice": {
+        "job_id": "alert-b-001_uid-guardian-b_voice",
+        "alert_id": "alert-b-001",
+        "uid": "uid-guardian-b",
+        "recipient_role": "guardian",
+        "student_id": "stu-b1",
+        "device_id": "robot-fam-b-01",
+        "session_id": "sess-b-001",
+        "channel": "voice",
+        "state": "suppressed",
+        "attempts": 0,
+        "max_attempts": 3,
+        "idempotency_key": "bugz-notif:alert-b-001:uid-guardian-b:voice",
+        "delivery_guarantee": "at_least_once_with_dedupe",
+        "external_payload": {
+          "title": "BUGZ Đồng hành Tư thế Học tập",
+          "body": "Tư thế chưa phù hợp — Mình thả lỏng vai rồi chỉnh chỗ ngồi ngay ngắn nhé! Bấm để đăng nhập và xem chi tiết phiên học.",
+          "deep_link_path": "/alerts/alert-b-001",
+          "alert_id": "alert-b-001",
+          "tag": "bugz-alert-alert-b-001",
+          "contains_capture_image": false,
+          "contains_medical_diagnosis": false
+        },
+        "created_at": 1793500000000,
+        "updated_at": 1793500000000,
+        "suppression_reason": "channel_disabled_by_user"
+      }
+    },
+    "questions_public": {
+      "BUGZ-Q001": {
+        "id": "BUGZ-Q001",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Lưng muốn học cùng mình thật thoải mái. Mình chọn cách nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ngồi có điểm tựa nhẹ, vai thả lỏng, chân được đỡ."
+          },
+          {
+            "id": "B",
+            "text": "Gồng vai lên như đang xách hai quả tạ tưởng tượng."
+          },
+          {
+            "id": "C",
+            "text": "Cúi sát bàn để chào từng con chữ."
+          }
+        ],
+        "source_days": [
+          1
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 1 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q002": {
+        "id": "BUGZ-Q002",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Ngồi vào ghế mà chân cứ đung đưa trên không, mình làm gì trước?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rủ chân thi đu đến hết buổi."
+          },
+          {
+            "id": "B",
+            "text": "Nhờ người lớn chỉnh ghế hoặc dùng kê chân chắc chắn, vừa tầm."
+          },
+          {
+            "id": "C",
+            "text": "Ngồi lên thật cao rồi cố nhón mũi chân."
+          }
+        ],
+        "source_days": [
+          5
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING_EQUIPMENT"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 5 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q003": {
+        "id": "BUGZ-Q003",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Bàn thấp quá khiến mình phải cúi người nhiều. Cách xử lý hợp lý là gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cúi thêm một chút cho quen luôn."
+          },
+          {
+            "id": "B",
+            "text": "Cố chịu vì cái bàn chắc chắn hiểu mình."
+          },
+          {
+            "id": "C",
+            "text": "Nhờ người lớn điều chỉnh bàn ghế cho vừa người."
+          }
+        ],
+        "source_days": [
+          5,
+          19
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING_EQUIPMENT"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 5, 19 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q004": {
+        "id": "BUGZ-Q004",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Đầu đang cúi quá thấp khi học, mình nên thử cách nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chỉnh chỗ ngồi và tài liệu để đầu, cổ ở tư thế dễ chịu hơn."
+          },
+          {
+            "id": "B",
+            "text": "Nín thở để cổ đứng yên."
+          },
+          {
+            "id": "C",
+            "text": "Dí đầu gần hơn để chữ thấy mình rõ."
+          }
+        ],
+        "source_days": [
+          1,
+          3
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 1, 3 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q005": {
+        "id": "BUGZ-Q005",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Ngồi học một lúc rồi thấy người bí bách, mình chọn gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gồng hết người để chứng tỏ mình chăm."
+          },
+          {
+            "id": "B",
+            "text": "Đứng dậy nghỉ vận động nhẹ khi phù hợp."
+          },
+          {
+            "id": "C",
+            "text": "Giữ nguyên như tượng cho đến cuối buổi."
+          }
+        ],
+        "source_days": [
+          15,
+          18
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 15, 18 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q006": {
+        "id": "BUGZ-Q006",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Viết bài mà hai vai cứ phải nhún cao để với bàn, mình nên làm gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ráng viết nhanh để vai khỏi kịp mỏi."
+          },
+          {
+            "id": "B",
+            "text": "Nhún thêm cho vai cao bằng bàn."
+          },
+          {
+            "id": "C",
+            "text": "Kiểm tra độ cao bàn ghế cùng người lớn."
+          }
+        ],
+        "source_days": [
+          5
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING_EQUIPMENT"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 5 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q007": {
+        "id": "BUGZ-Q007",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Thấy bạn cúi người lâu, câu nhắc nào dễ nghe nhất?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mình thả lỏng vai rồi chỉnh chỗ ngồi cùng nhau nhé!"
+          },
+          {
+            "id": "B",
+            "text": "Ngồi thế xấu quá, cả lớp nhìn kìa!"
+          },
+          {
+            "id": "C",
+            "text": "Để tớ chụp rồi đăng lên nhóm cho vui."
+          }
+        ],
+        "source_days": [
+          21,
+          26
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 21, 26 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q008": {
+        "id": "BUGZ-Q008",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Có lời nhắc chỉnh tư thế trong lúc học, mình nên làm gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gồng lưng thật cứng để máy khỏi nhắc."
+          },
+          {
+            "id": "B",
+            "text": "Bình tĩnh xem hướng dẫn, chỉnh chỗ ngồi và thả lỏng vai."
+          },
+          {
+            "id": "C",
+            "text": "Cáu với cái thông báo rồi bỏ qua mọi hướng dẫn."
+          }
+        ],
+        "source_days": [
+          1
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 1 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q009": {
+        "id": "BUGZ-Q009",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Bàn đầy đồ khiến vở phải nằm tận mép xa. Mình xử lý sao?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chồng thêm vài cuốn cho bàn có phong cách."
+          },
+          {
+            "id": "B",
+            "text": "Vươn người qua cả núi đồ."
+          },
+          {
+            "id": "C",
+            "text": "Dọn bớt đồ, đưa tài liệu cần dùng đến vị trí dễ với."
+          }
+        ],
+        "source_days": [
+          19
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 19 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q010": {
+        "id": "BUGZ-Q010",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Nhờ người thân xem tư thế qua một tấm ảnh, cách dùng nào hợp lý?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dùng ảnh để cùng xem cách ngồi và điều chỉnh, không tự chẩn đoán."
+          },
+          {
+            "id": "B",
+            "text": "Coi ảnh là kết luận chắc chắn mình có bệnh."
+          },
+          {
+            "id": "C",
+            "text": "Đăng ảnh bạn bè để mọi người chấm điểm dáng."
+          }
+        ],
+        "source_days": [
+          22
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 22 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q011": {
+        "id": "BUGZ-Q011",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Khi viết, cách chuẩn bị nào giúp mình dễ ngồi hơn?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kẹp vai thật chặt cho bút chạy nhanh."
+          },
+          {
+            "id": "B",
+            "text": "Đặt vở và bút ở vị trí thuận tay, ngồi gọn và thư giãn vai."
+          },
+          {
+            "id": "C",
+            "text": "Đẩy vở thật xa rồi rướn người theo."
+          }
+        ],
+        "source_days": [
+          20
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 20 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q012": {
+        "id": "BUGZ-Q012",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Nhóm bạn cùng rèn thói quen nên hoạt động thế nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chỉ khen người giữ im một tư thế lâu nhất."
+          },
+          {
+            "id": "B",
+            "text": "Thi xem ai chê bạn sắc sảo hơn."
+          },
+          {
+            "id": "C",
+            "text": "Cùng nhắc nhẹ, cùng chỉnh góc học, ghi nhận nỗ lực."
+          }
+        ],
+        "source_days": [
+          21
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 21 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q013": {
+        "id": "BUGZ-Q013",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Đến giờ nghỉ ngắn, mình chọn cách vươn vai nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Vươn nhẹ, thoải mái, không cố làm đau mình."
+          },
+          {
+            "id": "B",
+            "text": "Kéo thật mạnh để nhanh có thành tích."
+          },
+          {
+            "id": "C",
+            "text": "Thi ai làm động tác khó nhất."
+          }
+        ],
+        "source_days": [
+          15
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 15 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q014": {
+        "id": "BUGZ-Q014",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Ngày 18 gợi ý nghỉ đi lại. Ý chính mình cần nhớ là gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chỉ ngón tay bấm game mới cần hoạt động."
+          },
+          {
+            "id": "B",
+            "text": "Có lúc rời ghế vận động nhẹ thay vì ngồi liền mãi."
+          },
+          {
+            "id": "C",
+            "text": "Càng ngồi bất động lâu càng tốt."
+          }
+        ],
+        "source_days": [
+          18
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 18 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q015": {
+        "id": "BUGZ-Q015",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Sau thử thách học đầu tiên, điều nào đáng ghi nhận?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Hôm nay mình bỏ qua mọi bước nhưng bấm huy chương thật nhanh."
+          },
+          {
+            "id": "B",
+            "text": "Chỉ xem mình làm nhanh hơn ai."
+          },
+          {
+            "id": "C",
+            "text": "Mình đã chuẩn bị chỗ học và thực hành theo hướng dẫn."
+          }
+        ],
+        "source_days": [
+          7
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 7 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q016": {
+        "id": "BUGZ-Q016",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Làm flashcard riêng về tư thế, mình nên viết gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Một việc cụ thể, dễ hiểu, dựa vào bài đã học và kèm tranh rõ."
+          },
+          {
+            "id": "B",
+            "text": "Một lời hứa ngồi đúng là sẽ chữa mọi bệnh."
+          },
+          {
+            "id": "C",
+            "text": "Càng nhiều chữ càng khó hiểu càng hay."
+          }
+        ],
+        "source_days": [
+          25
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 25 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q017": {
+        "id": "BUGZ-Q017",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Muốn rủ một bạn cùng tập thói quen, mình có thể nói gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mình ép bạn ngồi im cả tiết nhé."
+          },
+          {
+            "id": "B",
+            "text": "Đến giờ nghỉ rồi, mình đứng dậy thư giãn một chút nhé?"
+          },
+          {
+            "id": "C",
+            "text": "Bạn không làm là mình chê ngay."
+          }
+        ],
+        "source_days": [
+          26
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 26 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q018": {
+        "id": "BUGZ-Q018",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Ngày Không Flashcard muốn mình thử điều gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Không cần để ý cơ thể nữa."
+          },
+          {
+            "id": "B",
+            "text": "Quên hết các thói quen đã học."
+          },
+          {
+            "id": "C",
+            "text": "Tự nhớ những thói quen phù hợp khi học, đọc và ngồi."
+          }
+        ],
+        "source_days": [
+          27
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 27 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q019": {
+        "id": "BUGZ-Q019",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Hoàn thành 28 ngày và nhận giấy chúc mừng có nghĩa là gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nỗ lực rèn thói quen được ghi nhận; mình vẫn tiếp tục chăm sóc bản thân."
+          },
+          {
+            "id": "B",
+            "text": "Mọi vấn đề mắt và lưng đều đã được chữa khỏi."
+          },
+          {
+            "id": "C",
+            "text": "Từ nay không cần chú ý tư thế nữa."
+          }
+        ],
+        "source_days": [
+          28
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 28 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "MOVE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q020": {
+        "id": "BUGZ-Q020",
+        "topic": "lung_thang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Một góc học hợp với mình cần điều gì nhất?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ghế thật cao cho mình có tầm vóc."
+          },
+          {
+            "id": "B",
+            "text": "Bàn ghế phù hợp, chân có điểm đỡ, tài liệu dễ dùng."
+          },
+          {
+            "id": "C",
+            "text": "Bàn thật to dù phải với khắp nơi."
+          }
+        ],
+        "source_days": [
+          1,
+          5
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING_EQUIPMENT"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 1, 5 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q021": {
+        "id": "BUGZ-Q021",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Theo flashcard đọc và viết của dự án, sách/vở nên ở khoảng nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Càng xa đến mức không đọc được càng tốt."
+          },
+          {
+            "id": "B",
+            "text": "Dí sát mũi cho chữ khỏi chạy."
+          },
+          {
+            "id": "C",
+            "text": "Khoảng 30–35 cm theo hướng dẫn trong thẻ."
+          }
+        ],
+        "source_days": [
+          1,
+          2
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 1, 2 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q022": {
+        "id": "BUGZ-Q022",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Cứ phải đưa mắt sát vở mới đọc được, mình nên làm gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chỉnh vị trí, ánh sáng và báo người lớn nếu vẫn khó nhìn."
+          },
+          {
+            "id": "B",
+            "text": "Cố dí sát hơn cả buổi."
+          },
+          {
+            "id": "C",
+            "text": "Giấu đi vì chữ nhỏ là thử thách bí mật."
+          }
+        ],
+        "source_days": [
+          2
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 2 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q023": {
+        "id": "BUGZ-Q023",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Góc học tối, mình nên bắt đầu bằng việc nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bật trò chơi cho màn hình sáng hộ cuốn vở."
+          },
+          {
+            "id": "B",
+            "text": "Bổ sung hoặc điều chỉnh ánh sáng để thấy tài liệu rõ, dễ chịu."
+          },
+          {
+            "id": "C",
+            "text": "Nheo mắt thật chăm chỉ thay đèn."
+          }
+        ],
+        "source_days": [
+          4
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 4 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q024": {
+        "id": "BUGZ-Q024",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Đèn chiếu khiến trang giấy chói, mình xử lý sao?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Giữ nguyên vì càng chói càng học giỏi."
+          },
+          {
+            "id": "B",
+            "text": "Đưa mặt sát vào vùng chói."
+          },
+          {
+            "id": "C",
+            "text": "Chỉnh vị trí hoặc hướng đèn để đọc dễ chịu hơn."
+          }
+        ],
+        "source_days": [
+          4
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 4 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q025": {
+        "id": "BUGZ-Q025",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Học việc gần được một lúc, quy tắc 20-20-20 nhắc mình làm gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Khoảng mỗi 20 phút, nhìn xa khoảng 6 mét trong ít nhất 20 giây."
+          },
+          {
+            "id": "B",
+            "text": "Chơi tiếp thêm 20 màn."
+          },
+          {
+            "id": "C",
+            "text": "Nhìn thật sát trong 20 giây."
+          }
+        ],
+        "source_days": [
+          8
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q026": {
+        "id": "BUGZ-Q026",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Trong lúc nghỉ mắt theo 20-20-20, hoạt động nào phù hợp?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Đọc chữ bé hơn để mắt luyện thêm."
+          },
+          {
+            "id": "B",
+            "text": "Ngước nhìn một vật ở xa và thả lỏng."
+          },
+          {
+            "id": "C",
+            "text": "Đổi từ sách sang điện thoại sát mặt."
+          }
+        ],
+        "source_days": [
+          8
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "published",
+        "approval": {
+          "content_reviewed": true,
+          "clinical_reviewed": true,
+          "reviewed_by": "uid-superadmin-01",
+          "reviewed_at": 1793500000000
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q027": {
+        "id": "BUGZ-Q027",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Chơi quiz tới lúc cần nghỉ mắt, mình chọn gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tắt lời nhắc và nhìn màn hình sát hơn."
+          },
+          {
+            "id": "B",
+            "text": "Cố thắng thêm thật nhiều lượt mới được nghỉ."
+          },
+          {
+            "id": "C",
+            "text": "Tạm dừng lượt chơi, nghỉ nhìn xa rồi quay lại."
+          }
+        ],
+        "source_days": [
+          8
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 8 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q028": {
+        "id": "BUGZ-Q028",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Nhớ tới bài chớp mắt, cách thực hiện nào nhẹ nhàng?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chớp mắt tự nhiên, nhẹ nhàng, không cố gồng."
+          },
+          {
+            "id": "B",
+            "text": "Dùng tay kéo mí để chớp nhanh hơn."
+          },
+          {
+            "id": "C",
+            "text": "Nhắm chặt đến mức đau."
+          }
+        ],
+        "source_days": [
+          9
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 9 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q029": {
+        "id": "BUGZ-Q029",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Đang nhìn màn hình thấy mắt khó chịu, mình nên làm gì trước?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cố thêm một giờ để quên khó chịu."
+          },
+          {
+            "id": "B",
+            "text": "Nghỉ nhìn gần, chớp nhẹ và nói với người lớn nếu khó chịu còn kéo dài."
+          },
+          {
+            "id": "C",
+            "text": "Dụi thật mạnh cho nhanh tỉnh."
+          }
+        ],
+        "source_days": [
+          9,
+          23
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 9, 23 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q030": {
+        "id": "BUGZ-Q030",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Đến thời gian nghỉ buổi tối theo lịch gia đình, mình chọn cách nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Xem tiếp đến khi máy tự hết pin."
+          },
+          {
+            "id": "B",
+            "text": "Giấu điện thoại dưới chăn cho mắt bất ngờ."
+          },
+          {
+            "id": "C",
+            "text": "Dừng màn hình và chuẩn bị nghỉ theo lịch đã thống nhất."
+          }
+        ],
+        "source_days": [
+          13
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 13 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q031": {
+        "id": "BUGZ-Q031",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Nhìn cây xanh ở xa trong giờ nghỉ có ý nghĩa gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Là một cách nghỉ việc nhìn gần; không phải cách chữa cận."
+          },
+          {
+            "id": "B",
+            "text": "Màu xanh chắc chắn chữa khỏi cận thị."
+          },
+          {
+            "id": "C",
+            "text": "Chỉ cây thật xanh mới có phép bảo vệ mắt."
+          }
+        ],
+        "source_days": [
+          14
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "AAO_BREAKS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 14 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q032": {
+        "id": "BUGZ-Q032",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Khi tạm dừng việc gần, mình nên chọn điểm nhìn thế nào?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Màn hình điện thoại áp gần hơn."
+          },
+          {
+            "id": "B",
+            "text": "Một vật ở xa nhìn thấy thoải mái."
+          },
+          {
+            "id": "C",
+            "text": "Một dòng chữ bé xíu sát mặt."
+          }
+        ],
+        "source_days": [
+          10,
+          14
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 10, 14 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q033": {
+        "id": "BUGZ-Q033",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Nhật ký cảm giác mắt nên ghi điều gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tự đặt tên bệnh cho mình mỗi tối."
+          },
+          {
+            "id": "B",
+            "text": "Chỉ ghi điều mình nghĩ người lớn muốn nghe."
+          },
+          {
+            "id": "C",
+            "text": "Ghi thật cảm giác và hoàn cảnh mình nhận thấy."
+          }
+        ],
+        "source_days": [
+          23
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 23 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q034": {
+        "id": "BUGZ-Q034",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Mình nhìn mờ hoặc khó chịu lặp lại, cách xử lý phù hợp là gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nói với phụ huynh để được hỗ trợ và kiểm tra khi cần."
+          },
+          {
+            "id": "B",
+            "text": "Cứ bấm huy chương là mắt sẽ tự ổn."
+          },
+          {
+            "id": "C",
+            "text": "Đoán bệnh từ một câu trong game."
+          }
+        ],
+        "source_days": [
+          23
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 23 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q035": {
+        "id": "BUGZ-Q035",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Muốn đọc sách thật thoải mái theo bài ngày 6, mình chọn gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nheo mắt trong góc tối để tăng độ khó."
+          },
+          {
+            "id": "B",
+            "text": "Chỗ ngồi có hỗ trợ, đủ sáng và sách ở vị trí dễ nhìn."
+          },
+          {
+            "id": "C",
+            "text": "Nằm nghiêng rồi đưa sách sát mặt cho tiện."
+          }
+        ],
+        "source_days": [
+          6
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 6 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "POSTURE",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q036": {
+        "id": "BUGZ-Q036",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Chữ khó đọc khiến mình cứ rướn tới gần, nên thử gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Đổi sang chữ nhỏ hơn cho vui."
+          },
+          {
+            "id": "B",
+            "text": "Cố nheo mắt đến cuối bài."
+          },
+          {
+            "id": "C",
+            "text": "Chỉnh ánh sáng, vị trí hoặc cỡ chữ khi có thể; nhờ hỗ trợ nếu vẫn khó."
+          }
+        ],
+        "source_days": [
+          2,
+          4
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 2, 4 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q037": {
+        "id": "BUGZ-Q037",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Dùng laptop mà cứ phải cúi đầu nhiều, mình nên thử gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nhờ người lớn bố trí màn hình và bàn học ổn định, phù hợp."
+          },
+          {
+            "id": "B",
+            "text": "Kê máy thật chênh bằng đồ dễ đổ."
+          },
+          {
+            "id": "C",
+            "text": "Cúi cổ theo máy suốt buổi."
+          }
+        ],
+        "source_days": [
+          3
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS",
+          "NHS_SEATING"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 3 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "DESK",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q038": {
+        "id": "BUGZ-Q038",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Một ngày mình ghi nhận đã nghỉ mắt đúng lúc. Nên tự khen gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Từ mai không cần nghỉ nữa."
+          },
+          {
+            "id": "B",
+            "text": "Hôm nay mình nhớ chăm sóc mắt và sẽ tiếp tục thói quen này."
+          },
+          {
+            "id": "C",
+            "text": "Mắt mình chắc chắn không bao giờ gặp vấn đề nữa."
+          }
+        ],
+        "source_days": [
+          8,
+          23
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 8, 23 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q039": {
+        "id": "BUGZ-Q039",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 2,
+        "prompt": "Muốn chia sẻ mẹo giữ mắt từ bài học, câu nào phù hợp?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cứ nhìn màu xanh là khỏi cần kiểm tra mắt."
+          },
+          {
+            "id": "B",
+            "text": "Chơi game này sẽ hết cận ngay."
+          },
+          {
+            "id": "C",
+            "text": "Nhớ nghỉ việc nhìn gần và xem lại hướng dẫn trong bài nhé."
+          }
+        ],
+        "source_days": [
+          24,
+          25
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 24, 25 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      },
+      "BUGZ-Q040": {
+        "id": "BUGZ-Q040",
+        "topic": "mat_sang",
+        "type": "single_choice",
+        "age_groups": [
+          "primary",
+          "lower_secondary"
+        ],
+        "difficulty": 1,
+        "prompt": "Chơi hết bộ câu hỏi Mắt sáng chứng minh điều gì?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mình đã ôn kiến thức; vẫn cần thực hành và được hỗ trợ khi có vấn đề."
+          },
+          {
+            "id": "B",
+            "text": "Mình đã vượt qua một cuộc khám mắt đầy đủ."
+          },
+          {
+            "id": "C",
+            "text": "Mình có thể bỏ mọi hướng dẫn chăm sóc mắt."
+          }
+        ],
+        "source_days": [
+          8,
+          28
+        ],
+        "source_refs": [
+          "PROJECT_FLASHCARDS"
+        ],
+        "source_fact": "Đối chiếu thẻ ngày 8, 28 và nguồn bổ sung nếu được chỉ rõ.",
+        "illustration_id": "EYES",
+        "version": 1,
+        "status": "editorial_draft",
+        "approval": {
+          "content_reviewed": false,
+          "clinical_reviewed": false
+        },
+        "scoring": {
+          "first_correct_points": 10,
+          "repeat_points": 0
+        },
+        "note": "Minh họa dẫn chuyện; đáp án dựa trên nội dung chữ và nguồn, không đo từ ảnh.",
+        "updated_at": 1793500000000
+      }
+    },
+    "question_keys": {
+      "BUGZ-Q001": {
+        "1": {
+          "question_id": "BUGZ-Q001",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+          "feedback_correct": "Chuẩn rồi! Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+          "feedback_incorrect": "Vai không cần đi tập tạ trong giờ học đâu nhé. Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+          "source_days": [
+            1
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q002": {
+        "1": {
+          "question_id": "BUGZ-Q002",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+          "feedback_correct": "Chuẩn rồi! Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+          "feedback_incorrect": "Chân cũng thích có bến đỗ riêng mà. Bàn ghế nên phù hợp với người ngồi và bàn chân có chỗ đỡ vững.",
+          "source_days": [
+            5
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q003": {
+        "1": {
+          "question_id": "BUGZ-Q003",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+          "feedback_correct": "Chuẩn rồi! Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+          "feedback_incorrect": "Cái bàn chưa biết tự lớn lên đâu, mình nhờ người lớn nhé. Khi bàn ghế không vừa, điều chỉnh chỗ học giúp mình bớt phải cúi hoặc nhún vai.",
+          "source_days": [
+            5,
+            19
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q004": {
+        "1": {
+          "question_id": "BUGZ-Q004",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+          "feedback_correct": "Chuẩn rồi! Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+          "feedback_incorrect": "Con chữ vẫn thấy bạn mà, không cần dí sát đâu. Điều chỉnh chỗ ngồi và tài liệu giúp hạn chế cúi người, đồng thời giữ vai thư giãn.",
+          "source_days": [
+            1,
+            3
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q005": {
+        "1": {
+          "question_id": "BUGZ-Q005",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+          "feedback_correct": "Chuẩn rồi! Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+          "feedback_incorrect": "Chăm học không bắt buộc phải hóa thành tượng nhé. Đổi tư thế và có những khoảng nghỉ vận động phù hợp giúp tránh ngồi bất động quá lâu.",
+          "source_days": [
+            15,
+            18
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q006": {
+        "1": {
+          "question_id": "BUGZ-Q006",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+          "feedback_correct": "Chuẩn rồi! Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+          "feedback_incorrect": "Vai chưa nhận nhiệm vụ làm giá đỡ đâu. Bàn quá cao có thể khiến vai phải nâng lên; cần xem lại cách bố trí bàn ghế.",
+          "source_days": [
+            5
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q007": {
+        "1": {
+          "question_id": "BUGZ-Q007",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+          "feedback_correct": "Chuẩn rồi! Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+          "feedback_incorrect": "Mình làm đồng đội của bạn, không làm ban giám khảo hình dáng nhé. Nhắc bạn nhẹ nhàng và cùng thực hành phù hợp với tinh thần hỗ trợ trong flashcard.",
+          "source_days": [
+            21,
+            26
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q008": {
+        "1": {
+          "question_id": "BUGZ-Q008",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+          "feedback_correct": "Chuẩn rồi! Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+          "feedback_incorrect": "Mình chỉnh nhẹ thôi, không cần vào vai siêu nhân bất động. Mục đích là tìm tư thế thoải mái, phù hợp với hướng dẫn, không phải gồng người.",
+          "source_days": [
+            1
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q009": {
+        "1": {
+          "question_id": "BUGZ-Q009",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+          "feedback_correct": "Chuẩn rồi! Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+          "feedback_incorrect": "Dọn đường cho cuốn vở về nhà nào. Góc học gọn và đồ dùng trong tầm với giúp mình sử dụng bàn thuận tiện hơn.",
+          "source_days": [
+            19
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q010": {
+        "1": {
+          "question_id": "BUGZ-Q010",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+          "feedback_correct": "Chuẩn rồi! Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+          "feedback_incorrect": "Ảnh là bạn quan sát, chưa phải bác sĩ mini đâu. Tự quan sát giúp nhận ra thói quen; một tấm ảnh không thay cho đánh giá sức khỏe.",
+          "source_days": [
+            22
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q011": {
+        "1": {
+          "question_id": "BUGZ-Q011",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+          "feedback_correct": "Chuẩn rồi! Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+          "feedback_incorrect": "Để bút làm việc, vai được thư giãn một chút nhé. Bố trí tài liệu thuận tay và giữ tư thế thoải mái là phần thực hành của ngày viết.",
+          "source_days": [
+            20
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q012": {
+        "1": {
+          "question_id": "BUGZ-Q012",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+          "feedback_correct": "Chuẩn rồi! Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+          "feedback_incorrect": "Đồng đội giỏi là đồng đội biết giúp nhau mà. Hoạt động nhóm trong dự án hướng tới hỗ trợ nhau giữ thói quen tốt.",
+          "source_days": [
+            21
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q013": {
+        "1": {
+          "question_id": "BUGZ-Q013",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+          "feedback_correct": "Chuẩn rồi! Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+          "feedback_incorrect": "Mình nghỉ cho dễ chịu, không thi xiếc đâu nha. Thực hành vận động cần nhẹ nhàng và phù hợp với cơ thể; không cố vượt qua đau.",
+          "source_days": [
+            15
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q014": {
+        "1": {
+          "question_id": "BUGZ-Q014",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+          "feedback_correct": "Chuẩn rồi! Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+          "feedback_incorrect": "Đôi chân cũng muốn được tham gia buổi học nhé. Flashcard khuyến khích xen kẽ thời gian ngồi với khoảng nghỉ và vận động nhẹ.",
+          "source_days": [
+            18
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q015": {
+        "1": {
+          "question_id": "BUGZ-Q015",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+          "feedback_correct": "Chuẩn rồi! Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+          "feedback_incorrect": "Huy chương thích đi cùng nỗ lực thật đó. Huy chương là động viên cho việc thực hành tự xác nhận, không thay cho các bước đã làm.",
+          "source_days": [
+            7
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q016": {
+        "1": {
+          "question_id": "BUGZ-Q016",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+          "feedback_correct": "Chuẩn rồi! Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+          "feedback_incorrect": "Mình làm thẻ nhắc nhớ, không làm lá bùa siêu năng lực. Flashcard mới nên giúp nhớ hành động đúng từ kiến thức đã học, không thêm lời hứa chữa bệnh.",
+          "source_days": [
+            25
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q017": {
+        "1": {
+          "question_id": "BUGZ-Q017",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+          "feedback_correct": "Chuẩn rồi! Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+          "feedback_incorrect": "Rủ bạn bằng một lời dễ thương là đủ rồi. Lời rủ tự nhiên và tôn trọng giúp cả hai cùng thực hành vui vẻ.",
+          "source_days": [
+            26
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q018": {
+        "1": {
+          "question_id": "BUGZ-Q018",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+          "feedback_correct": "Chuẩn rồi! Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+          "feedback_incorrect": "Không cầm thẻ nhưng kiến thức vẫn đi cùng mình mà. Ngày 27 hướng tới tự ghi nhớ và áp dụng thói quen trong sinh hoạt học tập.",
+          "source_days": [
+            27
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q019": {
+        "1": {
+          "question_id": "BUGZ-Q019",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+          "feedback_correct": "Chuẩn rồi! Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+          "feedback_incorrect": "Mình nhận lời chúc mừng, không nhận một chiếc áo giáp sức khỏe nhé. Chứng nhận hoàn thành ghi nhận hành trình học và thực hành, không phải kết quả khám chữa bệnh.",
+          "source_days": [
+            28
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q020": {
+        "1": {
+          "question_id": "BUGZ-Q020",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+          "feedback_correct": "Chuẩn rồi! Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+          "feedback_incorrect": "Góc học chọn vừa người là được điểm rồi. Kích thước phù hợp và hỗ trợ cơ thể quan trọng hơn việc bàn ghế trông hoành tráng.",
+          "source_days": [
+            1,
+            5
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q021": {
+        "1": {
+          "question_id": "BUGZ-Q021",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+          "feedback_correct": "Chuẩn rồi! Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+          "feedback_incorrect": "Cho cuốn vở một khoảng thở vừa phải nào. Khoảng 30–35 cm là hướng dẫn trong flashcard cho đọc/viết; không áp con số này cho mọi loại màn hình.",
+          "source_days": [
+            1,
+            2
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q022": {
+        "1": {
+          "question_id": "BUGZ-Q022",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+          "feedback_correct": "Chuẩn rồi! Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+          "feedback_incorrect": "Cuốn vở không cần một cái ôm bằng mũi đâu nhé. Đừng cố giữ tư thế khó chịu để đọc; hãy nhờ người lớn hỗ trợ khi nhìn không rõ.",
+          "source_days": [
+            2
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q023": {
+        "1": {
+          "question_id": "BUGZ-Q023",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+          "feedback_correct": "Chuẩn rồi! Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+          "feedback_incorrect": "Đôi mắt không cần nhận thêm ca trực trong bóng tối. Ánh sáng phù hợp giúp nhìn tài liệu thuận tiện; cần tránh cả thiếu sáng và chói.",
+          "source_days": [
+            4
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q024": {
+        "1": {
+          "question_id": "BUGZ-Q024",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+          "feedback_correct": "Chuẩn rồi! Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+          "feedback_incorrect": "Đèn làm trợ lý thôi, đừng để đèn thành đèn sân khấu. Điều chỉnh nguồn sáng và tránh chói là cách bố trí góc học được nhắc trong bài.",
+          "source_days": [
+            4
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q025": {
+        "1": {
+          "question_id": "BUGZ-Q025",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+          "feedback_correct": "Chuẩn rồi! 20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+          "feedback_incorrect": "Ba số 20 ở đây dành vé nghỉ cho mắt nhé. 20-20-20 là lời nhắc nghỉ việc nhìn gần; 20 feet xấp xỉ 6 mét.",
+          "source_days": [
+            8
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q026": {
+        "1": {
+          "question_id": "BUGZ-Q026",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+          "feedback_correct": "Chuẩn rồi! Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+          "feedback_incorrect": "Mắt xin nghỉ, không xin chuyển công việc gần đâu nha. Đổi từ một việc nhìn gần sang việc nhìn gần khác chưa tạo được khoảng nghỉ nhìn xa.",
+          "source_days": [
+            8
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q027": {
+        "1": {
+          "question_id": "BUGZ-Q027",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+          "feedback_correct": "Chuẩn rồi! Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+          "feedback_incorrect": "Nút tạm dừng cũng là một đồng đội tốt đó. Trò chơi phục vụ học tập và vẫn cần có khoảng nghỉ nhìn gần phù hợp.",
+          "source_days": [
+            8
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q028": {
+        "1": {
+          "question_id": "BUGZ-Q028",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+          "feedback_correct": "Chuẩn rồi! Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+          "feedback_incorrect": "Mí mắt biết làm việc rồi, mình đừng bắt bạn ấy tập tạ. Bài trong dự án nhắc chớp mắt nhẹ; không dùng lực hoặc làm đau mắt.",
+          "source_days": [
+            9
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q029": {
+        "1": {
+          "question_id": "BUGZ-Q029",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+          "feedback_correct": "Chuẩn rồi! Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+          "feedback_incorrect": "Mắt báo tin thì mình nghe bạn ấy một chút nhé. Lắng nghe cảm giác của mắt, nghỉ phù hợp và nhờ người lớn hỗ trợ khi cần.",
+          "source_days": [
+            9,
+            23
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q030": {
+        "1": {
+          "question_id": "BUGZ-Q030",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+          "feedback_correct": "Chuẩn rồi! Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+          "feedback_incorrect": "Cho điện thoại đi ngủ trước mình cũng được mà. Ngày 13 khuyến khích giảm dùng màn hình buổi tối; thời gian cụ thể cần phù hợp với lịch và lứa tuổi.",
+          "source_days": [
+            13
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q031": {
+        "1": {
+          "question_id": "BUGZ-Q031",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+          "feedback_correct": "Chuẩn rồi! Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+          "feedback_incorrect": "Cây là bạn thư giãn, không phải bác sĩ lá xanh nhé. Điều cần nhớ là nghỉ nhìn gần và nhìn xa thoải mái, không gán phép chữa bệnh cho màu xanh.",
+          "source_days": [
+            14
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q032": {
+        "1": {
+          "question_id": "BUGZ-Q032",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+          "feedback_correct": "Chuẩn rồi! Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+          "feedback_incorrect": "Mắt đang xin đổi phong cảnh đó. Bài nhìn xa hướng tới rời điểm nhìn gần một lúc; không cần cố nhìn đến khó chịu.",
+          "source_days": [
+            10,
+            14
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q033": {
+        "1": {
+          "question_id": "BUGZ-Q033",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+          "feedback_correct": "Chuẩn rồi! Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+          "feedback_incorrect": "Nhật ký thích sự thật hơn câu chuyện siêu nhân nhé. Nhật ký giúp nhận biết cảm giác và trao đổi với người lớn, không dùng để tự chẩn đoán.",
+          "source_days": [
+            23
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q034": {
+        "1": {
+          "question_id": "BUGZ-Q034",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+          "feedback_correct": "Chuẩn rồi! Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+          "feedback_incorrect": "Mình nhờ đúng người hỗ trợ, không để game làm bác sĩ nhé. Thông tin trong game không thay thế việc được người lớn và người có chuyên môn hỗ trợ.",
+          "source_days": [
+            23
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q035": {
+        "1": {
+          "question_id": "BUGZ-Q035",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+          "feedback_correct": "Chuẩn rồi! Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+          "feedback_incorrect": "Cho cuốn sách một chỗ học tử tế cùng mình nào. Ngày 6 gợi ý đọc ở chỗ học phù hợp, giữ tư thế và khoảng cách thuận tiện.",
+          "source_days": [
+            6
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q036": {
+        "1": {
+          "question_id": "BUGZ-Q036",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+          "feedback_correct": "Chuẩn rồi! Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+          "feedback_incorrect": "Mình mời con chữ rõ lên, không bắt mắt làm thám tử. Giúp nội dung dễ nhìn là cách xử lý tốt hơn việc cố giữ tư thế khó chịu.",
+          "source_days": [
+            2,
+            4
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q037": {
+        "1": {
+          "question_id": "BUGZ-Q037",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+          "feedback_correct": "Chuẩn rồi! Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+          "feedback_incorrect": "Laptop thích chỗ đứng vững vàng hơn một ngọn tháp lung lay. Bài ngày 3 gợi ý kiểm tra vị trí tài liệu và màn hình; thiết bị phải được đặt chắc chắn.",
+          "source_days": [
+            3
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q038": {
+        "1": {
+          "question_id": "BUGZ-Q038",
+          "version": 1,
+          "correct_option_id": "B",
+          "explanation": "Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+          "feedback_correct": "Chuẩn rồi! Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+          "feedback_incorrect": "Một lời khen nhỏ cho việc làm tốt là đủ vui rồi. Ghi nhận thói quen tốt không đồng nghĩa có bảo đảm sức khỏe tuyệt đối.",
+          "source_days": [
+            8,
+            23
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q039": {
+        "1": {
+          "question_id": "BUGZ-Q039",
+          "version": 1,
+          "correct_option_id": "C",
+          "explanation": "Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+          "feedback_correct": "Chuẩn rồi! Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+          "feedback_incorrect": "Mẹo hay cần đúng trước rồi mới vui nhé. Chia sẻ kiến thức đã học nên cụ thể và không thêm lời hứa chữa bệnh.",
+          "source_days": [
+            24,
+            25
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      },
+      "BUGZ-Q040": {
+        "1": {
+          "question_id": "BUGZ-Q040",
+          "version": 1,
+          "correct_option_id": "A",
+          "explanation": "Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+          "feedback_correct": "Chuẩn rồi! Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+          "feedback_incorrect": "Danh hiệu giỏi ôn tập rất vui, nhưng không thay kính khám mắt nhé. Game giúp ôn tập, còn thói quen thực tế và đánh giá sức khỏe là những việc riêng.",
+          "source_days": [
+            8,
+            28
+          ],
+          "first_correct_points": 10,
+          "repeat_points": 0,
+          "updated_at": 1793500000000
+        }
+      }
+    },
+    "game_attempts": {
+      "stu-a1": {
+        "att-a-001": {
+          "attempt_id": "att-a-001",
+          "student_id": "stu-a1",
+          "game_id": "situations",
+          "topic_filter": "all",
+          "timer_enabled": false,
+          "status": "completed",
+          "score": 40,
+          "max_possible_score": 50,
+          "question_ids": [
+            "BUGZ-Q001",
+            "BUGZ-Q002",
+            "BUGZ-Q003",
+            "BUGZ-Q021",
+            "BUGZ-Q025"
+          ],
+          "question_versions": {
+            "BUGZ-Q001": 1,
+            "BUGZ-Q002": 1,
+            "BUGZ-Q003": 1,
+            "BUGZ-Q021": 1,
+            "BUGZ-Q025": 1
+          },
+          "answers": {
+            "BUGZ-Q001": {
+              "question_id": "BUGZ-Q001",
+              "locked_version": 1,
+              "selected_option_id": "A",
+              "is_correct": true,
+              "attempt_count_for_question": 1,
+              "points_awarded": 10,
+              "feedback_text": "Chuẩn rồi! Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+              "explanation_text": "Ngồi thoải mái, có chỗ tựa và thả lỏng vai giúp mình làm việc ở bàn dễ chịu hơn.",
+              "source_days": [
+                1
+              ],
+              "answered_at": 1793499000000
+            }
+          },
+          "recommended_review_days": [
+            5,
+            8
+          ],
+          "created_at": 1793498900000,
+          "updated_at": 1793499000000,
+          "completed_at": 1793499000000
+        }
+      },
+      "stu-b1": {
+        "att-b-001": {
+          "attempt_id": "att-b-001",
+          "student_id": "stu-b1",
+          "game_id": "situations",
+          "topic_filter": "lung_thang",
+          "timer_enabled": false,
+          "status": "completed",
+          "score": 50,
+          "max_possible_score": 50,
+          "question_ids": [
+            "BUGZ-Q001",
+            "BUGZ-Q002",
+            "BUGZ-Q003",
+            "BUGZ-Q004",
+            "BUGZ-Q005"
+          ],
+          "question_versions": {
+            "BUGZ-Q001": 1,
+            "BUGZ-Q002": 1,
+            "BUGZ-Q003": 1,
+            "BUGZ-Q004": 1,
+            "BUGZ-Q005": 1
+          },
+          "answers": {},
+          "recommended_review_days": [
+            1,
+            5
+          ],
+          "created_at": 1793498000000,
+          "updated_at": 1793498100000,
+          "completed_at": 1793498100000
+        }
+      }
+    },
+    "reminder_templates": {
+      "tpl-head-forward": {
+        "template_id": "tpl-head-forward",
+        "posture_code": "HEAD_FORWARD",
+        "title": "Nhắc nhẹ: Thả lỏng cổ và vai",
+        "voice_text": "Cuốn vở vẫn đợi mình mà! Mình nâng đầu lên một chút và thả lỏng hai vai cho dễ chịu nhé.",
+        "push_body": "Gợi ý: Chỉnh lại chỗ ngồi và nâng đầu nhẹ nhàng để cổ đỡ mỏi nhé.",
+        "no_body_shaming_verified": true,
+        "updated_at": 1793500000000,
+        "updated_by": "system_bootstrap"
+      },
+      "tpl-trunk-lean": {
+        "template_id": "tpl-trunk-lean",
+        "posture_code": "TRUNK_LEAN",
+        "title": "Nhắc nhẹ: Tựa lưng thoải mái",
+        "voice_text": "Lưng mình xin một điểm tựa nhẹ nhàng nào! Mình ngồi gọn vào ghế và đặt hai chân vững nhé.",
+        "push_body": "Gợi ý: Ngồi ngay ngắn có điểm tựa lưng và thả lỏng vai theo hướng dẫn Ngày 1.",
+        "no_body_shaming_verified": true,
+        "updated_at": 1793500000000,
+        "updated_by": "system_bootstrap"
+      },
+      "tpl-eyes-close": {
+        "template_id": "tpl-eyes-close",
+        "posture_code": "EYES_TOO_CLOSE",
+        "title": "Nhắc nhẹ: Khoảng cách đọc viết & 20-20-20",
+        "voice_text": "Cho đôi mắt một khoảng thở vừa phải nào! Mình giữ khoảng cách đọc viết thoải mái và nhớ nghỉ mắt 20-20-20 nhé.",
+        "push_body": "Gợi ý: Kiểm tra ánh sáng bàn học và giữ khoảng cách đọc sách vở theo thẻ Ngày 2 & Ngày 8.",
+        "no_body_shaming_verified": true,
+        "updated_at": 1793500000000,
+        "updated_by": "system_bootstrap"
+      }
+    },
+    "notification_preferences": {
+      "uid-guardian-a": {
+        "push_enabled": true,
+        "voice_enabled": true,
+        "email_enabled": true,
+        "mode": "every_alert",
+        "quiet_hours_start": "22:00",
+        "quiet_hours_end": "06:30"
+      },
+      "uid-student-a1": {
+        "push_enabled": true,
+        "voice_enabled": true,
+        "email_enabled": false,
+        "mode": "every_alert",
+        "quiet_hours_start": "21:30",
+        "quiet_hours_end": "06:30"
+      },
+      "uid-guardian-b": {
+        "push_enabled": true,
+        "voice_enabled": false,
+        "email_enabled": true,
+        "mode": "digest",
+        "quiet_hours_start": "21:30",
+        "quiet_hours_end": "06:30"
+      }
+    },
+    "invitations": {},
+    "device_pairing_secrets": {
+      "robot-fam-a-01": {
+        "pairing_code": "PAIR-FAM-A-9911",
+        "factory_device_name": "BUGZ Robot Unit #A01"
+      },
+      "robot-fam-b-01": {
+        "pairing_code": "PAIR-FAM-B-8822",
+        "factory_device_name": "BUGZ Robot Unit #B01"
+      },
+      "robot-unclaimed-03": {
+        "pairing_code": "BUGZ-PAIR-2026",
+        "factory_device_name": "BUGZ Robot Unit #03 (Chưa ghép)"
+      }
+    },
+    "audit_logs": {
+      "log-init-001": {
+        "log_id": "log-init-001",
+        "actor_uid": "uid-superadmin-01",
+        "actor_email": "minhquantran4312@gmail.com",
+        "action": "BOOTSTRAP_SUPERADMIN",
+        "target": "account_roles/uid-superadmin-01",
+        "details": "Khởi tạo SuperAdmin từ email nguồn đã xác minh (email_verified=true).",
+        "time": 1793500000000,
+        "result": "SUCCESS"
+      }
+    }
+  }
+}

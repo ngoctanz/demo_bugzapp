@@ -1,0 +1,37 @@
+{
+  "id": "/",
+  "name": "BUGZ BrightUpGenZ — Mắt sáng Lưng thẳng",
+  "short_name": "BUGZ",
+  "description": "Ứng dụng Webapp/PWA rèn luyện thói quen Mắt sáng Lưng thẳng 28 ngày, Robot đồng hành MQTT và Trò chơi rèn luyện.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0d9488",
+  "background_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

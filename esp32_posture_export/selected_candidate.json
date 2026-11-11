@@ -1,0 +1,9 @@
+{
+  "name": "v3_only_soft_w12_s2026",
+  "mode": "v3_only",
+  "supervision": "soft",
+  "width": 12,
+  "seed": 2026,
+  "int8_val_macro_f1": 0.8793859649122806,
+  "bytes": 29336
+}

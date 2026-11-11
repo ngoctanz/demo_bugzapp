@@ -1,0 +1,36 @@
+{
+  "labels": [
+    "Good",
+    "Bad"
+  ],
+  "input_shape": [
+    1,
+    96,
+    96,
+    3
+  ],
+  "color": "RGB",
+  "pixel_float": "pixel/255",
+  "resize": "nearest neighbour preserving aspect ratio, floor dimensions, center black padding",
+  "input_scale": 0.003921568859368563,
+  "input_zero_point": -128,
+  "output_scale": 0.00390625,
+  "output_zero_point": -128,
+  "quantization_rounding": "floor(pixel_float/scale + zero_point + 0.5), clamp int8",
+  "unknown_threshold": 0.5750000000000001,
+  "operators": [
+    "AVERAGE_POOL_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "RESHAPE",
+    "SOFTMAX"
+  ],
+  "model_bytes": 29336,
+  "sha256": "8eefda2e1464aac9ca885b1a74b6a36aaa94164ecf02cf2bfbab17b981b88fc8",
+  "tensorflow_version": "2.21.0",
+  "hardware_validated": false,
+  "training_recipe": "v3_he_initialization_soft_target_ablation",
+  "selection_rule": "family validation INT8 mean - 0.25 std, then best seed within family",
+  "warning": "No empty class. Confidence cannot measure neck severity. Arena/latency must be measured on board."
+}

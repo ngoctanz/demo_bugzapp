@@ -1,0 +1,43 @@
+{
+  "name": "bugz-brightupgenz",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "start": "node server.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/domain/bugzRules.test.ts src/domain/rtdbRulesAndRbac.test.ts src/lib/frontPostureEngine.test.ts",
+    "bootstrap:superadmin": "tsx scripts/bootstrapSuperAdmin.ts"
+  },
+  "dependencies": {
+    "@firebase/app": "^0.11.2",
+    "@firebase/auth": "^1.9.1",
+    "@firebase/database": "^1.1.0",
+    "@firebase/messaging": "^0.12.16",
+    "@firebase/storage": "^0.13.7",
+    "@google/genai": "^3.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "react-router-dom": "^7.18.5",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}

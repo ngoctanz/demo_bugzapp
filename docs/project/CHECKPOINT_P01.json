@@ -1,0 +1,45 @@
+{
+  "checkpoint_id": "CHECKPOINT_P01_BEFORE_P02",
+  "created_at_iso": "2026-11-02T16:19:55Z",
+  "stage_completed": "P01",
+  "next_stage": "P02",
+  "firebase_project_id": "gen-lang-client-0531599250",
+  "realtime_database_url": "https://gen-lang-client-0531599250-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "superadmin_bootstrap_emails": [
+    "minhquantran4312@gmail.com",
+    "tamtranmusic@gmail.com"
+  ],
+  "verification_evidence": {
+    "unit_and_rbac_tests": "PASS (13/13 subtests in bugzRules.test.ts and rtdbRulesAndRbac.test.ts)",
+    "typescript_typecheck": "PASS (tsc --noEmit exit code 0)",
+    "production_build": "PASS (vite build exit code 0)",
+    "browser_e2e_verification": "PASS (Playwright Chromium verified /login, /onboarding, /profile, /parent, /admin)"
+  },
+  "integration_statuses": {
+    "rtdb_rules_and_local_engine": "PASS",
+    "firebase_web_client_config": "PASS",
+    "firebase_admin_service_account_live": "BLOCKED (Waiting for FIREBASE_SERVICE_ACCOUNT_JSON secret outside AI Studio)",
+    "firebase_console_google_provider_and_rules_deploy": "BLOCKED (Waiting for Project Owner action in Firebase Console)",
+    "java_cli_firebase_emulator_in_container": "BLOCKED (No JVM installed in container image; verified via AST rtdbRulesEngine.ts)",
+    "p02_28_days_content_module": "NOT_RUN (Scheduled for P02)",
+    "p03_mqtt_and_robot_bridge": "BLOCKED (Scheduled for P03)",
+    "p04_fcm_push_and_email_provider": "BLOCKED (Scheduled for P04)"
+  },
+  "core_p01_files": [
+    "database.rules.json",
+    "firebase.json",
+    ".firebaserc",
+    "ENV_SETUP.md",
+    "scripts/bootstrapSuperAdmin.ts",
+    "src/domain/superAdminBootstrapScript.ts",
+    "src/domain/p01RbacStore.ts",
+    "src/domain/rtdbRulesEngine.ts",
+    "src/domain/rtdbRulesAndRbac.test.ts",
+    "src/context/AuthContext.tsx",
+    "src/pages/P01AccountPages.tsx",
+    "server.ts",
+    "docs/project/PROJECT_STATE.md",
+    "docs/project/INTEGRATION_STATUS.md",
+    "docs/project/DECISION_LOG.md"
+  ]
+}

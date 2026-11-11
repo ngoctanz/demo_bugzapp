@@ -1,0 +1,69 @@
+menu "BUGZ robot connectivity"
+
+    config BUGZ_WIFI_SSID
+        string "Wi-Fi SSID (2.4 GHz)"
+        default ""
+        help
+            SSID cua mang Wi-Fi 2.4 GHz ma ESP32-CAM se ket noi.
+
+    config BUGZ_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default ""
+        help
+            Mat khau Wi-Fi. Gia tri nay duoc luu trong sdkconfig va firmware.
+
+    config BUGZ_MQTT_BROKER_URI
+        string "MQTT broker URI"
+        default ""
+        help
+            Dia chi MQTT TLS day du, vi du mqtts://broker-host.example.com:8883.
+            Copy hostname that tu trang quan tri broker hoac Edit Connection cua
+            MQTTX; khong copy nhan ket noi da bi rut gon bang dau ba cham.
+
+    config BUGZ_MQTT_USERNAME
+        string "MQTT username"
+        default "robot01"
+        help
+            Nen trung voi BUGZ_DEVICE_ID de qua kiem tra ACL cua backend BUGZ.
+
+    config BUGZ_MQTT_PASSWORD
+        string "MQTT password"
+        default ""
+        help
+            Mat khau credential cua thiet bi tren broker. Khong commit sdkconfig.
+
+    config BUGZ_DEVICE_ID
+        string "BUGZ device ID"
+        default "robot01"
+        help
+            Chi dung chu, so, dau gach ngang va gach duoi; dai 2-64 ky tu.
+            MQTT client ID va topic cua robot dung gia tri nay.
+
+    config BUGZ_DEFAULT_SESSION_ID
+        string "Default session ID for standalone broker test"
+        default "session-manual-001"
+        help
+            Session tam khi chua nhan lenh tu app. Khi app gui monitoring.set,
+            firmware se thay bang session_id trong lenh.
+
+    config BUGZ_MONITORING_ON_BOOT
+        bool "Publish observations immediately after boot"
+        default y
+        help
+            Bat de test truc tiep voi MQTTX. Khi trien khai voi app BUGZ nen tat
+            va chi bat monitoring sau khi nhan lenh commands co session_id hop le.
+
+    config BUGZ_OBSERVATION_INTERVAL_MS
+        int "Observation publish interval (ms)"
+        range 500 60000
+        default 1000
+        help
+            Backend can nhieu mau lien tuc de xac nhan trang thai on dinh.
+
+    config BUGZ_NTP_SERVER
+        string "NTP server"
+        default "pool.ntp.org"
+        help
+            Dong bo UTC epoch milliseconds truoc khi ket noi MQTT TLS.
+
+endmenu
