@@ -127,3 +127,12 @@ Hệ thống tích hợp trực tiếp mô hình **Front-View 5-Class Posture Re
 - **Từ Xanh (`GOOD`) → Vàng (`WARNING`):** Phản hồi **tức thì (`0s` debounce)** ngay khi chạm mốc cảnh báo để hiển thị lưu ý nhẹ trên khung HUD và thanh **Dynamic Island** (khi đang ở các trang `/learn`, `/games`, `/library`...).
 - **Từ Vàng (`WARNING`) → Đỏ (`BAD`):** Debounce **`10.0 giây` (10s)** — chỉ khi giữ tư thế sai liên tục đủ `10.0s` mới chuyển sang cảnh báo Đỏ, phát giọng nhắc và **ngay lập tức cộng thêm lượt cảnh báo / đợt cần chỉnh ở bảng thống kê bên dưới**. Nhờ khoảng đệm 10 giây ở trạng thái Vàng, học sinh có đủ thời gian tự điều chỉnh về tư thế chuẩn mà không bị nhảy sớm sang Đỏ.
 
+## Log phiên học riêng tư
+
+Khi một phiên học kết thúc, server tự ghi một dòng vào `data/study_sessions.csv` gồm tên học sinh, tên tài khoản, email, số điện thoại, giờ bắt đầu/kết thúc, tổng thời gian học và thời gian tư thế tốt/chưa tốt.
+
+- File chỉ nằm phía server, không có API đọc và không được phục vụ trên web.
+- Thư mục `data/` hiện bình thường trong project; riêng `study_sessions.csv` nằm trong `.gitignore` để tránh đẩy thông tin cá nhân lên Git.
+- Có thể đổi vị trí lưu bằng biến môi trường `STUDY_SESSION_LOG_FILE`.
+- CSV mở trực tiếp bằng Excel hoặc Google Sheets; mỗi `session_id` chỉ được ghi một lần.
+

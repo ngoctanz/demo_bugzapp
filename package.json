@@ -11,7 +11,7 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test src/domain/bugzRules.test.ts src/domain/rtdbRulesAndRbac.test.ts src/lib/frontPostureEngine.test.ts",
+    "test": "tsx --test src/domain/bugzRules.test.ts src/domain/rtdbRulesAndRbac.test.ts src/lib/frontPostureEngine.test.ts src/lib/studySessionFileLog.test.ts",
     "bootstrap:superadmin": "tsx scripts/bootstrapSuperAdmin.ts"
   },
   "dependencies": {

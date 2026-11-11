@@ -45,6 +45,8 @@ import {
   resolveDriveAssetEntry,
 } from './src/data/driveAssetRegistry.ts';
 import { BugzNativeMqttBridge } from './src/lib/mqttNativeBridge.ts';
+import { appendStudySessionLogCsv } from './src/lib/studySessionFileLog.ts';
+import type { ExtendedSessionRecord } from './src/domain/p03RobotEngine.ts';
 
 dotenv.config();
 
@@ -58,6 +60,35 @@ const p01Store = new P01RbacDomainService(createCleanDynamicRtdbState());
 const PERSIST_DIR = path.resolve(process.cwd(), '.data');
 const PERSIST_FILE_PRIMARY = path.join(PERSIST_DIR, 'bugz_rtdb_persistence.json');
 const PERSIST_FILE_TMP = '/tmp/bugz_rtdb_persistence.json';
+const STUDY_SESSION_LOG_FILE = process.env.STUDY_SESSION_LOG_FILE
+  ? path.resolve(process.env.STUDY_SESSION_LOG_FILE)
+  : path.resolve(process.cwd(), 'data', 'study_sessions.csv');
+
+function logClosedStudySession(sessionId: string, session: ExtendedSessionRecord): void {
+  if (session.ended_at === undefined) return;
+  const state = p01Store.getState();
+  const student = state.students[session.student_id];
+  const account =
+    (student?.auth_uid ? state.users[student.auth_uid] : undefined) ||
+    (student?.guardian_owner_uid ? state.users[student.guardian_owner_uid] : undefined);
+
+  try {
+    appendStudySessionLogCsv(STUDY_SESSION_LOG_FILE, {
+      session_id: sessionId,
+      student_name: student?.display_name || session.student_id || 'Không rõ',
+      account_name: account?.full_name || student?.display_name || 'Không rõ',
+      email: account?.email || '',
+      phone: account?.phone || '',
+      device_id: session.device_id,
+      started_at: session.started_at,
+      ended_at: session.ended_at,
+      good_duration_ms: session.good_duration_ms,
+      bad_duration_ms: session.bad_duration_ms,
+    });
+  } catch (error) {
+    console.error('[STUDY_SESSION_LOG] Không thể ghi file CSV:', error);
+  }
+}
 
 const LEGACY_SAMPLE_IDS = new Set([
   'uid-guardian-a',
@@ -599,6 +630,10 @@ async function resolveRequestActor(req: Request): Promise<
 async function startServer() {
   const app = express();
   app.use(express.json({ limit: '256kb' }));
+  // Không cho Vite dev middleware hoặc static fallback phục vụ file CSV chứa PII.
+  app.use('/data', (_req: Request, res: Response) => {
+    res.status(404).send('Not Found');
+  });
 
   let mqttBridge: BugzNativeMqttBridge | null = null;
 
@@ -1967,6 +2002,10 @@ async function startServer() {
 
     if (result.ok && result.session) {
       await persistRobotAndSessionState(deviceId, result.session_id);
+      if (result.closed_previous_session_id) {
+        const previous = p01Store.getState().sessions[deviceId]?.[result.closed_previous_session_id];
+        if (previous) logClosedStudySession(result.closed_previous_session_id, previous);
+      }
     }
 
     res.status(result.status).json({
@@ -2015,6 +2054,10 @@ async function startServer() {
         mqttStopPublished = pubRes.ok;
       }
       await persistRobotAndSessionState(deviceId, sessionId);
+    }
+
+    if (result.ok && result.session) {
+      logClosedStudySession(sessionId, result.session);
     }
 
     res.status(result.status).json({

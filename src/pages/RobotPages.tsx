@@ -61,6 +61,8 @@ interface StudentView {
   timezone: string;
 }
 
+const OWNED_STUDY_SESSION_KEY = 'bugz_owned_study_session_v1';
+
 export interface MqttBridgeStatusView {
   connected: boolean;
   connecting: boolean;
@@ -354,6 +356,8 @@ export const RobotCompanionPage: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = useState<string>(activeStudentId || '');
   const lastAutoSpokenAlertIdRef = React.useRef<string>('');
   const hasInitializedAlertsRef = React.useRef<boolean>(false);
+  const exitSaveTargetRef = React.useRef<{ sessionId: string; deviceId: string } | null>(null);
+  const exitSaveSentRef = React.useRef<string | null>(null);
 
   const [simClockMs, setSimClockMs] = useState<number>(1793502000000);
   const [simSeq, setSimSeq] = useState<number>(0);
@@ -457,13 +461,55 @@ export const RobotCompanionPage: React.FC = () => {
     return () => window.clearInterval(timer);
   }, [fetchBootstrap, uid]);
 
+  const currentDevice =
+    devices.find((d) => d.device_id === selectedDeviceId) || devices[0] || null;
+  const openSession = currentDevice?.open_session || null;
+
+  useEffect(() => {
+    const ownedSessionId = window.sessionStorage.getItem(OWNED_STUDY_SESSION_KEY);
+    if (currentDevice && openSession?.session_id === ownedSessionId) {
+      exitSaveTargetRef.current = {
+        sessionId: openSession.session_id,
+        deviceId: currentDevice.device_id,
+      };
+      return;
+    }
+    exitSaveTargetRef.current = null;
+    if (!openSession && ownedSessionId) {
+      window.sessionStorage.removeItem(OWNED_STUDY_SESSION_KEY);
+    }
+  }, [currentDevice, openSession?.session_id]);
+
+  useEffect(() => {
+    if (!uid) return;
+
+    const saveBeforeExit = () => {
+      const target = exitSaveTargetRef.current;
+      if (!target || exitSaveSentRef.current === target.sessionId) return;
+      exitSaveSentRef.current = target.sessionId;
+      void fetch(`/api/sessions/${encodeURIComponent(target.sessionId)}/end`, {
+        method: 'POST',
+        headers: { ...buildAuthHeaders(), 'Content-Type': 'application/json' },
+        body: JSON.stringify({ device_id: target.deviceId }),
+        keepalive: true,
+      }).catch(() => {
+        // Nếu trình duyệt bị đóng cưỡng bức trước khi gửi xong, lần mở phiên kế tiếp
+        // sẽ tự đóng và ghi log phiên cũ nhờ auto_close_previous phía server.
+      });
+    };
+
+    window.addEventListener('pagehide', saveBeforeExit);
+    window.addEventListener('beforeunload', saveBeforeExit);
+    return () => {
+      window.removeEventListener('pagehide', saveBeforeExit);
+      window.removeEventListener('beforeunload', saveBeforeExit);
+    };
+  }, [buildAuthHeaders, uid]);
+
   if (!authLoading && !uid) {
     return <RobotLandingPage returnTo="/robot" />;
   }
 
-  const currentDevice =
-    devices.find((d) => d.device_id === selectedDeviceId) || devices[0] || null;
-  const openSession = currentDevice?.open_session || null;
   const latestCommand = currentDevice?.latest_command || null;
   const isCommandExpired = Boolean(
     latestCommand && latestCommand.ack_status === 'expired'
@@ -499,6 +545,15 @@ export const RobotCompanionPage: React.FC = () => {
           : data.message,
       });
       if (res.ok) {
+        if (data.session_id) {
+          const startedSessionId = String(data.session_id);
+          window.sessionStorage.setItem(OWNED_STUDY_SESSION_KEY, startedSessionId);
+          exitSaveTargetRef.current = {
+            sessionId: startedSessionId,
+            deviceId: currentDevice.device_id,
+          };
+          exitSaveSentRef.current = null;
+        }
         setSimClockMs(1793502000000);
         setSimSeq(0);
         await fetchBootstrap();
@@ -524,6 +579,11 @@ export const RobotCompanionPage: React.FC = () => {
         type: res.ok ? 'success' : 'error',
         text: res.ok ? 'Đã kết thúc phiên học và lưu kết quả thống kê.' : data.message,
       });
+      if (res.ok) {
+        window.sessionStorage.removeItem(OWNED_STUDY_SESSION_KEY);
+        exitSaveTargetRef.current = null;
+        exitSaveSentRef.current = openSession.session_id;
+      }
       await fetchBootstrap();
     } catch {
       setActionBanner({ type: 'error', text: 'Không thể kết thúc phiên học.' });
